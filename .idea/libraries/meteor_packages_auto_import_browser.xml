@@ -49,7 +49,9 @@
         <item url="file://$USER_HOME$/.meteor/packages/caching-compiler/1.0.6/web.browser/multi-file-caching-compiler.js" />
         <item url="file://$USER_HOME$/.meteor/packages/caching-compiler/1.0.6/web.browser/caching-compiler.js" />
         <item url="file://$USER_HOME$/.meteor/packages/modules-runtime/0.7.6/web.browser/modules-runtime.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.7/web.browser/packages/materialize_materialize/sass/materialize.scss.css" />
         <item url="file://$USER_HOME$/.meteor/packages/modules-runtime/0.7.6/web.browser/.npm/package/node_modules/install/install.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.7/web.browser/dist/js/materialize.js" />
         <item url="file://$USER_HOME$/.meteor/packages/caching-html-compiler/1.0.6/web.browser/caching-html-compiler.js" />
         <item url="file://$USER_HOME$/.meteor/packages/callback-hook/1.0.9/web.browser/hook.js" />
         <item url="file://$USER_HOME$/.meteor/packages/check/1.2.3/web.browser/match.js" />
@@ -182,7 +184,9 @@
       <root url="file://$USER_HOME$/.meteor/packages/caching-compiler/1.0.6/web.browser/multi-file-caching-compiler.js" />
       <root url="file://$USER_HOME$/.meteor/packages/caching-compiler/1.0.6/web.browser/caching-compiler.js" />
       <root url="file://$USER_HOME$/.meteor/packages/modules-runtime/0.7.6/web.browser/modules-runtime.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.7/web.browser/packages/materialize_materialize/sass/materialize.scss.css" />
       <root url="file://$USER_HOME$/.meteor/packages/modules-runtime/0.7.6/web.browser/.npm/package/node_modules/install/install.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.7/web.browser/dist/js/materialize.js" />
       <root url="file://$USER_HOME$/.meteor/packages/caching-html-compiler/1.0.6/web.browser/caching-html-compiler.js" />
       <root url="file://$USER_HOME$/.meteor/packages/callback-hook/1.0.9/web.browser/hook.js" />
       <root url="file://$USER_HOME$/.meteor/packages/check/1.2.3/web.browser/match.js" />
