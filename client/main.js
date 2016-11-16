@@ -1,6 +1,7 @@
 
 import '../imports/ui/main.js'
 import '../imports/startup/client/index.js'
+import '../imports/stylesheets/app.css'
 
 /*Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0

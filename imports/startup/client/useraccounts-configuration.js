@@ -8,6 +8,7 @@ AccountsTemplates.configure({
     //appearance
     showForgotPasswordLink: true,
     negativeValidation: true,
+    overrideLoginErrors:false,
     //default routing
     defaultLayoutType: 'blaze', // Optional, the default is 'blaze'
     defaultTemplate: '',
@@ -46,20 +47,19 @@ AccountsTemplates.addField({
     type: 'text',
     required: true,
     minLength: 3,
+    errStr: 'username already exists',
     func: function(value){
-        if (Meteor.isClient) {
             var self = this;
-            console.log('validating')
             Meteor.call("userExists", value, function(err, userExists){
                 if (!userExists)
                     self.setSuccess();
                 else
-                    self.setError(userExists);
+                    self.setError(err);
                 self.setValidating(false);
             });
             return;
-        }
         // Server
-        return Meteor.call("userExists", value);
+        return Meteor.call("userExists", value)
     },
+
 });

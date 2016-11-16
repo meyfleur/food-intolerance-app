@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
+import '../lib/server/account-methods.js';
+
 Meteor.startup(() => {
-  // code to run on server at startup
+    process.env.MAIL_URL
 });
