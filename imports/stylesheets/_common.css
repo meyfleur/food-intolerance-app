@@ -13,9 +13,14 @@ body .dropdown {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1; }
-    body .dropdown .dropdown-list li a {
-      color: #ee6e73;
-      font-weight: bold; }
+    body .dropdown .dropdown-list li {
+      width: 100%; }
+      body .dropdown .dropdown-list li a {
+        width: 100%;
+        color: #ee6e73;
+        font-weight: bold; }
+    body .dropdown .dropdown-list #at-nav-button {
+      padding: 0 28px; }
 body .dropdown:hover .dropdown-list {
   display: block; }
 body footer .modal {
@@ -23,4 +28,4 @@ body footer .modal {
 body footer .footer-copyright .data_protection a {
   margin-left: 10px; }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=main.csss.map */
