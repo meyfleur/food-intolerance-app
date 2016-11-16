@@ -1,5 +1,5 @@
 
-import '../imports/ui/layout.js'
+import '../imports/ui/main.js'
 import '../imports/startup/client/index.js'
 
 /*Template.hello.onCreated(function helloOnCreated() {

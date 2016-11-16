@@ -1,6 +1,5 @@
 <template name="layout">
-    {{> nav}}
-    {{> atForm}}
-
-    {{> footer}}
+    {{> Template.dynamic template=nav}}
+        {{> Template.dynamic template=main}}
+    {{> Template.dynamic template=footer}}
 </template>

@@ -2,12 +2,25 @@
     <header>
         <nav>
             <div class="nav-wrapper container">
-                <a href="#" class="brand-logo">Logo</a>
+            {{#if currentUser}}
+                <a href="{{pathFor 'dashboard'}}" class="brand-logo">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="">Results</a></li>
-                    <li><a href="">Settings</a></li>
+                    <li><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
+                    <li><a href="{{pathFor 'results'}}">Results</a></li>
+                    <li class="dropdown">
+                        <a href="">
+                            <i class="material-icons">account_circle</i>
+                            <span>{{currentUser.username}}</span>
+                        </a>
+                        <ul class="dropdown-list">
+                            <li><a href="{{pathFor 'settings'}}">Settings</a></li>
+                            {{> atNavButton}}
+                        </ul>
+                    </li>
                 </ul>
+                {{else}}
+                <a class="brand-logo">Logo</a>
+            {{/if}}
             </div>
         </nav>
     </header>
