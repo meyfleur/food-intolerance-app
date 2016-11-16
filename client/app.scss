@@ -1,0 +1,48 @@
+/* CSS declarations go here */
+body{
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+    .material-icons{
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    .dropdown-list {
+      display: none;
+      position: absolute;
+      padding: 0;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      li {
+        a {
+          color: #ee6e73;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  footer{
+    .modal{
+      max-height: 100%;
+    }
+    .footer-copyright{
+      .data_protection a{
+        margin-left: 10px;
+      }
+    }
+  }
+
+}
+
+
+
+
