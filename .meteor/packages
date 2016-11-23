@@ -27,6 +27,8 @@ accounts-facebook
 useraccounts:flow-routing
 kadira:blaze-layout
 seba:minifiers-autoprefixer
-materialize:materialize
 arillo:flow-router-helpers
 email
+pagebakers:ionicons
+aldeed:template-extension
+materialize:materialize

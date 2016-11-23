@@ -1,0 +1,22 @@
+.dashboard{
+  .add-food, .add-symptoms{
+    text-align: center;
+    font-weight: 600;
+    color: $black;
+    .card-panel{
+      @include transition(.5s);
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+    .icons{
+      margin: 0 auto;
+    }
+    i{
+      font-size: $icon-size-big;
+    }
+    .ion-knife, .ion-pizza{
+      margin-right: 10px;
+    }
+  }
+}

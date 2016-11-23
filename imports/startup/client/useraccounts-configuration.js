@@ -3,13 +3,16 @@ let logOut = function(){
 }
 
 AccountsTemplates.configure({
-    //behavior
     sendVerificationEmail: true,
-    //appearance
     showForgotPasswordLink: true,
     negativeValidation: true,
     overrideLoginErrors:false,
-    //default routing
+    enablePasswordChange: true,
+    texts:{
+        button: {
+            changePwd: 'Update Password'
+        }
+    },
     defaultLayoutType: 'blaze', // Optional, the default is 'blaze'
     defaultTemplate: '',
     defaultLayout: 'layout',
@@ -25,6 +28,9 @@ AccountsTemplates.configureRoute('signUp');
 AccountsTemplates.configureRoute('forgotPwd');
 AccountsTemplates.configureRoute('resetPwd');
 AccountsTemplates.configureRoute('verifyEmail');
+AccountsTemplates.configureRoute('changePwd', {
+    redirect: '/settings'
+});
 AccountsTemplates.configureRoute('signIn', {
     layoutType: 'blaze',
     name: 'signin',
@@ -50,7 +56,8 @@ AccountsTemplates.addField({
     errStr: 'username already exists',
     func: function(value){
             var self = this;
-            Meteor.call("userExists", value, function(err, userExists){
+            console.log(self)
+            Meteor.call('userExists', value, function(err, userExists){
                 if (!userExists)
                     self.setSuccess();
                 else
@@ -59,7 +66,7 @@ AccountsTemplates.addField({
             });
             return;
         // Server
-        return Meteor.call("userExists", value)
+        return Meteor.call('userExists', value)
     },
 
 });

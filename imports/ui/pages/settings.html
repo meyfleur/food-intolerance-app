@@ -1,44 +1,37 @@
 <template name="settings">
-    <div class="container">
-        <h4>Settings</h4>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">mode_edit</i>
-                        <input value="{{currentUser.username}}" id="username" type="text" class="validate">
-                        <label class="active" for="username">Username</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">mode_edit</i>
-                        <input value="" id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">mode_edit</i>
-                        <input id="password" type="password" class="validate">
-                        <label for="password">old Password</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">mode_edit</i>
-                        <input id="new_password" type="password" class="validate">
-                        <label for="new_password">new Password</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">mode_edit</i>
-                        <input id="repeat_password" type="password" class="validate">
-                        <label for="repeat_password">new Password (again)</label>
-                    </div>
+    <div class="settings">
+        <div class="container">
+            <h4>Settings</h4>
+            <div class="row">
+                <div class="col s6">
+                    <form class="user-details">
+                        <div class="row">
+                            <div class="at-input input-field col s12">
+                                <input value="{{currentUser.username}}" id="username" type="text" class="validate">
+                                <label class="active" for="username">Username</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="at-input input-field col s12">
+                                <input value="{{userEmails}}" id="email" type="email" class="validate">
+                                <label class="active" for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <button class="reset-fields waves-effect red btn left" type="reset">
+                                Cancel
+                            </button>
+                        </div>
+                        <div class="input-field">
+                            <button class="waves-effect waves-green btn left" type="submit">Update Profile</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="row">
-                    <div class="col l2">
-                        <button class="waves-effect red darken-1 btn">Delete</button>
-                    </div>
-                    <div class="col l2">
-                        <button class="waves-effect waves-green btn">Save</button>
-                    </div>
+                <div class="col s6">
+                    {{> atForm state="changePwd"}}
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </template>
+

@@ -1,1 +1,7 @@
-@import '_common.scss'
+@import '../../node_modules/toastr/toastr.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+@import '_common.scss';
+@import '_settings.scss';
+@import '_dashboard.scss';
+@import '_addFoodSymptoms.scss';

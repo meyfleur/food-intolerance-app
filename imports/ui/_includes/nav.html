@@ -4,12 +4,14 @@
             <div class="nav-wrapper container">
             {{#if currentUser}}
                 <a href="{{pathFor 'dashboard'}}" class="brand-logo">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
                     <li><a href="{{pathFor 'results'}}">Results</a></li>
                     <li class="dropdown">
                         <a href="">
-                            <i class="material-icons">account_circle</i>
+                            <i class="ion-person"></i>
                             <span>{{currentUser.username}}</span>
                         </a>
                         <ul class="dropdown-list">
@@ -19,7 +21,7 @@
                     </li>
                 </ul>
                 {{else}}
-                <a class="brand-logo">Logo</a>
+                <a class="brand-logo" href="{{pathFor 'signin'}}">Logo</a>
             {{/if}}
             </div>
         </nav>

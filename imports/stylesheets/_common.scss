@@ -1,39 +1,48 @@
 /* CSS declarations go here */
 body{
-  .dropdown {
-    position: relative;
-    display: inline-block;
 
-    .material-icons{
-      display: inline-block;
-      vertical-align: bottom;
+  a{
+    @include transition(.6s);
+  }
+  .nav-wrapper{
+    li a, span{
+      font-size: 18px;
+      font-style: normal;
     }
-
-    .dropdown-list {
-      display: none;
-      position: absolute;
-      padding: 0;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-      li {
-        width: 100%;
-        a {
+    .dropdown {
+      position: relative;
+      z-index: 9;
+      i{
+        height: auto;
+        line-height: 24px;
+        display: inline;
+      }
+      .dropdown-list {
+        display: none;
+        position: absolute;
+        padding: 0;
+        background-color: $bg-light-white;
+        min-width: 170px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        li {
           width: 100%;
-          color: #ee6e73;
-          font-weight: bold;
+          a {
+            width: 100%;
+            color: $light-pink;
+          }
+        }
+        #at-nav-button{
+          padding: 0 28px;
         }
       }
-      #at-nav-button{
-        padding: 0 28px;
-      }
+    }
+
+    .dropdown:hover .dropdown-list {
+      display: block;
     }
   }
 
-  .dropdown:hover .dropdown-list {
-    display: block;
-  }
 
   footer{
     .modal{
@@ -47,7 +56,3 @@ body{
   }
 
 }
-
-
-
-

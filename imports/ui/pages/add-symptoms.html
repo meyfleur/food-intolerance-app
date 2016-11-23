@@ -1,0 +1,32 @@
+<template name="add-symptoms">
+    <div class="add-symptoms">
+        <div class="container">
+          <div class="row ">
+              <div class="col m6">
+                  <h5>add Symptoms</h5>
+                  <div class="date-picker">
+                      <label>Date:</label>
+                      <input type="date" class="datepicker" value="pick up date">
+                  </div>
+                  <div class="time-picker">
+                      <label for="timepicker">Time</label>
+                      <input id="timepicker" class="timepicker" type="time">
+                  </div>
+              </div>
+           </div>
+           <div class="row">
+             <div class="col m6">
+               <a href="{{pathFor 'dashboard'}}"><button class="waves-effect red btn left">Cancel</button></a>
+               <a href="{{pathFor 'food-symptoms-list'}}"><button class="waves-effect waves-green btn right">Submit</button></a>
+             </div>
+           </div>
+        </div>
+    </div>
+    <script>
+      $(function() {
+         $('.datepicker').pickadate({
+           close: 'submit'
+         });
+      });
+    </script>
+</template>

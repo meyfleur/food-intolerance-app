@@ -1,7 +1,3 @@
-import { Meteor } from 'meteor/meteor';
+import './account-methods';
+import '../imports/startup/server/index';
 
-import '../lib/server/account-methods.js';
-
-Meteor.startup(() => {
-    process.env.MAIL_URL
-});
