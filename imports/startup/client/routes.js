@@ -55,7 +55,7 @@ FlowRouter.route('/add-food/', {
     name: 'addFood.show',
     action(){
         BlazeLayout.render('layout', {
-            main: 'add-food',
+            main: 'addFood',
             nav: 'nav',
             footer: 'footer'
         })
@@ -66,7 +66,7 @@ FlowRouter.route('/add-symptoms/', {
     name: 'addSymptoms.show',
     action(){
         BlazeLayout.render('layout', {
-            main: 'add-symptoms',
+            main: 'addSymptoms',
             nav: 'nav',
             footer: 'footer'
         })

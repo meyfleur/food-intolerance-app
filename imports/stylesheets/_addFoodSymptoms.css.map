@@ -4,6 +4,6 @@
 	"sources": [
 		"_addFoodSymptoms.scss"
 	],
-	"mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,KAAK,EAAE,IAAK;EACZ,SAAS,EAAE,KAAM;CACpB",
+	"mappings": "AAAA,AAAA,cAAc,CAAA;EACZ,KAAK,EAAE,IAAK;EACZ,SAAS,EAAE,KAAM;CAClB",
 	"names": []
 }

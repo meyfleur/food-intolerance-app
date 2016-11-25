@@ -1,4 +1,3 @@
-import { Template } from 'meteor/templating'
 import toastr from 'toastr'
 import './customPwdFormBtn.html'
 import './settings.html'
