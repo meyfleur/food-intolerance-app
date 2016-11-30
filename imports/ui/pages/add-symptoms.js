@@ -5,13 +5,26 @@ Template.addSymptoms.helpers({
 
 });
 
-Template.addSymptoms.inheritsHooksFrom('addFood')
-Template.addSymptoms.inheritsHelpersFrom('addFood')
-
 Template.addSymptoms.rendered = (function() {
+  $('.datepicker').pickadate({
+    close: 'submit',
+    onStart: function() {
+       var date = new Date()
+       this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
+     }
+   });
     $('#symptom-intensity-slider').ionRangeSlider({
-      values: ['light', 'middle', 'strong'],
+      values: ['none','sensible','light', 'middle', 'strong'],
       grid: true,
       from: 0
    });
+   $('#physical-state-slider').ionRangeSlider({
+     values: ['none','healthy', 'ailing', 'sick'],
+     grid: true,
+     from: 0
+  });
+   $('.durationpicker').lolliclock({
+     hour24: true
+   });
+
 });

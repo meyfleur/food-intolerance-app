@@ -32,3 +32,6 @@ pagebakers:ionicons
 aldeed:template-extension
 materialize:materialize
 momentjs:moment
+aldeed:simple-schema
+aldeed:collection2
+pauldowman:dotenv

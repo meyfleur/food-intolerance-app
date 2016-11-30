@@ -8,17 +8,32 @@
                       <label>Date:</label>
                       <input type="date" class="datepicker">
                   </div>
-                  <div class="time-picker">
-                      <label for="timepicker">Time:</label>
-                      <input class="timepicker" value="{{getCurrentTime}}">
+                  <div class="duration-picker">
+                      <label for="time">Duration:</label>
+                      <input class="durationpicker" value="pick the duration">
+                  </div>
+                  <div class="notes">
+                    <label for="note">Notes:</label>
+                    <textarea id="symptom-note" class="materialize-textarea"></textarea>
                   </div>
               </div>
               <div class="col m6">
-                <label for="symptom-name">Symptom:</label>
-                <input class="symptom-name" type="text">
-                <label for="intensity">Intensity:</label>
+                <div class="name">
+                  <label for="symptom-name">Symptoms:</label>
+                  <input class="symptom-name" type="text">
+                </div>
+              </div>
+              <div class="intensity col m6">
+                <label for="symptom-intensity">Intensity:</label>
                 <input type="text" id="symptom-intensity-slider" name="symptom-intensity" value="" />
               </div>
+              <div class="stress col m6">
+                <label for="stress-lvl">Physical State:</label>
+                <input type="text" id="physical-state-slider" name="stress-lvl" value="" />
+              </div>
+           </div>
+           <div class="row">
+
            </div>
            <div class="row">
              <div class="col m6">

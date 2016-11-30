@@ -16,4 +16,14 @@ Template.addFood.onRendered(function(){
      }
    });
    $('.timepicker').lolliclock();
+   $('#stress-level-slider').ionRangeSlider({
+     values: ['none','relaxed','normal','light stressed','stressed'],
+     grid: true,
+     from: 0
+  });
+  $('#condition-slider').ionRangeSlider({
+    values: ['none','calmly','normal','in a hurry','stressed'],
+    grid: true,
+    from: 0
+ });
 });
