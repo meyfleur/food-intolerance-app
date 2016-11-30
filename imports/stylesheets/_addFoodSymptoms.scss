@@ -1,4 +1,12 @@
-.picker__frame{
-  width: 100%;
-  max-width: 400px;
+.add-symptoms{
+  .picker__frame{
+    width: 100%;
+    max-width: 400px;
+  }
+  .irs-from, .irs-to, .irs-single{
+    background: $turqoise;
+  }
+  .irs-from:after, .irs-to:after, .irs-single:after{
+    border-top-color: $turqoise;
+  }
 }

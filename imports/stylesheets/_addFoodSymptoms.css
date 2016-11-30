@@ -1,6 +1,14 @@
-.picker__frame {
+.add-symptoms .picker__frame {
   width: 100%;
   max-width: 400px;
+}
+
+.add-symptoms .irs-from, .add-symptoms .irs-to, .add-symptoms .irs-single {
+  background: #26a69a;
+}
+
+.add-symptoms .irs-from:after, .add-symptoms .irs-to:after, .add-symptoms .irs-single:after {
+  border-top: #26a69a;
 }
 
 /*# sourceMappingURL=_addFoodSymptoms.css.map */

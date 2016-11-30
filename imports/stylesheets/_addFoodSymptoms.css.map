@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "_addFoodSymptoms.css",
-	"sources": [
-		"_addFoodSymptoms.scss"
-	],
-	"mappings": "AAAA,AAAA,cAAc,CAAA;EACZ,KAAK,EAAE,IAAK;EACZ,SAAS,EAAE,KAAM;CAClB",
-	"names": []
-}

@@ -28,21 +28,4 @@
            </div>
         </div>
     </div>
-    <script>
-      $(function() {
-        $('.datepicker').pickadate({
-          close: 'submit',
-          onStart: function() {
-             var date = new Date()
-             this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
-           }
-         });
-         $('.timepicker').lolliclock();
-         $('#symptom-intensity-slider').ionRangeSlider({
-           values: ['light', 'middle', 'strong'],
-           grid: true,
-           from: 0
-        });
-      });
-    </script>
 </template>

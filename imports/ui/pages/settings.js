@@ -1,4 +1,3 @@
-import toastr from 'toastr'
 import './customPwdFormBtn.html'
 import './settings.html'
 
@@ -31,13 +30,21 @@ Template.settings.events({
         event.preventDefault()
 
         if(username != user.username){
-            Meteor.call('changeUsername', username)
-            toastr.success();
+            Meteor.call('changeUsername', username, function(err){
+              if(err)
+                Materialize.toast('<i class="ion-close-round"></i>', 8000, 'red')
+              else
+                Materialize.toast('<i class="ion-checkmark-round"></i>',8000,'teal lighten-1 left');
+            })
         }
 
         if(email != mail) {
-            Meteor.call('changeEmail', email)
-            toastr.success();
+            Meteor.call('changeEmail', email, function(err) {
+              if(err)
+                Materialize.toast('<i class="ion-close-round"></i>', 8000, 'red')
+              else
+                Materialize.toast('<i class="ion-checkmark-round"></i>', 8000, 'teal lighten-1');
+            })
         }
     }
 
@@ -45,14 +52,3 @@ Template.settings.events({
 });
 
 Template.customPwdFormBtn.replaces('atPwdFormBtn');
-
-toastr.options = {
-    "closeButton": false,
-    "debug": false,
-    "positionClass": "toast-top-left",
-    "preventDuplicates": false,
-    "onclick": null,
-    "hideEasing": "linear",
-    "showMethod": "fadeIn",
-    "hideMethod": "fadeOut"
-}

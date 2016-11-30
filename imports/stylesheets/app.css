@@ -302,6 +302,12 @@ body footer .footer-copyright .data_protection a {
   display: inline-block;
 }
 
+@medi only screen and (min-width: 993px) {
+  #toast-container {
+    right: 30%;
+  }
+}
+
 .dashboard .add-food, .dashboard .add-symptoms {
   text-align: center;
   font-weight: 600;
@@ -332,9 +338,15 @@ body footer .footer-copyright .data_protection a {
   margin-right: 10px;
 }
 
-.picker__frame {
+.add-symptoms .picker__frame {
   width: 100%;
   max-width: 400px;
 }
 
-/*# sourceMappingURL=app.css.map */
+.add-symptoms .irs-from, .add-symptoms .irs-to, .add-symptoms .irs-single {
+  background: #26a69a;
+}
+
+.add-symptoms .irs-from:after, .add-symptoms .irs-to:after, .add-symptoms .irs-single:after {
+  border-top-color: #26a69a;
+}

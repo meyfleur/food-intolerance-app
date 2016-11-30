@@ -1,10 +1,17 @@
-import dateFormat from 'dateformat'
 import './add-symptoms.html'
+import './add-food.js'
 
 Template.addSymptoms.helpers({
-  'getCurrentTime'(){
-    let time = new Date()
-    let currentTime = dateFormat(time, 'h:MM TT')
-    return currentTime
-  }
+
+});
+
+Template.addSymptoms.inheritsHooksFrom('addFood')
+Template.addSymptoms.inheritsHelpersFrom('addFood')
+
+Template.addSymptoms.rendered = (function() {
+    $('#symptom-intensity-slider').ionRangeSlider({
+      values: ['light', 'middle', 'strong'],
+      grid: true,
+      from: 0
+   });
 });

@@ -26,16 +26,4 @@
         </div>
       </div>
     </div>
-    <script>
-      $(function() {
-         $('.datepicker').pickadate({
-           close: 'submit',
-           onStart: function() {
-              var date = new Date()
-              this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
-            }
-          });
-         $('.timepicker').lolliclock();
-      });
-    </script>
 </template>
