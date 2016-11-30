@@ -9,13 +9,31 @@
                     <input type="date" class="datepicker">
                 </div>
                 <div class="time-picker">
-                  <label for="timepicker">Time:</label>
+                  <label for="time">Duration:</label>
                   <input class="timepicker" value="{{getCurrentTime}}">
+              </div>
+              <div class="notes">
+                <label for="note">Medicaments:</label>
+                <input class="note" type="text" value="">
+              </div>
+              <div class="notes">
+                <label for="note">Notes:</label>
+                <textarea id="food-note" class="materialize-textarea"></textarea>
               </div>
             </div>
             <div class="col m6">
-              <label for="food-name">Food:</label>
-              <input class="food-name" type="text" value="">
+              <div class="name">
+                <label for="food-name">Drink / Food:</label>
+                <input class="food-name" type="text" value="">
+              </div>
+              <div class="stress">
+                <label for="stress-lvl">current Stress Level:</label>
+                <input type="text" id="stress-level-slider" name="stress-lvl" value="" />
+              </div>
+              <div class="condition">
+                <label for="condition">current Condition:</label>
+                <input type="text" id="condition-slider" name="condition" value="" />
+              </div>
             </div>
         </div>
         <div class="row">

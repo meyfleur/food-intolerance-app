@@ -10,7 +10,7 @@
 
   // Default options
   LolliClock.DEFAULTS = {
-    startTime: 'now',	      // default time, '' or 'now' or 'H:MM AM'
+    startTime: '',	      // default time, '' or 'now' or 'H:MM AM'
     autoclose: false,    	// show Cancel/OK buttons
     vibrate: true,        // vibrate the device when dragging clock hand
     hour24:false
@@ -45,7 +45,7 @@
 
   // Clock size
   var dialRadius = 84;
-  var radius = 70;
+  var radius = 50;
   var outSizeRadius = 70;
   var tickRadius = 12;
   var diameter = dialRadius * 2;
@@ -341,7 +341,7 @@
     var minLeft = popoverMargin;
     var maxTop = $(window).height() + $(window).scrollTop() - popoverMargin - popover.height();
     var minTop = popoverMargin + $(window).scrollTop();
-    var topOffset = element.offset().top - 100
+    var topOffset = element.offset().top;
     var styles = {};
 
     styles.top = topOffset < minTop ? minTop : topOffset > maxTop ? maxTop : topOffset;
@@ -724,7 +724,7 @@
     if(!this.options.hour24){
       value = this.hours + ':' + leadingZero(this.minutes) + " " + this.amOrPm;
     }else{
-      value = leadingZero(this.hours) + ':' + leadingZero(this.minutes) ;
+      value = leadingZero(this.hours) + ':' + leadingZero(this.minutes + ' hours') ;
     }
     if (value !== last) {
       this.input.prop('value', value);
