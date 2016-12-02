@@ -6,6 +6,6 @@ import './pages/settings.js'
 import './pages/add-food.js'
 import './pages/add-symptoms.js'
 
-Meteor.startup(function () {
-   $('.modal-trigger').leanModal()
-});
+Template.footer.onRendered(()=>{
+  $('.modal-trigger').leanModal()
+})

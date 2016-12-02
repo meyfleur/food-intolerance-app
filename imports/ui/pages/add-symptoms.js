@@ -5,7 +5,8 @@ Template.addSymptoms.helpers({
 
 });
 
-Template.addSymptoms.rendered = (function() {
+Template.addSymptoms.rendered = (()=>{
+
   $('.datepicker').pickadate({
     close: 'submit',
     onStart: function() {
@@ -13,16 +14,19 @@ Template.addSymptoms.rendered = (function() {
        this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
      }
    });
-    $('#symptom-intensity-slider').ionRangeSlider({
+
+  $('#symptom-intensity-slider').ionRangeSlider({
       values: ['none','sensible','light', 'middle', 'strong'],
       grid: true,
       from: 0
    });
+
    $('#physical-state-slider').ionRangeSlider({
      values: ['none','healthy', 'ailing', 'sick'],
      grid: true,
      from: 0
-  });
+   });
+
    $('.durationpicker').lolliclock({
      hour24: true
    });

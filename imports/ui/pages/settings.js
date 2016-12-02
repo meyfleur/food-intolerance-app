@@ -30,16 +30,16 @@ Template.settings.events({
         event.preventDefault()
 
         if(username != user.username){
-            Meteor.call('changeUsername', username, function(err){
+            Meteor.call('changeUsername', username, (err) => {
               if(err)
                 Materialize.toast('<i class="ion-close-round"></i>', 8000, 'red')
               else
-                Materialize.toast('<i class="ion-checkmark-round"></i>',8000,'teal lighten-1 left');
+                Materialize.toast('<i class="ion-checkmark-round"></i>',8000,'teal lighten-1');
             })
         }
 
         if(email != mail) {
-            Meteor.call('changeEmail', email, function(err) {
+            Meteor.call('changeEmail', email, (err) => {
               if(err)
                 Materialize.toast('<i class="ion-close-round"></i>', 8000, 'red')
               else

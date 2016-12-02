@@ -35,3 +35,7 @@ momentjs:moment
 aldeed:simple-schema
 aldeed:collection2
 pauldowman:dotenv
+check
+reactive-dict
+mdg:validation-error
+mdg:validated-method

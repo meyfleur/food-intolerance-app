@@ -1,5 +1,18 @@
 /* CSS declarations go here */
-body a {
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+}
+
+html body #__blaze-root .wrapper {
+  height: auto;
+  min-height: calc(100vh - 135px);
+}
+
+html body a {
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
   -o-transition: 0.6s;
@@ -7,23 +20,23 @@ body a {
   transition: 0.6s;
 }
 
-body .nav-wrapper li a, body .nav-wrapper span {
+html body .nav-wrapper li a, html body .nav-wrapper span {
   font-size: 18px;
   font-style: normal;
 }
 
-body .nav-wrapper .dropdown {
+html body .nav-wrapper .dropdown {
   position: relative;
   z-index: 9;
 }
 
-body .nav-wrapper .dropdown i {
+html body .nav-wrapper .dropdown i {
   height: auto;
   line-height: 24px;
   display: inline;
 }
 
-body .nav-wrapper .dropdown .dropdown-list {
+html body .nav-wrapper .dropdown .dropdown-list {
   display: none;
   position: absolute;
   padding: 0;
@@ -33,28 +46,28 @@ body .nav-wrapper .dropdown .dropdown-list {
   z-index: 1;
 }
 
-body .nav-wrapper .dropdown .dropdown-list li {
+html body .nav-wrapper .dropdown .dropdown-list li {
   width: 100%;
 }
 
-body .nav-wrapper .dropdown .dropdown-list li a {
+html body .nav-wrapper .dropdown .dropdown-list li a {
   width: 100%;
   color: #ee6e73;
 }
 
-body .nav-wrapper .dropdown .dropdown-list #at-nav-button {
+html body .nav-wrapper .dropdown .dropdown-list #at-nav-button {
   padding: 0 28px;
 }
 
-body .nav-wrapper .dropdown:hover .dropdown-list {
+html body .nav-wrapper .dropdown:hover .dropdown-list {
   display: block;
 }
 
-body footer .modal {
+html body footer .modal {
   max-height: 100%;
 }
 
-body footer .footer-copyright .data_protection a {
+html body footer .footer-copyright .data_protection a {
   margin-left: 10px;
 }
 
