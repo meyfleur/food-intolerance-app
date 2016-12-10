@@ -5,6 +5,7 @@ html {
 
 html body {
   height: 100%;
+  /** date time picker **/
 }
 
 html body #__blaze-root .wrapper {
@@ -18,6 +19,10 @@ html body a {
   -o-transition: 0.6s;
   -ms-transition: 0.6s;
   transition: 0.6s;
+}
+
+html body .btn {
+  border-radius: 5px;
 }
 
 html body .nav-wrapper li a, html body .nav-wrapper span {
@@ -61,6 +66,32 @@ html body .nav-wrapper .dropdown .dropdown-list #at-nav-button {
 
 html body .nav-wrapper .dropdown:hover .dropdown-list {
   display: block;
+}
+
+html body .picker__frame {
+  width: 100%;
+  max-width: 400px;
+}
+
+html body div.lolliclock-popover {
+  width: 290px;
+}
+
+html body .irs {
+  margin-top: 10px;
+}
+
+html body .irs .irs-grid-text {
+  font-size: 11px;
+}
+
+html body .irs .irs-from, html body .irs .irs-to, html body .irs .irs-single {
+  background: #26a69a;
+  font-size: 11px;
+}
+
+html body .irs .irs-from:after, html body .irs .irs-to:after, html body .irs .irs-single:after {
+  border-top-color: #26a69a;
 }
 
 html body footer .modal {
@@ -115,36 +146,20 @@ html body footer .footer-copyright .data_protection a {
   margin-right: 10px;
 }
 
-.add-symptoms .intensity {
-  margin-bottom: 30px;
+@media screen and (min-width: 992px) {
+  .results .modal {
+    width: 35%;
+  }
 }
 
-.add-symptoms .picker__frame {
-  width: 100%;
-  max-width: 400px;
+.add-symptoms .intensity {
+  margin-bottom: 30px;
 }
 
 .add-food .stress {
   margin-bottom: 30px;
 }
 
-#food-note, #symptom-note {
+.add-symptoms .notes, .add-food .notes {
   padding: 0;
-}
-
-.irs {
-  margin-top: 10px;
-}
-
-.irs .irs-grid-text {
-  font-size: 11px;
-}
-
-.irs .irs-from, .irs .irs-to, .irs .irs-single {
-  background: #26a69a;
-  font-size: 11px;
-}
-
-.irs .irs-from:after, .irs .irs-to:after, .irs .irs-single:after {
-  border-top-color: #26a69a;
 }

@@ -30,7 +30,6 @@ arillo:flow-router-helpers
 email@1.1.17_1
 pagebakers:ionicons
 aldeed:template-extension
-materialize:materialize
 momentjs:moment
 aldeed:simple-schema
 aldeed:collection2
@@ -39,3 +38,4 @@ check
 reactive-dict
 mdg:validation-error
 mdg:validated-method
+materialize:materialize

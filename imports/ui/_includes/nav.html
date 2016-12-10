@@ -3,25 +3,51 @@
         <nav>
             <div class="nav-wrapper container">
             {{#if currentUser}}
-                <a href="{{pathFor 'dashboard'}}" class="brand-logo">Logo</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="{{pathFor '/dashboard'}}" class="brand-logo">Logo</a>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
-                    <li><a href="{{pathFor 'results'}}">Results</a></li>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{pathFor '/dashboard'}}">Dashboard</a></li>
+                    <li><a href="{{pathFor '/food-symptoms-list'}}">List</a></li>
+                    <li><a href="{{pathFor '/results'}}">Results</a></li>
                     <li class="dropdown">
                         <a href="">
                             <i class="ion-person"></i>
                             <span>{{currentUser.username}}</span>
                         </a>
                         <ul class="dropdown-list">
-                            <li><a href="{{pathFor 'settings'}}">Settings</a></li>
+                            <li><a href="{{pathFor '/settings'}}">Settings</a></li>
                             {{> atNavButton}}
                         </ul>
                     </li>
                 </ul>
+                <ul class="side-nav" id="slide-out">
+                  <li><div class="userView">
+                      <div class="background">
+                        <img src="images/office.jpg">
+                      </div>
+                      <a href="#!name">
+                        <i class="ion-person"></i>
+                        <span class="white-text name">{{currentUser.username}}</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li><a href="{{pathFor '/dashboard'}}">Dashboard</a></li>
+                  <li><a href="{{pathFor '/food-symptoms-list'}}">List</a></li>
+                  <li><a href="{{pathFor '/results'}}">Results</a></li>
+                  <li class="collapsible collapsible-accordion">
+                      <a href="" class="collapsible-header">
+                          <i class="ion-person"></i>
+                          <span>{{currentUser.username}}</span>
+                      </a>
+                      <ul class="collapsible-body">
+                          <li><a href="{{pathFor '/settings'}}">Settings</a></li>
+                          {{> atNavButton}}
+                      </ul>
+                  </li>
+                </ul>
                 {{else}}
-                <a class="brand-logo" href="{{pathFor 'signin'}}">Logo</a>
+                <a class="brand-logo" href="{{pathFor '/signin'}}">Logo</a>
             {{/if}}
             </div>
         </nav>

@@ -1,14 +1,11 @@
-.add-symptoms .picker__frame {
-  width: 100%;
-  max-width: 400px;
+.add-symptoms .intensity {
+  margin-bottom: 30px;
 }
 
-.add-symptoms .irs-from, .add-symptoms .irs-to, .add-symptoms .irs-single {
-  background: #26a69a;
+.add-food .stress {
+  margin-bottom: 30px;
 }
 
-.add-symptoms .irs-from:after, .add-symptoms .irs-to:after, .add-symptoms .irs-single:after {
-  border-top: #26a69a;
+.add-symptoms .notes, .add-food .notes {
+  padding: 0;
 }
-
-/*# sourceMappingURL=_addFoodSymptoms.css.map */

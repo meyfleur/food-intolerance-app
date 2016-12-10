@@ -1,11 +1,15 @@
 import {Mongo} from 'meteor/mongo';
 
-const Food = new Mongo.Collection('food');
-export default Food;
+const Food = new Mongo.Collection('food')
+export default Food
 
 Food.allow({
   insert: () => {
+    if(Meteor.user()){
       return true
+    } else {
+       return false
+    }
   },
   update: () => {
     if(Meteor.user()){
@@ -30,7 +34,7 @@ FoodSchema = new SimpleSchema({
   },
   username:{
     type: String,
-    label: 'username'
+    label: 'username:'
   },
   createdAt:{
     type: Date,
@@ -39,7 +43,8 @@ FoodSchema = new SimpleSchema({
   food:{
     type: [String],
     label: 'food:',
-    optional: true
+    minCount: 1,
+    defaultValue: []
   },
   drink:{
     type: [String],
@@ -48,31 +53,41 @@ FoodSchema = new SimpleSchema({
   },
   date:{
     type: String,
-    label: 'date'
+    label: 'date:'
   },
   time:{
     type: String,
-    label: 'time'
+    label: 'time:'
   },
   notes: {
     type: String,
-    label: 'notes',
+    label: 'notes:',
     optional: true
   },
   medicaments: {
     type: String,
-    label: 'medicaments',
+    label: 'medicaments:',
     optional: true
   },
   stressLvl:{
+    type: Number,
+    label: 'stress-level index:',
+    allowedValues: [0,1,2,3,4]
+  },
+  stressLvlName:{
     type: String,
-    label: 'current stress-level',
+    label: 'current stress-level:',
     allowedValues: ['none','relaxed','normal','light stressed','stressed']
   },
-  condition:{
+  conditionName:{
     type: String,
-    label: 'current condition',
+    label: 'current condition:',
     allowedValues: ['none','calmly','normal','in a hurry','stressed']
+  },
+  condition:{
+    type: Number,
+    label: 'stress-level index:',
+    allowedValues: [0,1,2,3,4]
   }
 })
 

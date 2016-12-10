@@ -5,7 +5,9 @@ import './layout.js'
 import './pages/settings.js'
 import './pages/add-food.js'
 import './pages/add-symptoms.js'
-
-Template.footer.onRendered(()=>{
-  $('.modal-trigger').leanModal()
-})
+import './pages/results.js'
+import './pages/list.js'
+import './pages/item-food.js'
+import './pages/item-symptoms.js'
+import './pages/update-food.js'
+import './pages/update-symptoms.js'
