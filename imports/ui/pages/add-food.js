@@ -9,7 +9,7 @@ Template.addFood.helpers({
 });
 
 Template.addFood.events({
-  'submit .insert-food':(evt, instance)=>{
+  'submit .insert-food'(evt, instance){
      evt.preventDefault()
      const userId = Meteor.userId()
      const target = evt.target
@@ -83,6 +83,11 @@ Template.addFood.onRendered(function(){
        var date = new Date()
        this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
      }
+   });
+
+   $('.chip').material_chip({
+     placeholder: 'Enter a tag',
+     secondaryPlaceholder: '+Tag',
    });
 
    $('.timepicker').lolliclock();

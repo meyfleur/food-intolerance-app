@@ -20,7 +20,7 @@ blaze@2.1.8
 blaze-html-templates@1.0.4
 blaze-tools@1.0.9
 boilerplate-generator@1.0.9
-caching-compiler@1.0.6
+caching-compiler@1.1.7
 caching-html-compiler@1.0.6
 callback-hook@1.0.9
 check@1.2.3
@@ -39,7 +39,7 @@ email@1.1.17_1
 es5-shim@4.6.14_1
 facebook@1.2.8
 fastclick@1.0.12
-fourseven:scss@3.8.1
+fourseven:scss@3.10.0
 geojson-utils@1.0.9
 hot-code-push@1.0.4
 html-tools@1.0.10
@@ -53,7 +53,7 @@ launch-screen@1.0.12
 livedata@1.0.18
 localstorage@1.0.11
 logging@1.1.15_1
-materialize:materialize@0.97.6
+materialize:materialize@0.97.7
 mdg:validated-method@1.1.0
 mdg:validation-error@0.2.0
 meteor@1.2.17_1

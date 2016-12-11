@@ -33,7 +33,7 @@ Template.updateSymptoms.events({
       } else {
         Materialize.toast('<i class="ion-checkmark-round"></i>',2000,'teal lighten-1')
           Meteor.setTimeout(function(){
-            FlowRouter.go('/results')
+            FlowRouter.go('/food-symptoms-list')
         }, 3000);
       }
     })

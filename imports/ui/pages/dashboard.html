@@ -3,28 +3,49 @@
         <div class="container">
             <h4>Dashboard</h4>
             <div class="row">
-                <div class="col s12 m5 l4">
-                    <a href="{{pathFor 'add-food'}}" class="add-food">
+                <div class="col s12 m5 l5">
+                    <a href="{{pathFor '/add-food'}}" class="add-food">
                         <div class="card-panel light-blue lighten-1">
                             <div class="icons">
                                 <i class="ion-fork"></i>
                                 <i class="ion-knife"></i>
                                 <i class="ion-pizza"></i>
-                                <i class="ion-coffee"></i>
-                                <i class="ion-wineglass"></i>
                             </div>
                             <p>add Food & Drink</p>
                         </div>
                     </a>
                 </div>
-                <div class="col s12 m5 l4">
-                    <a href="{{pathFor 'add-symptoms'}}" class="add-symptoms">
+                <div class="col s12 m5 l5">
+                    <a href="{{pathFor '/add-symptoms'}}" class="add-symptoms">
                         <div class="card-panel amber darken-3">
                             <div class="icons">
                                 <i class="ion-ios-pulse-strong"></i>
                                 <i class="ion-ios-body"></i>
                             </div>
                             <p>add Symptoms</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s12 m5 l5">
+                    <a href="{{pathFor '/results'}}" class="results">
+                        <div class="card-panel green lighten-1">
+                            <div class="icons">
+                                <i class="ion-podium"></i>
+
+                            </div>
+                            <p>Results</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s12 m5 l5">
+                    <a href="{{pathFor '/food-symptoms-list'}}" class="list">
+                        <div class="card-panel yellow darken-1">
+                            <div class="icons">
+
+
+                                <i class="ion-android-list"></i>
+                            </div>
+                            <p>Food-Symptoms List</p>
                         </div>
                     </a>
                 </div>
