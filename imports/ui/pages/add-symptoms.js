@@ -5,16 +5,17 @@ Template.addSymptoms.events({
      evt.preventDefault()
      const userId = Meteor.userId()
      const target = evt.target
-     let symptomsset = target.symptoms.value == '' ? [] : target.symptoms.value
-     const physicalValue = $('#physical-state-slider').data("ionRangeSlider");
-     const intensityValue = $('#symptom-intensity-slider').data("ionRangeSlider");
+     const physicalValue = $('#physical-state-slider').data("ionRangeSlider")
+     const intensityValue = $('#symptom-intensity-slider').data("ionRangeSlider")
+     const symptomsset = $(target.symptoms).materialtags('items')
+
      const symptomsEntry = {
        createdBy: userId,
        username: Meteor.users.findOne(userId).username,
        createdAt: new Date(),
        date: target.date.value,
        duration: target.duration.value,
-       symptoms: [symptomsset],
+       symptoms: symptomsset,
        intensity: intensityValue.old_from,
        intensityName: target.intensity.value,
        physicalState: physicalValue.old_from,
@@ -38,6 +39,8 @@ Template.addSymptoms.events({
 });
 
 Template.addSymptoms.onRendered(function(){
+
+  $('input[data-role=materialtags]').materialtags()
 
   $('.datepicker').pickadate({
     close: 'submit',

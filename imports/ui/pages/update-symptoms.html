@@ -20,20 +20,21 @@
                     </div>
                 </div>
                 <div class="col s12 m6">
-                  <div class="name">
                     <label for="symptom-name">Symptoms:</label>
-                    <input class="symptom-name" name="symptoms" type="text" value="{{symptoms}}">
-                  </div>
-                </div>
-                <div class="intensity col s12 m6">
+                    {{#each symptoms}}
+                    <span class="chip">{{this}}<i class="material-icons" data-role="remove">close</i></span>
+                    {{/each}}
+                    <input type="text" name="symptoms" value="{{symptoms}}" data-role="materialtags"/>
+                <div class="intensity">
                   <label for="symptom-intensity">Intensity:</label>
                   <input type="text" id="symptom-intensity-slider" name="intensity"/>
                 </div>
-                <div class="stress col s12 m6">
+                <div class="stress">
                   <label for="stress-lvl">Physical State:</label>
                   <input type="text" id="physical-state-slider" name="physicalState"/>
                 </div>
               </div>
+           </div>
            <div class="row">
              <div class="col s12 m6">
                <a href="{{pathFor '/food-symptoms-list'}}"><button class="waves-effect red btn left">Cancel</button></a>

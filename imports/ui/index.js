@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating'
 import 'ion-rangeslider'
+import 'materialize-tags'
 import '../js/lolliclock.js'
 import './layout.js'
 import './pages/settings.js'

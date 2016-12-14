@@ -13,18 +13,20 @@ Template.addFood.events({
      evt.preventDefault()
      const userId = Meteor.userId()
      const target = evt.target
-     let foodset = target.food.value == '' ? [] : target.food.value
-     const drinkset = target.drink.value
      const stresslvlValue = $('#stress-level-slider').data("ionRangeSlider");
      const conditionValue = $('#condition-slider').data("ionRangeSlider");
+
+     const foodset = $(target.food).materialtags('items')
+     const drinkset = $(target.drink).materialtags('items')
+
      const foodEntry = {
        createdBy: userId,
        username: Meteor.users.findOne(userId).username,
        createdAt: new Date(),
        date: target.datepicker.value,
        time: target.timepicker.value,
-       food: [foodset],
-       drink: [drinkset],
+       food: foodset,
+       drink: drinkset,
        stressLvlName: target.stresslvl.value,
        stressLvl: stresslvlValue.old_from,
        conditionName: target.condition.value,
@@ -37,12 +39,9 @@ Template.addFood.events({
         if (err) {
           console.log(err)
           Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
-
         } else {
-          Materialize.toast('<i class="ion-checkmark-round"></i>',2000,'teal lighten-1')
-            Meteor.setTimeout(function(){
-              FlowRouter.go('/food-symptoms-list')
-          }, 3000);
+          Materialize.toast('<i class="ion-checkmark-round"></i>', 2000, 'teal lighten-1')
+          Meteor.setTimeout(()=> FlowRouter.go('/food-symptoms-list'), 3000);
         }
       });
    },
@@ -76,6 +75,9 @@ Template.addFood.onCreated(function(){
 });
 
 Template.addFood.onRendered(function(){
+
+  $('input[data-role=materialtags]').materialtags()
+
   $('.datepicker').pickadate({
     close: 'submit',
     clear: '',
@@ -83,11 +85,6 @@ Template.addFood.onRendered(function(){
        var date = new Date()
        this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
      }
-   });
-
-   $('.chip').material_chip({
-     placeholder: 'Enter a tag',
-     secondaryPlaceholder: '+Tag',
    });
 
    $('.timepicker').lolliclock();

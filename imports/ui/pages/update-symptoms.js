@@ -12,13 +12,13 @@ Template.updateSymptoms.events({
   'submit .update-symptoms'(evt){
     evt.preventDefault()
     const target = evt.target
-    const symptomsset = target.symptoms.value == '' ? [] : target.symptoms.value
     const physicalValue = $('#physical-state-slider').data("ionRangeSlider");
     const intensityValue = $('#symptom-intensity-slider').data("ionRangeSlider");
+    const symptomsset = $(target.symptoms).materialtags('items')
     const symptomsUpdate = {
       date: target.date.value,
       duration: target.duration.value,
-      symptoms: [symptomsset],
+      symptoms: symptomsset,
       intensity: intensityValue.old_from,
       intensityName: target.intensity.value,
       physicalState: physicalValue.old_from,
@@ -49,6 +49,7 @@ Template.updateSymptoms.onRendered(function(){
     const entry_id = FlowRouter.getParam('entry_id')
     const intensityValue = Symptoms.findOne(entry_id, {fields: {intensity:1}})
     const physicalStateValue = Symptoms.findOne(entry_id, {fields: {physicalState:1}})
+    $('input[data-role=materialtags]').materialtags()
 
     $('.datepicker').pickadate({
       close: 'submit',
