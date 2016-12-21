@@ -2,10 +2,6 @@
   .intensity{
     margin-bottom: 30px;
   }
-  .picker__frame{
-    width: 100%;
-    max-width: 400px;
-  }
 }
 
 .add-food{
@@ -13,19 +9,26 @@
     margin-bottom: 30px;
   }
 }
-#food-note, #symptom-note{
-  padding: 0;
+
+.chips{
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #e4e4e4;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
-.irs{
-  margin-top: 10px;
-  .irs-grid-text{
-    font-size: 11px;
+.add-symptoms, .add-food{
+  .notes{
+    padding: 0;
   }
-  .irs-from, .irs-to, .irs-single{
-    background: $turqoise;
-    font-size: 11px;
-  }
-  .irs-from:after, .irs-to:after, .irs-single:after{
-    border-top-color: $turqoise;
-  }
+}
+
+text{
+  display: none
 }

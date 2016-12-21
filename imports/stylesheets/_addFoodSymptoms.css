@@ -1,14 +1,29 @@
-.add-symptoms .picker__frame {
-  width: 100%;
-  max-width: 400px;
+.add-symptoms .intensity {
+  margin-bottom: 30px;
 }
 
-.add-symptoms .irs-from, .add-symptoms .irs-to, .add-symptoms .irs-single {
-  background: #26a69a;
+.add-food .stress {
+  margin-bottom: 30px;
 }
 
-.add-symptoms .irs-from:after, .add-symptoms .irs-to:after, .add-symptoms .irs-single:after {
-  border-top: #26a69a;
+.chips {
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #e4e4e4;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 
-/*# sourceMappingURL=_addFoodSymptoms.css.map */
+.add-symptoms .notes, .add-food .notes {
+  padding: 0;
+}
+
+text {
+  display: none;
+}

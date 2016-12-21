@@ -1,8 +1,17 @@
 <template name="list">
-  <div class="container">
+  <div class="list container">
+    <br>
+    {{> calendar}}
     <div class="row">
-      <div class="col m12">
-        <h5>List</h5>
+      <div class="col s12 m6">
+        {{#each food}}
+          {{>foodItem}}
+        {{/each}}
+      </div>
+      <div class="col s12 m6">
+        {{#each symptoms}}
+          {{>symptomsItem}}
+        {{/each}}
       </div>
     </div>
   </div>

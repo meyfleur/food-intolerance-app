@@ -1,5 +1,19 @@
 /* CSS declarations go here */
-body a {
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+  /** date time picker **/
+}
+
+html body #__blaze-root .wrapper {
+  height: auto;
+  min-height: calc(100vh - 135px);
+}
+
+html body a {
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
   -o-transition: 0.6s;
@@ -7,23 +21,37 @@ body a {
   transition: 0.6s;
 }
 
-body .nav-wrapper li a, body .nav-wrapper span {
+html body .btn {
+  border-radius: 5px;
+}
+
+html body .material-icons {
+  vertical-align: middle;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+html body .material-icons:hover {
+  cursor: pointer;
+}
+
+html body .nav-wrapper li a, html body .nav-wrapper span {
   font-size: 18px;
   font-style: normal;
 }
 
-body .nav-wrapper .dropdown {
+html body .nav-wrapper .dropdown {
   position: relative;
   z-index: 9;
 }
 
-body .nav-wrapper .dropdown i {
+html body .nav-wrapper .dropdown i {
   height: auto;
   line-height: 24px;
   display: inline;
 }
 
-body .nav-wrapper .dropdown .dropdown-list {
+html body .nav-wrapper .dropdown .dropdown-list {
   display: none;
   position: absolute;
   padding: 0;
@@ -33,28 +61,54 @@ body .nav-wrapper .dropdown .dropdown-list {
   z-index: 1;
 }
 
-body .nav-wrapper .dropdown .dropdown-list li {
+html body .nav-wrapper .dropdown .dropdown-list li {
   width: 100%;
 }
 
-body .nav-wrapper .dropdown .dropdown-list li a {
+html body .nav-wrapper .dropdown .dropdown-list li a {
   width: 100%;
   color: #ee6e73;
 }
 
-body .nav-wrapper .dropdown .dropdown-list #at-nav-button {
+html body .nav-wrapper .dropdown .dropdown-list #at-nav-button {
   padding: 0 28px;
 }
 
-body .nav-wrapper .dropdown:hover .dropdown-list {
+html body .nav-wrapper .dropdown:hover .dropdown-list {
   display: block;
 }
 
-body footer .modal {
+html body .picker__frame {
+  width: 100%;
+  max-width: 400px;
+}
+
+html body div.lolliclock-popover {
+  width: 290px;
+}
+
+html body .irs {
+  margin-top: 10px;
+}
+
+html body .irs .irs-grid-text {
+  font-size: 11px;
+}
+
+html body .irs .irs-from, html body .irs .irs-to, html body .irs .irs-single {
+  background: #26a69a;
+  font-size: 11px;
+}
+
+html body .irs .irs-from:after, html body .irs .irs-to:after, html body .irs .irs-single:after {
+  border-top-color: #26a69a;
+}
+
+html body footer .modal {
   max-height: 100%;
 }
 
-body footer .footer-copyright .data_protection a {
+html body footer .footer-copyright .data_protection a {
   margin-left: 10px;
 }
 
@@ -72,13 +126,14 @@ body footer .footer-copyright .data_protection a {
   display: inline-block;
 }
 
-.dashboard .add-food, .dashboard .add-symptoms {
+.dashboard .add-food, .dashboard .add-symptoms, .dashboard .list, .dashboard .results {
   text-align: center;
   font-weight: 600;
   color: #000000;
+  font-size: 16px;
 }
 
-.dashboard .add-food .card-panel, .dashboard .add-symptoms .card-panel {
+.dashboard .add-food .card-panel, .dashboard .add-symptoms .card-panel, .dashboard .list .card-panel, .dashboard .results .card-panel {
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -86,19 +141,19 @@ body footer .footer-copyright .data_protection a {
   transition: 0.5s;
 }
 
-.dashboard .add-food .card-panel:hover, .dashboard .add-symptoms .card-panel:hover {
-  opacity: 0.7;
+.dashboard .add-food .card-panel:hover, .dashboard .add-symptoms .card-panel:hover, .dashboard .list .card-panel:hover, .dashboard .results .card-panel:hover {
+  opacity: 0.8;
 }
 
-.dashboard .add-food .icons, .dashboard .add-symptoms .icons {
+.dashboard .add-food .icons, .dashboard .add-symptoms .icons, .dashboard .list .icons, .dashboard .results .icons {
   margin: 0 auto;
 }
 
-.dashboard .add-food i, .dashboard .add-symptoms i {
+.dashboard .add-food i, .dashboard .add-symptoms i, .dashboard .list i, .dashboard .results i {
   font-size: 45px;
 }
 
-.dashboard .add-food .ion-knife, .dashboard .add-food .ion-pizza, .dashboard .add-symptoms .ion-knife, .dashboard .add-symptoms .ion-pizza {
+.dashboard .add-food .ion-knife, .dashboard .add-food .ion-pizza, .dashboard .add-symptoms .ion-knife, .dashboard .add-symptoms .ion-pizza, .dashboard .list .ion-knife, .dashboard .list .ion-pizza, .dashboard .results .ion-knife, .dashboard .results .ion-pizza {
   margin-right: 10px;
 }
 
@@ -106,32 +161,77 @@ body footer .footer-copyright .data_protection a {
   margin-bottom: 30px;
 }
 
-.add-symptoms .picker__frame {
-  width: 100%;
-  max-width: 400px;
-}
-
 .add-food .stress {
   margin-bottom: 30px;
 }
 
-#food-note, #symptom-note {
+.chips {
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #e4e4e4;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.add-symptoms .notes, .add-food .notes {
   padding: 0;
 }
 
-.irs {
-  margin-top: 10px;
+text {
+  display: none;
 }
 
-.irs .irs-grid-text {
-  font-size: 11px;
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Thin), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.eot");
+  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 200;
 }
 
-.irs .irs-from, .irs .irs-to, .irs .irs-single {
-  background: #26a69a;
-  font-size: 11px;
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Light), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.eot");
+  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
 }
 
-.irs .irs-from:after, .irs .irs-to:after, .irs .irs-single:after {
-  border-top-color: #26a69a;
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Regular), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.eot");
+  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.eot");
+  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.eot");
+  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+.list .modal {
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.fc-left h2 {
+  font-size: 30px;
+}
+
+.fc-ltr .fc-time-grid .fc-event-container {
+  margin: 0 5%;
 }

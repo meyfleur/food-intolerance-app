@@ -1,11 +1,16 @@
 import { Template } from 'meteor/templating'
+import { ReactiveDict } from 'meteor/reactive-dict';
 import 'ion-rangeslider'
+import 'materialize-tags'
 import '../js/lolliclock.js'
 import './layout.js'
 import './pages/settings.js'
 import './pages/add-food.js'
 import './pages/add-symptoms.js'
-
-Meteor.startup(function () {
-   $('.modal-trigger').leanModal()
-});
+import './pages/results.js'
+import './pages/list.js'
+import './pages/item-food.js'
+import './pages/item-symptoms.js'
+import './pages/update-food.js'
+import './pages/update-symptoms.js'
+import './pages/calendar.js'

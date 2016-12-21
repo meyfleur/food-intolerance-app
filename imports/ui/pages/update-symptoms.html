@@ -1,0 +1,51 @@
+<template name="updateSymptoms">
+    <div class="update-symptoms">
+        <div class="container">
+            <h5>update Symptoms</h5>
+            {{#with symptomsset}}
+            <form class="update-symptoms">
+              <div class="row">
+                <div class="col s12 m6">
+                  <div class="date-picker">
+                      <label>Date:</label>
+                      <input type="date" name="date" class="datepicker">
+                  </div>
+                  <div class="time-picker">
+                    <label for="time">Time:</label>
+                    <input class="timepicker" name="timepicker" value="{{time}}">
+                  </div>
+                  <div class="duration-picker">
+                      <label for="time">Duration:</label>
+                      <input class="durationpicker" name="duration" value="{{duration}}">
+                  </div>
+                  <div class="notes">
+                    <label for="note">Notes:</label>
+                    <textarea name="notes" class="materialize-textarea" value="{{notes}}"></textarea>
+                  </div>
+                </div>
+                <div class="col s12 m6">
+                <div class="symptoms">
+                  <label for="symptom-name">Symptoms:</label>
+                  <input type="text" name="symptoms" value="{{symptoms}}" data-role="materialtags" placeholder="+ Enter to add Tag"/>
+                </div>
+                <div class="intensity">
+                  <label for="symptom-intensity">Intensity:</label>
+                  <input type="text" id="symptom-intensity-slider" name="intensity" data-from="0"/>
+                </div>
+                <div class="stress">
+                  <label for="stress-lvl">Physical State:</label>
+                  <input type="text" id="physical-state-slider" name="physicalState"/>
+                </div>
+              </div>
+           </div>
+           <div class="row">
+             <div class="col s12 m6">
+               <a href="{{pathFor '/food-symptoms-list'}}"><button class="waves-effect red btn left">Cancel</button></a>
+               <a href="#"><button type="submit" class="waves-effect waves-green btn right">Update</button></a>
+             </div>
+           </div>
+         </form>
+         {{/with}}
+      </div>
+    </div>
+</template>

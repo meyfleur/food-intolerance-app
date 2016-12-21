@@ -10,7 +10,6 @@ aldeed:simple-schema@1.5.3
 aldeed:template-extension@4.0.0
 allow-deny@1.0.5
 arillo:flow-router-helpers@0.5.2
-autopublish@1.0.7
 autoupdate@1.2.11
 babel-compiler@6.9.1_1
 babel-runtime@0.1.11_1
@@ -20,7 +19,7 @@ blaze@2.1.8
 blaze-html-templates@1.0.4
 blaze-tools@1.0.9
 boilerplate-generator@1.0.9
-caching-compiler@1.0.6
+caching-compiler@1.1.7
 caching-html-compiler@1.0.6
 callback-hook@1.0.9
 check@1.2.3
@@ -39,7 +38,7 @@ email@1.1.17_1
 es5-shim@4.6.14_1
 facebook@1.2.8
 fastclick@1.0.12
-fourseven:scss@3.8.1
+fourseven:scss@3.10.0
 geojson-utils@1.0.9
 hot-code-push@1.0.4
 html-tools@1.0.10
@@ -53,7 +52,8 @@ launch-screen@1.0.12
 livedata@1.0.18
 localstorage@1.0.11
 logging@1.1.15_1
-materialize:materialize@0.97.6
+materialize:materialize@0.97.7
+mdg:validated-method@1.1.0
 mdg:validation-error@0.2.0
 meteor@1.2.17_1
 meteor-base@1.0.4
@@ -84,6 +84,7 @@ reactive-var@1.0.10
 reload@1.1.10
 retry@1.0.8
 routepolicy@1.0.11
+rzymek:fullcalendar@2.7.2
 seba:minifiers-autoprefixer@1.0.1
 service-configuration@1.0.10
 sha@1.0.8

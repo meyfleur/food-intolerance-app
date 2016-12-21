@@ -1,58 +1,98 @@
 /* CSS declarations go here */
-body{
-
-  a{
-    @include transition(.6s);
-  }
-  .nav-wrapper{
-    li a, span{
-      font-size: 18px;
-      font-style: normal;
-    }
-    .dropdown {
-      position: relative;
-      z-index: 9;
-      i{
+html{
+  height: 100%;
+  body{
+    height: 100%;
+    #__blaze-root{
+      .wrapper{
         height: auto;
-        line-height: 24px;
-        display: inline;
+        min-height: calc(100vh - 135px);
       }
-      .dropdown-list {
-        display: none;
-        position: absolute;
-        padding: 0;
-        background-color: $bg-light-white;
-        min-width: 170px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        li {
-          width: 100%;
-          a {
+    }
+    a{
+      @include transition(.6s);
+    }
+    .btn{
+        border-radius: 5px;
+    }
+    .material-icons{
+      vertical-align: middle;
+      font-size: 20px;
+      padding-left: 5px;
+        &:hover{
+          cursor: pointer;
+        }
+    }
+
+    .nav-wrapper{
+      li a, span{
+        font-size: 18px;
+        font-style: normal;
+      }
+      .dropdown {
+        position: relative;
+        z-index: 9;
+        i{
+          height: auto;
+          line-height: 24px;
+          display: inline;
+        }
+        .dropdown-list {
+          display: none;
+          position: absolute;
+          padding: 0;
+          background-color: $bg-light-white;
+          min-width: 170px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+          li {
             width: 100%;
-            color: $light-pink;
+            a {
+              width: 100%;
+              color: $light-pink;
+            }
+          }
+          #at-nav-button{
+            padding: 0 28px;
           }
         }
-        #at-nav-button{
-          padding: 0 28px;
+      }
+
+      .dropdown:hover .dropdown-list {
+        display: block;
+      }
+    }
+    /** date time picker **/
+    .picker__frame{
+      width: 100%;
+      max-width: 400px;
+    }
+    div.lolliclock-popover{
+      width: 290px;
+    }
+    .irs{
+      margin-top: 10px;
+      .irs-grid-text{
+        font-size: 11px;
+      }
+      .irs-from, .irs-to, .irs-single{
+        background: $turqoise;
+        font-size: 11px;
+      }
+      .irs-from:after, .irs-to:after, .irs-single:after{
+        border-top-color: $turqoise;
+      }
+    }
+    footer{
+      .modal{
+        max-height: 100%;
+      }
+      .footer-copyright{
+        .data_protection a{
+          margin-left: 10px;
         }
       }
     }
 
-    .dropdown:hover .dropdown-list {
-      display: block;
-    }
   }
-
-
-  footer{
-    .modal{
-      max-height: 100%;
-    }
-    .footer-copyright{
-      .data_protection a{
-        margin-left: 10px;
-      }
-    }
-  }
-
 }

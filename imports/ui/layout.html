@@ -1,5 +1,7 @@
 <template name="layout">
     {{> Template.dynamic template=nav}}
-        {{> Template.dynamic template=main}}
+    <div class="wrapper">
+      {{> Template.dynamic template=main}}
+    </div>
     {{> Template.dynamic template=footer}}
 </template>
