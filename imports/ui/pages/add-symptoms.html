@@ -9,6 +9,10 @@
                         <label>Date:</label>
                         <input type="date" name="date" class="datepicker">
                     </div>
+                    <div class="time-picker">
+                      <label for="time">Time:</label>
+                      <input class="timepicker" name="timepicker" value="{{getCurrentTime}}">
+                    </div>
                     <div class="duration-picker">
                         <label for="time">Duration:</label>
                         <input class="durationpicker" name="duration" value="00:05 hours">
@@ -21,7 +25,7 @@
                 <div class="col s12 m6">
                   <div class="name">
                     <label for="symptom-name">Symptoms:</label>
-                    <input type="text" name="symptoms" data-role="materialtags"/>
+                    <input type="text" name="symptoms" data-role="materialtags" placeholder="+ Enter to add Tag"/>
                   </div>
                 </div>
                 <div class="intensity col s12 m6">

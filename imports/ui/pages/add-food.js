@@ -1,4 +1,3 @@
-import { ReactiveDict } from 'meteor/reactive-dict';
 import './add-food.html'
 
 Template.addFood.helpers({

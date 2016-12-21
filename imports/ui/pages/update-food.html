@@ -2,17 +2,17 @@
     <div class="update-food">
         <div class="container">
           <h5>update Food</h5>
-          {{#each foodset}}
+          {{#with foodset}}
           <form class="update-food">
             <div class="row">
               <div class="col s12 m6">
-                  <div class="date-picker">
-                      <label>Date:</label>
-                      <input type="date" name="datepicker" class="datepicker">
-                  </div>
-                  <div class="time-picker">
-                    <label for="time">Time:</label>
-                    <input class="timepicker" name="timepicker" value="{{time}}">
+                <div class="date-picker">
+                    <label>Date:</label>
+                    <input type="date" name="datepicker" class="datepicker">
+                </div>
+                <div class="time-picker">
+                  <label for="time">Time:</label>
+                  <input class="timepicker" name="timepicker" value="{{time}}">
                 </div>
                 <div class="medicaments">
                   <label for="note">Medicaments:</label>
@@ -24,24 +24,21 @@
                 </div>
               </div>
               <div class="col s12 m6">
-                <label for="food-name">Food:</label>
-                {{#each food}}
-                <span class="chip">{{this}}<i class="material-icons" data-role="remove">close</i></span>
-                {{/each}}
-                <input type="text" name="food" data-role="materialtags"/>
-
-                <label for="drink-name">Drink:</label>
-                {{#each drink}}
-                <span class="chip">{{this}}<i class="material-icons" data-role="remove">close</i></span>
-                {{/each}}
-                <input type="text" name="drink" data-role="materialtags"/>
-
+                <div class="food">
+                  <label for="food-name">Food:</label>
+                  <input type="text" name="food" value="{{food}}" data-role="materialtags" placeholder="+ Enter to add Tag"/>
+                </div>
+                <div class="drink">
+                  <label for="drink-name">Drink:</label>
+                  <input type="text" name="drink" value="{{drink}}" data-role="materialtags" placeholder="+ Enter to add Tag"/>
+                </div>
                 <div class="stress">
                   <label for="stress-lvl">current Stress Level:</label>
                   <input type="text" id="stress-level-slider" name="stresslvl" value=""/>
                 </div>
+                <br>
                 <div class="condition">
-                  <label for="condition">current Condition:</label>
+                  <label for="condition">How did you ate:</label>
                   <input type="text" id="condition-slider" name="condition" value=""/>
                 </div>
               </div>
@@ -53,7 +50,7 @@
               </div>
             </div>
           </form>
-          {{/each}}
+          {{/with}}
         </div>
     </div>
 </template>

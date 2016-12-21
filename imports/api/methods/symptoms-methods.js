@@ -1,5 +1,14 @@
 import Symptoms from '../symptoms'
 
+Meteor.publish('symptoms', ()=> {
+  return Symptoms.find({}, {sort:{createdAt: -1}});
+});
+
+Meteor.publish('symptomsEntry', function(entryId){
+  check(entryId, String)
+  return Symptoms.find({_id: entryId});
+});
+
 Meteor.methods({
 
   'insertSymptomsEntry'(symptoms){

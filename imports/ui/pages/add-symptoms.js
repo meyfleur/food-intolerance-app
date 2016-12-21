@@ -1,5 +1,8 @@
 import './add-symptoms.html'
 
+
+Template.addSymptoms.inheritsHelpersFrom('addFood')
+
 Template.addSymptoms.events({
   'submit .insert-symptoms'(evt, instance) {
      evt.preventDefault()
@@ -14,6 +17,7 @@ Template.addSymptoms.events({
        username: Meteor.users.findOne(userId).username,
        createdAt: new Date(),
        date: target.date.value,
+       time: target.timepicker.value,
        duration: target.duration.value,
        symptoms: symptomsset,
        intensity: intensityValue.old_from,
@@ -50,6 +54,8 @@ Template.addSymptoms.onRendered(function(){
        this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
      }
    });
+
+  $('.timepicker').lolliclock();
 
   $('#symptom-intensity-slider').ionRangeSlider({
       values: ['none','sensible','light', 'middle', 'strong'],

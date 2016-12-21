@@ -1,10 +1,36 @@
 import Food from '../../api/food'
 import './update-food.html'
 
+Template.updateFood.onCreated(function(){
+
+  const instance = this
+  instance.state = new ReactiveDict()
+
+  this.autorun(() => {
+    console.log("autorun called")
+    const entryId = FlowRouter.getParam('entry_id')
+
+    this.subscribe("foodEntry", entryId, function(){
+      console.log("handle ready")
+      const fields = Food.findOne({_id: entryId}, {fields: {stressLvl:1, condition:1, date:1}})
+
+      console.log("setting foodEntry", fields)
+      instance.state.set('foodEntry', fields);
+
+      Tracker.afterFlush(()=>{
+        console.log('tracker afterflush')
+        const fields = instance.state.get('foodEntry')
+        setupJQueryHooks(fields)
+      })
+    })
+  })
+})
+
 Template.updateFood.helpers({
   foodset(){
-    const entry_id = FlowRouter.getParam('entry_id')
-    return Food.find({_id: entry_id})
+    const entryId = FlowRouter.getParam('entry_id')
+    console.log("foodset called", Food.findOne({_id: entryId}))
+    return Food.findOne({_id: entryId})
   }
 });
 
@@ -14,7 +40,6 @@ Template.updateFood.events({
     const target = evt.target
     const foodset = $(target.food).materialtags('items')
     const drinkset = $(target.drink).materialtags('items')
-    console.log(foodset);
     const stresslvlValue = $('#stress-level-slider').data("ionRangeSlider");
     const conditionValue = $('#condition-slider').data("ionRangeSlider");
     const foodUpdate = {
@@ -29,8 +54,7 @@ Template.updateFood.events({
       medicaments: target.medicaments.value,
       notes: target.notes.value
     }
-
-    Meteor.call('updateFood', foodUpdate, entry_id, (err)=>{
+    Meteor.call('updateFood', foodUpdate, this._id, (err)=>{
       if(err){
         console.log(err)
         Materialize.toast('<i class="ion-close-round"></i>'+ err, 2000, 'red')
@@ -49,34 +73,31 @@ Template.updateFood.events({
   },
 });
 
-Template.updateFood.onRendered(function(){
 
-    $('input[data-role=materialtags]').materialtags()
+function setupJQueryHooks( fields ) {
 
-    const entry_id = FlowRouter.getParam('entry_id')
-    const fields = Food.findOne(entry_id, {fields: {stressLvl:1, condition:1, date:1}})
+  const { date, condition, stressLvl } = fields
 
-    console.log(fields)
+  $('input[data-role=materialtags]').materialtags()
+  $('.timepicker').lolliclock();
 
-    $('.datepicker').pickadate({
-      close: 'submit',
-      clear: '',
-      onStart: function() {
-         this.set('select', fields.date)
-       }
-   });
+  $('.datepicker').pickadate({
+    close: 'submit',
+    clear: '',
+    onStart: function() {
+       this.set('select', date)
+     }
+  });
 
-   $('.timepicker').lolliclock();
+  $('#stress-level-slider').ionRangeSlider({
+    values: ['none','relaxed','normal','light stressed','stressed'],
+    grid: true,
+    from: stressLvl
+  });
 
-   $('#stress-level-slider').ionRangeSlider({
-     values: ['none','relaxed','normal','light stressed','stressed'],
-     grid: true,
-     from: fields.stressLvl
-   });
-
-   $('#condition-slider').ionRangeSlider({
+  $('#condition-slider').ionRangeSlider({
     values: ['none','calmly','normal','in a hurry','stressed'],
     grid: true,
-    from: fields.condition
+    from: condition
   });
-})
+}

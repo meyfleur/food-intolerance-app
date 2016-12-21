@@ -25,6 +25,16 @@ html body .btn {
   border-radius: 5px;
 }
 
+html body .material-icons {
+  vertical-align: middle;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+html body .material-icons:hover {
+  cursor: pointer;
+}
+
 html body .nav-wrapper li a, html body .nav-wrapper span {
   font-size: 18px;
   font-style: normal;
@@ -147,12 +157,6 @@ html body footer .footer-copyright .data_protection a {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 992px) {
-  .results .modal {
-    width: 35%;
-  }
-}
-
 .add-symptoms .intensity {
   margin-bottom: 30px;
 }
@@ -216,4 +220,18 @@ text {
   src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.eot");
   src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
+}
+
+.list .modal {
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.fc-left h2 {
+  font-size: 30px;
+}
+
+.fc-ltr .fc-time-grid .fc-event-container {
+  margin: 0 5%;
 }

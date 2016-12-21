@@ -1,23 +1,27 @@
 <template name="foodItem">
-  <ul class="collection">
-    <li class="collection-item">
-      <p><span class="title">Food: </span> {{food}}</p>
-      <p><span class="title">Drink: </span>{{drink}}</p>
-      <p><span class="title">Date: </span>{{date}}</p>
-      <p><span class="title">Time: </span>{{time}}</p>
-      <p><span class="title">Streess Level: </span>{{stressLvlName}}</p>
-      <p><span class="title">Condition: </span>{{conditionName}}</p>
-      <p><span class="title">Medicaments: </span>{{medicaments}}</p>
-      <p><span class="title">Notes: </span>{{notes}}</p>
-      <a href="#modalDeleteFood" class="modal-trigger waves-effect waves-light btn left red"><i class="ion-close-round red"></i></a>
+  <div class="card light-blue lighten-3">
+    <ul class="card-content">
+      <li class="items">
+        <p><span class="title">Food: </span> {{food}}</p>
+        <p><span class="title">Drink: </span>{{drink}}</p>
+        <p><span class="title">Date: </span>{{date}}</p>
+        <p><span class="title">Time: </span>{{time}}</p>
+        <p><span class="title">Streess Level: </span>{{stressLvlName}}</p>
+        <p><span class="title">Condition: </span>{{conditionName}}</p>
+        <p><span class="title">Medicaments: </span>{{medicaments}}</p>
+        <p><span class="title">Notes: </span>{{notes}}</p>
+      </li>
+    </ul>
+    <div class="card-action light-blue lighten-1">
+      <a href="#modalDeleteFood" class="modal-trigger waves-effect waves-light btn red"><i class="ion-trash-b red"></i></a>
       <a id="updateFood" class="waves-effect waves-light btn right">
         <i class="ion-edit teal lighten-1"></i>
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
   <div id="modalDeleteFood" class="modal">
     <div class="modal-content">
-      <p>Are you sure you want to delete? You can't undo this step</p>
+      <p>Are you sure you want to delete? <br> You can't undo this step</p>
       <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn left red">Cancel</a>
         <a href="#!" id="deleteFood" class=" modal-action modal-close waves-effect waves-green btn right">Submit</a>

@@ -13,3 +13,8 @@ Template.foodItem.events({
     FlowRouter.go('/update-food/'+ entry_id)
   }
 });
+
+
+Template.foodItem.onRendered(()=>{
+  $('.modal-trigger').leanModal()
+});

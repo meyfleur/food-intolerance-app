@@ -15,6 +15,15 @@ html{
     .btn{
         border-radius: 5px;
     }
+    .material-icons{
+      vertical-align: middle;
+      font-size: 20px;
+      padding-left: 5px;
+        &:hover{
+          cursor: pointer;
+        }
+    }
+
     .nav-wrapper{
       li a, span{
         font-size: 18px;

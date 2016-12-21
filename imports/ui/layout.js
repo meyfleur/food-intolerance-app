@@ -6,7 +6,7 @@ Template.footer.onRendered(()=>{
   $('.modal-trigger').leanModal()
 });
 
-Template.nav.onRendered(function(){
+Template.nav.onRendered(()=>{
   $('.button-collapse').sideNav({
      closeOnClick: true
   });

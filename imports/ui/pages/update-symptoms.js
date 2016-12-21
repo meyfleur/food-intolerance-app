@@ -1,10 +1,32 @@
 import Symptoms from '../../api/symptoms'
 import './update-symptoms.html'
 
+Template.updateSymptoms.onCreated(function(){
+
+  const instance = this
+  instance.state = new ReactiveDict()
+
+  this.autorun(()=>{
+
+    const entryId = FlowRouter.getParam('entry_id')
+
+    this.subscribe('symptomsEntry', entryId, function(){
+
+      const fields = Symptoms.findOne({_id:entryId}, {fields: {intensity:1,physicalState:1,date:1}})
+      instance.state.set('symptomsEntry', fields)
+
+      Tracker.afterFlush(()=>{
+          const fields = instance.state.get('symptomsEntry')
+          setupJQueryHooks(fields)
+      })
+    })
+  })
+})
+
 Template.updateSymptoms.helpers({
   symptomsset(){
-    const entry_id = FlowRouter.getParam('entry_id')
-    return Symptoms.find({_id: entry_id})
+    const entryId = FlowRouter.getParam('entry_id')
+    return Symptoms.findOne({_id: entryId})
   }
 });
 
@@ -17,6 +39,7 @@ Template.updateSymptoms.events({
     const symptomsset = $(target.symptoms).materialtags('items')
     const symptomsUpdate = {
       date: target.date.value,
+      time: target.timepicker.value,
       duration: target.duration.value,
       symptoms: symptomsset,
       intensity: intensityValue.old_from,
@@ -26,7 +49,7 @@ Template.updateSymptoms.events({
       notes: target.notes.value
     }
 
-    Meteor.call('updateSymptoms', symptomsUpdate, entry_id, (err)=>{
+    Meteor.call('updateSymptoms', symptomsUpdate, this._id, (err)=>{
       if(err){
         console.log(err)
         Materialize.toast('<i class="ion-close-round"></i>'+ err, 2000, 'red')
@@ -45,33 +68,34 @@ Template.updateSymptoms.events({
   },
 });
 
-Template.updateSymptoms.onRendered(function(){
-    const entry_id = FlowRouter.getParam('entry_id')
-    const intensityValue = Symptoms.findOne(entry_id, {fields: {intensity:1}})
-    const physicalStateValue = Symptoms.findOne(entry_id, {fields: {physicalState:1}})
-    $('input[data-role=materialtags]').materialtags()
+function setupJQueryHooks (fields){
+  const { intensity, physicalState, date } = fields
 
-    $('.datepicker').pickadate({
-      close: 'submit',
-      clear: '',
-      onStart: function() {
-         const symptomsDate = Symptoms.findOne(entry_id, {fields: {date:1}})
-         this.set('select', symptomsDate.date)
-       }
-   });
+  $('input[data-role=materialtags]').materialtags()
 
-   $('.durationpicker').lolliclock();
+  $('.datepicker').pickadate({
+    close: 'submit',
+    clear: '',
+    onStart: function() {
+       this.set('select', date)
+     }
+ });
 
-   $('#symptom-intensity-slider').ionRangeSlider({
-       values: ['none','sensible','light', 'middle', 'strong'],
-       grid: true,
-       from: intensityValue.intensity
-    });
+ $('.timepicker').lolliclock();
 
-    $('#physical-state-slider').ionRangeSlider({
-      values: ['none','healthy', 'ailing', 'sick'],
-      grid: true,
-      from: physicalStateValue.physicalState
-    });
+ $('.durationpicker').lolliclock({
+   hour24: true
+ });
 
- })
+ $('#symptom-intensity-slider').ionRangeSlider({
+     values: ['none','sensible','light', 'middle', 'strong'],
+     grid: true,
+     from: intensity
+  });
+
+  $('#physical-state-slider').ionRangeSlider({
+    values: ['none','healthy', 'ailing', 'sick'],
+    grid: true,
+    from: physicalState
+  });
+}

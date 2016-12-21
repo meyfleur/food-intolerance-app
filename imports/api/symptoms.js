@@ -40,6 +40,10 @@ SymptomsSchema = new SimpleSchema({
     type: Date,
     label: 'created at:'
   },
+  time:{
+    type: String,
+    label: 'time:'
+  },
   symptoms:{
     type: [String],
     label: 'Symptoms:',
