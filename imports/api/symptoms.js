@@ -40,6 +40,10 @@ SymptomsSchema = new SimpleSchema({
     type: Date,
     label: 'created at:'
   },
+  slug:{
+    type: String,
+    label: 'slug:'
+  },
   time:{
     type: String,
     label: 'time:'

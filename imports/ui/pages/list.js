@@ -15,9 +15,9 @@ Template.list.onCreated(function(){
 
 Template.list.helpers({
   food(){
-    return Food.find({}, {sort:{createdAt: -1}});
+    return Food.find({}, {sort:{createdAt: 1}});
   },
   symptoms(){
-    return Symptoms.find({}, {sort:{createdAt: -1}});
+    return Symptoms.find({}, {sort:{createdAt: 1}});
   }
 });

@@ -1,7 +1,7 @@
 import Symptoms from '../symptoms'
 
 Meteor.publish('symptoms', ()=> {
-  return Symptoms.find({}, {sort:{createdAt: -1}});
+  return Symptoms.find({}, {sort:{createdAt: 1}});
 });
 
 Meteor.publish('symptomsEntry', function(entryId){
@@ -11,12 +11,12 @@ Meteor.publish('symptomsEntry', function(entryId){
 
 Meteor.methods({
 
-  'insertSymptomsEntry'(symptoms){
+  'insertSymptoms'(symptoms){
     check(symptoms, SymptomsSchema)
     Symptoms.insert(symptoms);
   },
 
-  'deleteSymptomsEntry'(entry_id){
+  'deleteSymptoms'(entry_id){
     Symptoms.remove(entry_id)
   },
 

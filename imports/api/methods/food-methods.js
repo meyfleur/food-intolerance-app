@@ -1,7 +1,7 @@
 import Food from '../food'
 
 Meteor.publish('food', ()=> {
-  return Food.find({}, {sort:{createdAt: -1}})
+  return Food.find({}, {sort:{createdAt: 1}})
 });
 
 Meteor.publish('foodEntry', function(entryId) {
@@ -11,8 +11,7 @@ Meteor.publish('foodEntry', function(entryId) {
 
 Meteor.methods({
 
-  'insertEntry'(food){
-    console.log(food)
+  'insertFood'(food){
     check(food, FoodSchema)
     Food.insert(food);
   },

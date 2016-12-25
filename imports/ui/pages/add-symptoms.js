@@ -16,6 +16,7 @@ Template.addSymptoms.events({
        createdBy: userId,
        username: Meteor.users.findOne(userId).username,
        createdAt: new Date(),
+       slug: 'symptoms',
        date: target.date.value,
        time: target.timepicker.value,
        duration: target.duration.value,
@@ -27,7 +28,7 @@ Template.addSymptoms.events({
        notes: target.notes.value
      }
 
-     Meteor.call('insertSymptomsEntry', symptomsEntry, (err)=>{
+     Meteor.call('insertSymptoms', symptomsEntry, (err)=>{
        if (err) {
          console.log(err)
          Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')

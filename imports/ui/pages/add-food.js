@@ -22,6 +22,7 @@ Template.addFood.events({
        createdBy: userId,
        username: Meteor.users.findOne(userId).username,
        createdAt: new Date(),
+       slug: 'food',
        date: target.datepicker.value,
        time: target.timepicker.value,
        food: foodset,
@@ -34,7 +35,7 @@ Template.addFood.events({
        notes: target.notes.value
      }
 
-      Meteor.call('insertEntry', foodEntry, (err)=>{
+      Meteor.call('insertFood', foodEntry, (err)=>{
         if (err) {
           console.log(err)
           Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')

@@ -3,7 +3,53 @@
     font-size: 30px;
   }
 }
-
-.fc-ltr .fc-time-grid .fc-event-container{
-  margin: 0 5%
+.fc-button{
+  background-image: none;
+  &:hover{
+    background: #2BBBAD;
+  }
+  &:focus{
+    background: #f5f5f5;
+  }
+}
+.fc-toolbar {
+  .fc-state-active{
+    background: #2BBBAD;
+  }
+  .fc-left{
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+  }
+  .fc-center{
+    @media screen and (max-width: $break-small) {
+      display: block !important;
+    }
+  }
+}
+.fc-view-container{
+  .fc-scroller{
+    height: auto !important;
+    overflow: hidden !important;
+  }
+  .fc-event-container{
+    margin: 0 5%;
+    .fc-content{
+      span.fc-title {
+        display: block;
+      }
+      @media screen and (max-width: $break-small) {
+        white-space: normal;
+      }
+    }
+    .fc-day-grid-event{
+      @media screen and (max-width: $break-small) {
+        margin: 0;
+      }
+    }
+  }
 }

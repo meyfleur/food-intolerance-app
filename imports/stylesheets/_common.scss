@@ -14,6 +14,8 @@ html{
     }
     .btn{
         border-radius: 5px;
+        color: #ffffff;
+        padding: 0 20px;
     }
     .material-icons{
       vertical-align: middle;
@@ -22,6 +24,13 @@ html{
         &:hover{
           cursor: pointer;
         }
+    }
+    #updateSymptoms, #updateFood{
+      &:hover{
+        i.ion-edit{
+            background-color: #2bbbad !important;
+        }
+      }
     }
 
     .nav-wrapper{

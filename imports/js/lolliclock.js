@@ -724,7 +724,7 @@
     if(!this.options.hour24){
       value = this.hours + ':' + leadingZero(this.minutes) + " " + this.amOrPm;
     }else{
-      value = leadingZero(this.hours) + ':' + leadingZero(this.minutes + ' hours') ;
+      value = leadingZero(this.hours) + ':0' + leadingZero(this.minutes + ' hours') ;
     }
     if (value !== last) {
       this.input.prop('value', value);

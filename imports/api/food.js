@@ -40,6 +40,10 @@ FoodSchema = new SimpleSchema({
     type: Date,
     label: 'created at:'
   },
+  slug:{
+    type: String,
+    label: 'slug:'
+  },
   food:{
     type: [String],
     label: 'food:',
