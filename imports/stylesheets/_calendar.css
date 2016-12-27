@@ -1,0 +1,32 @@
+.fc-left h2 {
+  font-size: 30px;
+}
+
+.fc-button {
+  background-image: none;
+}
+
+.fc-button:hover {
+  background: #2BBBAD;
+}
+
+.fc-button:focus {
+  background: #f5f5f5;
+}
+
+.fc-toolbar .fc-state-active {
+  background: #2BBBAD;
+}
+
+.fc-view-container .fc-scroller {
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.fc-view-container .fc-event-container {
+  margin: 0 5%;
+}
+
+.fc-view-container .fc-event-container .fc-content span.fc-title {
+  display: block;
+}

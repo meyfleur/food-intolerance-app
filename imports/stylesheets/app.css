@@ -23,6 +23,8 @@ html body a {
 
 html body .btn {
   border-radius: 5px;
+  color: #ffffff;
+  padding: 0 20px;
 }
 
 html body .material-icons {
@@ -33,6 +35,10 @@ html body .material-icons {
 
 html body .material-icons:hover {
   cursor: pointer;
+}
+
+html body #updateSymptoms:hover i.ion-edit, html body #updateFood:hover i.ion-edit {
+  background-color: #2bbbad !important;
 }
 
 html body .nav-wrapper li a, html body .nav-wrapper span {
@@ -232,6 +238,89 @@ text {
   font-size: 30px;
 }
 
-.fc-ltr .fc-time-grid .fc-event-container {
+.fc-button {
+  background-image: none;
+}
+
+.fc-button:hover {
+  background: #2BBBAD;
+}
+
+.fc-button:focus {
+  background: #f5f5f5;
+}
+
+.fc-toolbar .fc-state-active {
+  background: #2BBBAD;
+}
+
+@media screen and (max-width: 600px) {
+  .fc-toolbar .fc-left {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.fc-toolbar .fc-left h2 {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .fc-toolbar .fc-center {
+    display: block !important;
+  }
+}
+
+.fc-toolbar .filter {
+  height: 40px;
+  width: 50%;
+  display: inline-block;
+  margin: 0;
+}
+
+.fc-toolbar .filter #search {
+  margin: 0;
+  border-bottom: 1px solid #000000;
+}
+
+.fc-toolbar .filter #search:focus {
+  border-bottom: 1px solid #000000;
+}
+
+.fc-toolbar .filter .ion-search {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 22px;
+}
+
+.fc-toolbar .filter .ion-close-round {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.fc-view-container .fc-scroller {
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.fc-view-container .fc-event-container {
   margin: 0 5%;
+}
+
+.fc-view-container .fc-event-container .fc-content span.fc-title {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .fc-view-container .fc-event-container .fc-content {
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fc-view-container .fc-event-container .fc-day-grid-event {
+    margin: 0;
+  }
 }
