@@ -24,7 +24,12 @@ AccountsTemplates.configure({
     onLogoutHook: logOut,
 });
 
-AccountsTemplates.configureRoute('signUp');
+AccountsTemplates.configureRoute('signUp', {
+  layoutType: 'blaze',
+  name: 'signUp',
+  paht: '/sign-up',
+  redirect: '/dashboard'
+});
 AccountsTemplates.configureRoute('forgotPwd');
 AccountsTemplates.configureRoute('resetPwd');
 AccountsTemplates.configureRoute('verifyEmail');
@@ -65,7 +70,6 @@ AccountsTemplates.addField({
                 self.setValidating(false);
             });
             return;
-        // Server
         return Meteor.call('userExists', value)
     },
 

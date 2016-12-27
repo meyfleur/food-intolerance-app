@@ -271,6 +271,35 @@ text {
   }
 }
 
+.fc-toolbar .filter {
+  height: 40px;
+  width: 50%;
+  display: inline-block;
+  margin: 0;
+}
+
+.fc-toolbar .filter #search {
+  margin: 0;
+  border-bottom: 1px solid #000000;
+}
+
+.fc-toolbar .filter #search:focus {
+  border-bottom: 1px solid #000000;
+}
+
+.fc-toolbar .filter .ion-search {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 22px;
+}
+
+.fc-toolbar .filter .ion-close-round {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .fc-view-container .fc-scroller {
   height: auto !important;
   overflow: hidden !important;

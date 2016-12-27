@@ -14,14 +14,14 @@ Template.calendar.onCreated(function(){
     console.log('handle ready')
     this.subscribe('food', function(){
 
-        let foodEvents = Food.find({},{fields:{createdBy:0, createdAt:0, username:0}}).fetch()
+        let foodEvents = Food.find({createdBy: Meteor.userId()},{fields:{createdBy:0, createdAt:0, username:0}}).fetch()
 
         console.log('set foodEvents',foodEvents)
         instance.getFoodEvents.set('food', foodEvents)
     }),
     this.subscribe('symptoms', function(){
 
-      let symptomEvents = Symptoms.find({},{fields:{createdBy:0, createdAt:0, username:0}}).fetch()
+      let symptomEvents = Symptoms.find({createdBy: Meteor.userId()},{fields:{createdBy:0, createdAt:0, username:0}}).fetch()
 
       instance.getSymptomEvents.set('symptoms', symptomEvents)
       console.log('set symptomEvents',symptomEvents)
@@ -41,6 +41,7 @@ Template.calendar.onCreated(function(){
          })
          console.log('push events to array',events)
          setupCalendar(events)
+        //  addFilter('.fc-toolbar')
       })
     })
   })
@@ -130,13 +131,6 @@ function setupCalendar(events){
   })
 }
 
-function addDescription(obj, event, element){
-  let description = event.description
-  for (const [key, val] of Object.entries(description)) {
-      element.find(obj).append('<div>'+ key + ': ' + val + '</div>')
-  }
-}
-
 function clickDelete(modalBtn, event, element){
     element.find(modalBtn).click(function(){
     eventId = event._id
@@ -184,4 +178,15 @@ function addEventBtns(listEl, element, event){
   } else {
     element.find(listEl).append('<div class="eventBtn"><a id="updateSymptoms" class="waves-effect waves-light btn right"><i class="ion-edit waves-effect teal lighten-1"></i></a><a href="#modalDeleteSymptom" class="modal-trigger waves-effect waves-light btn right red"><i class="ion-trash-b red"></i></a></div>')
   }
+}
+
+function addDescription(obj, event, element){
+  let description = event.description
+  for (const [key, val] of Object.entries(description)) {
+      element.find(obj).append('<div>'+ key + ': ' + val + '</div>')
+  }
+}
+
+function addFilter(obj, element){
+  $(obj).append('<span>Filter: </span><div class="filter input-field"><input id="search" type="search"><i class="ion-close-round"></i></div>')
 }
