@@ -41,6 +41,7 @@ Template.calendar.onCreated(function(){
          })
          console.log('push events to array',events)
          setupCalendar(events)
+         $('.fc-toolbar').append('<div class="legende"><div class="description"><div class="circle food"></div><span>Food Entry</span><div class="circle symptoms"></div><span>Symptom Entry</span></div></div>')
         //  addFilter('.fc-toolbar')
       })
     })
@@ -101,7 +102,7 @@ function setupCalendar(events){
        center: 'month,listWeek,listDay',
        right: 'prev,next'
     },
-    defaultView: 'listDay',
+    defaultView: 'month',
     views: {
       listDay:{
         buttonText: 'list day',
@@ -127,6 +128,10 @@ function setupCalendar(events){
       clickUpdate('#updateSymptoms', event, element)
       clickDelete('.modal-trigger', event, element)
       element.find('.modal-trigger').leanModal()
+    },
+    eventClick: function(event){
+      $('#calendar').fullCalendar('changeView','listDay')
+      $('#calendar').fullCalendar('gotoDate', event.start)
     }
   })
 }

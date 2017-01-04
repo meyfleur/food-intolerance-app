@@ -1,6 +1,11 @@
 .fc-left{
   h2{
-    font-size: 30px;
+    font-size: 22px;
+  }
+}
+.eventBtn{
+  .btn{
+    margin-left: 10px;
   }
 }
 .fc-button{
@@ -22,7 +27,7 @@
       margin-bottom: 15px;
     }
     h2 {
-      font-size: 25px;
+      font-size: 22px;
     }
   }
   .fc-center{
@@ -54,6 +59,27 @@
       right: 0;
     }
   }
+  .legende{
+    min-height: 20px;
+    margin-top: 10px;
+    span{
+      padding: 0;
+      margin: 10px 15px 0 5px;
+    }
+    .circle{
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .food{
+      background: $light-blue;
+    }
+    .symptoms{
+      background: $light-orange;
+      margin-left: 10px;
+    }
+  }
 }
 .fc-view-container{
   .fc-scroller{
@@ -71,6 +97,10 @@
       }
     }
     .fc-day-grid-event{
+      &:hover{
+        opacity: 0.6;
+        cursor: pointer;
+      }
       @media screen and (max-width: $break-small) {
         margin: 0;
       }

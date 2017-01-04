@@ -17,14 +17,6 @@ html{
         color: #ffffff;
         padding: 0 20px;
     }
-    .material-icons{
-      vertical-align: middle;
-      font-size: 20px;
-      padding-left: 5px;
-        &:hover{
-          cursor: pointer;
-        }
-    }
     #updateSymptoms, #updateFood{
       &:hover{
         i.ion-edit{
@@ -32,20 +24,38 @@ html{
         }
       }
     }
-
+    h5{
+      font-weight: bold;
+      margin: 25px 0 20px;
+      display: inline-block;
+    }
+    .icons{
+      h5{
+        display: inline-block;
+      }
+    }
+    i{
+      height: auto;
+      line-height: 24px;
+      display: inline;
+      font-size: 25px;
+    }
     .nav-wrapper{
       li a, span{
         font-size: 18px;
         font-style: normal;
       }
+      .username{
+        text-transform: capitalize;
+      }
+      i{
+        &:before{
+          padding-right: 10px;
+        }
+      }
       .dropdown {
         position: relative;
         z-index: 9;
-        i{
-          height: auto;
-          line-height: 24px;
-          display: inline;
-        }
         .dropdown-list {
           display: none;
           position: absolute;

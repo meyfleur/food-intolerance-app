@@ -27,18 +27,25 @@ html body .btn {
   padding: 0 20px;
 }
 
-html body .material-icons {
-  vertical-align: middle;
-  font-size: 20px;
-  padding-left: 5px;
-}
-
-html body .material-icons:hover {
-  cursor: pointer;
-}
-
 html body #updateSymptoms:hover i.ion-edit, html body #updateFood:hover i.ion-edit {
   background-color: #2bbbad !important;
+}
+
+html body h5 {
+  font-weight: bold;
+  margin: 25px 0 20px;
+  display: inline-block;
+}
+
+html body .icons h5 {
+  display: inline-block;
+}
+
+html body i {
+  height: auto;
+  line-height: 24px;
+  display: inline;
+  font-size: 25px;
 }
 
 html body .nav-wrapper li a, html body .nav-wrapper span {
@@ -46,15 +53,17 @@ html body .nav-wrapper li a, html body .nav-wrapper span {
   font-style: normal;
 }
 
+html body .nav-wrapper .username {
+  text-transform: capitalize;
+}
+
+html body .nav-wrapper i:before {
+  padding-right: 10px;
+}
+
 html body .nav-wrapper .dropdown {
   position: relative;
   z-index: 9;
-}
-
-html body .nav-wrapper .dropdown i {
-  height: auto;
-  line-height: 24px;
-  display: inline;
 }
 
 html body .nav-wrapper .dropdown .dropdown-list {
@@ -235,7 +244,11 @@ text {
 }
 
 .fc-left h2 {
-  font-size: 30px;
+  font-size: 22px;
+}
+
+.eventBtn .btn {
+  margin-left: 10px;
 }
 
 .fc-button {
@@ -262,7 +275,7 @@ text {
 }
 
 .fc-toolbar .fc-left h2 {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 @media screen and (max-width: 600px) {
@@ -300,6 +313,32 @@ text {
   right: 0;
 }
 
+.fc-toolbar .legende {
+  min-height: 20px;
+  margin-top: 10px;
+}
+
+.fc-toolbar .legende span {
+  padding: 0;
+  margin: 10px 15px 0 5px;
+}
+
+.fc-toolbar .legende .circle {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fc-toolbar .legende .food {
+  background: #29B6F6;
+}
+
+.fc-toolbar .legende .symptoms {
+  background: #FF8F00;
+  margin-left: 10px;
+}
+
 .fc-view-container .fc-scroller {
   height: auto !important;
   overflow: hidden !important;
@@ -317,6 +356,11 @@ text {
   .fc-view-container .fc-event-container .fc-content {
     white-space: normal;
   }
+}
+
+.fc-view-container .fc-event-container .fc-day-grid-event:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
