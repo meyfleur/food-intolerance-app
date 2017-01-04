@@ -41,8 +41,8 @@ Template.calendar.onCreated(function(){
          })
          console.log('push events to array',events)
          setupCalendar(events)
-         $('.fc-toolbar').append('<div class="legende"><div class="description"><div class="circle food"></div><span>Food Entry</span><div class="circle symptoms"></div><span>Symptom Entry</span></div></div>')
-        //  addFilter('.fc-toolbar')
+         addLegende('.fc-toolbar')
+         addFilter('.fc-toolbar')
       })
     })
   })
@@ -97,7 +97,7 @@ function setupCalendar(events){
 
   console.log('formated events',formatEvents)
 
-  $('#calendar').fullCalendar({
+  let options = {
     header: {
        center: 'month,listWeek,listDay',
        right: 'prev,next'
@@ -122,8 +122,8 @@ function setupCalendar(events){
     events: formatEvents,
     eventRender: function(event, element){
       let id = event._id
-      addEventBtns('.fc-list-item-title', element, event)
       addDescription('.fc-list-item-title', event, element)
+      addEventBtns('.fc-list-item-title', element, event)
       clickUpdate('#updateFood', event, element)
       clickUpdate('#updateSymptoms', event, element)
       clickDelete('.modal-trigger', event, element)
@@ -132,6 +132,19 @@ function setupCalendar(events){
     eventClick: function(event){
       $('#calendar').fullCalendar('changeView','listDay')
       $('#calendar').fullCalendar('gotoDate', event.start)
+    }
+  }
+
+  $('#calendar').fullCalendar(options)
+
+  changeViewMobile()
+}
+
+function changeViewMobile(options){
+  $(window).resize(function(event) {
+    let size = $(window).width()
+    if(size < 700){
+      $('#calendar').fullCalendar('changeView', 'listWeek')
     }
   })
 }
@@ -194,4 +207,8 @@ function addDescription(obj, event, element){
 
 function addFilter(obj, element){
   $(obj).append('<span>Filter: </span><div class="filter input-field"><input id="search" type="search"><i class="ion-close-round"></i></div>')
+}
+
+function addLegende(el){
+  $(el).append('<div class="legende"><div class="description"><div class="circle food"></div><span>Food Entry</span><div class="circle symptoms"></div><span>Symptom Entry</span></div></div>')
 }

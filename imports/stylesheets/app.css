@@ -48,6 +48,11 @@ html body i {
   font-size: 25px;
 }
 
+html body .material-icons {
+  vertical-align: text-bottom;
+  font-size: 18px;
+}
+
 html body .nav-wrapper li a, html body .nav-wrapper span {
   font-size: 18px;
   font-style: normal;
@@ -284,6 +289,16 @@ text {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .fc-toolbar .fc-center .fc-month-button {
+    display: none;
+  }
+  .fc-toolbar .fc-center .fc-listWeek-button {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+}
+
 .fc-toolbar .filter {
   height: 40px;
   width: 50%;
@@ -344,6 +359,10 @@ text {
   overflow: hidden !important;
 }
 
+.fc-view-container .fc-scroller .fc-list-item:hover td {
+  background: #ffffff;
+}
+
 .fc-view-container .fc-event-container {
   margin: 0 5%;
 }
@@ -359,7 +378,7 @@ text {
 }
 
 .fc-view-container .fc-event-container .fc-day-grid-event:hover {
-  opacity: 0.6;
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -367,4 +386,10 @@ text {
   .fc-view-container .fc-event-container .fc-day-grid-event {
     margin: 0;
   }
+}
+
+.fc-view-container .fc-event-container .fc-day-grid-event .fc-content {
+  white-space: normal;
+  overflow: hidden;
+  margin: 5px;
 }
