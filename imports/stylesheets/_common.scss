@@ -29,16 +29,50 @@ html{
       margin: 25px 0 20px;
       display: inline-block;
     }
-    .icons{
-      h5{
-        display: inline-block;
-      }
-    }
     i{
       height: auto;
       line-height: 24px;
       display: inline;
       font-size: 25px;
+    }
+    .materialize-tags{
+      font-weight: lighter;
+      .tt-input{
+        font-weight: 400;
+      }
+      .tag.badge{
+        background: $turqoise;
+        .mdi-content-clear{
+          transition: 500ms;
+          &:hover{
+            background: $dark-turqoise;
+          }
+        }
+        .mdi-content-clear[data-role=remove]:before{
+          content: "x";
+          font-size: 16px;
+          font-weight: bold;
+          padding: 0 5px;
+        }
+      }
+    }
+    .twitter-typeahead{
+      .visuallyhidden{
+        display: none;
+      }
+      .tt-menu{
+        background: $white;
+        border: 1px solid #9e9e9e;
+        width: 100%;
+        text-align: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-top: 2px;
+        .tt-cursor{
+          background: $turqoise;
+          color: $white;
+        }
+      }
     }
     .material-icons{
       vertical-align: text-bottom;

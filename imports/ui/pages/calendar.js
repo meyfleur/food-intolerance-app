@@ -42,25 +42,19 @@ Template.calendar.onCreated(function(){
          console.log('push events to array',events)
          setupCalendar(events)
          addLegende('.fc-toolbar')
-         addFilter('.fc-toolbar')
+         //addFilter('.fc-toolbar')
       })
     })
   })
 })
-
-function getFieldsKeyVal(fields, obj){
-  for (const [key, val] of Object.entries(obj)) {
-      console.log(key, val)
-  }
-}
 
 function setupCalendar(events){
   console.log('events in calendar', events)
   formatEvents = events.map((event)=>{
     const { slug, _id, food, symptoms, drink, stressLvlName, conditionName, medicaments, notes, physicalStateName, intensityName} = event
     let { date, time, duration} = event
+    duration = moment(duration, 'HH:mm').format('HH:mm')
     time = moment(time, 'hh:mm A').format('hh:mm')
-    let end_time = symptoms ? moment(duration, 'HH:mm').format('HH:mm') : ''
     date = moment(date, 'DD MMM, YYYY').format('YYYY-MM-DDT')
 
     let FoodDescrip =  {
@@ -71,18 +65,12 @@ function setupCalendar(events){
       'Notes': notes ? notes : '-'
     }
     let SymptomsDescrip =  {
+      'Duration': duration + ' hours',
       'Physical State': physicalStateName,
       'Intensity': intensityName,
       'Medicaments': medicaments ? medicaments : '-',
       'Notes': notes ? notes : '-'
     }
-
-    // console.log('date_time', date+time)
-    // console.log('time', moment(time,'hh:mm'))
-    // console.log('duration', moment.duration(end_time,'HH:mm').humanize())
-    // console.log(moment(date+time, 'YYYY-MM-DDThh:mm').add(moment.duration(end_time,'hh:mm')))
-    // console.log(event.slug)
-    // console.log('______________________')
 
     let events = {
       _id: _id,
@@ -160,8 +148,13 @@ function clickDelete(modalBtn, event, element){
         Meteor.call('deleteFood', eventId, (err)=>{
           if(err){
             console.log(err)
+            Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
           } else {
             $('#calendar').fullCalendar( 'removeEvents', eventId)
+            Materialize.toast('<i class="ion-checkmark-round"></i>', 2000, 'teal lighten-1')
+            Meteor.setTimeout(function(){
+              $('#calendar').fullCalendar( 'changeView', 'month')
+            }, 3000);
           }
         })
       })
@@ -172,8 +165,13 @@ function clickDelete(modalBtn, event, element){
         Meteor.call('deleteSymptoms', eventId, (err)=>{
           if(err){
             console.log(err)
+            Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
           } else {
-            $('#calendar').fullCalendar( 'removeEvents', eventId)
+            Materialize.toast('<i class="ion-checkmark-round"></i>', 2000, 'teal lighten-1')
+            Meteor.setTimeout(function(){
+              $('#calendar').fullCalendar( 'removeEvents', eventId)
+              $('#calendar').fullCalendar( 'changeView', 'month')
+            }, 3000);
           }
         })
       })

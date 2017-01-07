@@ -4,5 +4,4 @@ import '../imports/stylesheets/app.css'
 import '../imports/stylesheets/lolliclock.css'
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 import 'ion-rangeslider/css/ion.rangeSlider.skinFlat.css';
-import 'materialize-tags/dist/css/materialize-tags.css';
 import 'fullcalendar/dist/fullcalendar.min.css';

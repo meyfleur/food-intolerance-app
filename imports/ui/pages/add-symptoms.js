@@ -1,5 +1,5 @@
 import './add-symptoms.html'
-
+import Bloodhound from '../../js/bloodhound.js'
 
 Template.addSymptoms.inheritsHelpersFrom('addFood')
 
@@ -43,9 +43,25 @@ Template.addSymptoms.events({
   }
 });
 
-Template.addSymptoms.onRendered(function(){
 
-  $('input[data-role=materialtags]').materialtags()
+Template.addSymptoms.helpers({
+  // symptomsJson(){
+  //   let symptoms = []
+  //   Meteor.call('getJson', function(err, result){
+  //     if(err){
+  //       console.log("error", err);
+  //     } else{
+  //       result.map(function(el) {
+  //           symptoms.push(el.name)
+  //       });
+  //       console.log(symptoms)
+  //       return symptoms
+  //     }
+  //   });
+  // },
+});
+
+Template.addSymptoms.onRendered(function(){
 
   $('.datepicker').pickadate({
     close: 'submit',
@@ -73,5 +89,23 @@ Template.addSymptoms.onRendered(function(){
    $('.durationpicker').lolliclock({
      hour24: true
    });
+
+   let symptoms = new Bloodhound({
+     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+     queryTokenizer: Bloodhound.tokenizers.whitespace,
+     local: require('./symptoms.json'),
+
+   })
+
+   $('input[data-role=materialtags]').materialtags({
+     typeaheadjs: {
+       hint: false,
+       highlight: true,
+            name: 'symptoms',
+            displayKey: 'name',
+            valueKey: 'name',
+            source: symptoms.ttAdapter()
+        }
+   })
 
 });

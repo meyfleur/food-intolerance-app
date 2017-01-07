@@ -1,4 +1,5 @@
 import Symptoms from '../../api/symptoms'
+import Bloodhound from '../../js/bloodhound.js'
 import './update-symptoms.html'
 
 Template.updateSymptoms.onCreated(function(){
@@ -71,7 +72,23 @@ Template.updateSymptoms.events({
 function setupJQueryHooks (fields){
   const { intensity, physicalState, date } = fields
 
-  $('input[data-role=materialtags]').materialtags()
+  let symptoms = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    local: require('./symptoms.json'),
+
+  })
+
+  $('input[data-role=materialtags]').materialtags({
+    typeaheadjs: {
+      hint: false,
+      highlight: true,
+           name: 'symptoms',
+           displayKey: 'name',
+           valueKey: 'name',
+           source: symptoms.ttAdapter()
+       }
+  })
 
   $('.datepicker').pickadate({
     close: 'submit',

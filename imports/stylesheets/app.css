@@ -37,15 +37,57 @@ html body h5 {
   display: inline-block;
 }
 
-html body .icons h5 {
-  display: inline-block;
-}
-
 html body i {
   height: auto;
   line-height: 24px;
   display: inline;
   font-size: 25px;
+}
+
+html body .materialize-tags {
+  font-weight: lighter;
+}
+
+html body .materialize-tags .tt-input {
+  font-weight: 400;
+}
+
+html body .materialize-tags .tag.badge {
+  background: #26a69a;
+}
+
+html body .materialize-tags .tag.badge .mdi-content-clear {
+  transition: 500ms;
+}
+
+html body .materialize-tags .tag.badge .mdi-content-clear:hover {
+  background: #1e8c81;
+}
+
+html body .materialize-tags .tag.badge .mdi-content-clear[data-role=remove]:before {
+  content: "x";
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+html body .twitter-typeahead .visuallyhidden {
+  display: none;
+}
+
+html body .twitter-typeahead .tt-menu {
+  background: #ffffff;
+  border: 1px solid #9e9e9e;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 2px;
+}
+
+html body .twitter-typeahead .tt-menu .tt-cursor {
+  background: #26a69a;
+  color: #ffffff;
 }
 
 html body .material-icons {
