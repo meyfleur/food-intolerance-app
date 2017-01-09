@@ -75,8 +75,7 @@ function setupJQueryHooks (fields){
   let symptoms = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: require('./symptoms.json'),
-
+    local: require('../../api/data/symptoms.json')
   })
 
   $('input[data-role=materialtags]').materialtags({

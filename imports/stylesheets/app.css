@@ -46,6 +46,7 @@ html body i {
 
 html body .materialize-tags {
   font-weight: lighter;
+  margin-bottom: 20px;
 }
 
 html body .materialize-tags .tt-input {
@@ -77,17 +78,20 @@ html body .twitter-typeahead .visuallyhidden {
 
 html body .twitter-typeahead .tt-menu {
   background: #ffffff;
-  border: 1px solid #9e9e9e;
   width: 100%;
   text-align: center;
+  border: 1px solid #26a69a;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   margin-top: 2px;
+  font-weight: 400;
 }
 
 html body .twitter-typeahead .tt-menu .tt-cursor {
+  cursor: pointer;
   background: #26a69a;
   color: #ffffff;
+  font-weight: 400;
 }
 
 html body .material-icons {

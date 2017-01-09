@@ -37,6 +37,7 @@ html{
     }
     .materialize-tags{
       font-weight: lighter;
+      margin-bottom: 20px;
       .tt-input{
         font-weight: 400;
       }
@@ -62,15 +63,18 @@ html{
       }
       .tt-menu{
         background: $white;
-        border: 1px solid #9e9e9e;
         width: 100%;
         text-align: center;
+        border: 1px solid $turqoise;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         margin-top: 2px;
+        font-weight: 400;
         .tt-cursor{
+          cursor: pointer;
           background: $turqoise;
           color: $white;
+          font-weight: 400;
         }
       }
     }
