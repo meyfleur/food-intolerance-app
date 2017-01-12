@@ -1,55 +1,48 @@
 @font-face {
 font-family: "Roboto";
-src: local(Roboto Thin), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.eot");
-src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.eot?") format("embedded-opentype"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.woff2") format("woff2"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.woff") format("woff"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.ttf") format("truetype");
+src: local(Roboto Thin), url("/fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot");
+src: url("/fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot?") format("embedded-opentype"),
+url("/fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff") format("woff"),
+url("/fonts/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype");
 font-weight: 200;
 }
 
 @font-face {
 font-family:
 "Roboto";
-src: local(Roboto Light),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.eot");
-src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.eot?") format("embedded-opentype"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.woff2") format("woff2"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.woff") format("woff"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.ttf") format("truetype");
+src: local(Roboto Light), url("/fonts/roboto_light_macroman/Roboto-Light-webfont.eot");
+src: url("/fonts/roboto_light_macroman/Roboto-Light-webfont.eot?") format("embedded-opentype"),
+ url("/fonts/roboto_light_macroman/Roboto-Light-webfont.woff") format("woff"),
+ url("/fonts/roboto_light_macroman/Roboto-Light-webfont.ttf") format("truetype");
 font-weight: 300;
 }
 
 @font-face {
 font-family:
 "Roboto";
-src: local(Roboto Regular),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.eot");
-src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.eot?") format("embedded-opentype"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.woff2") format("woff2"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.woff") format("woff"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+src: local(Roboto Regular), url("/fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+src: url("/fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?") format("embedded-opentype"),
+ url("/fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"),
+ url("/fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
 font-weight: 400;
 }
 
 @font-face {
 font-family:
 "Roboto";
-src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.eot");
-src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.eot?") format("embedded-opentype"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.woff2") format("woff2"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.woff") format("woff"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+src: local(Roboto Medium), url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.eot");
+src: url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.eot?") format("embedded-opentype"),
+ url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.woff") format("woff"),
+ url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.ttf") format("truetype");
 font-weight: 500;
 }
 
 @font-face {
 font-family:
 "Roboto";
-src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.eot");
-src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.eot?") format("embedded-opentype"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.woff2") format("woff2"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.woff") format("woff"),
-url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+src: local(Roboto Bold), url("/fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot");
+src: url("/fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot?") format("embedded-opentype"),
+ url("/fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff"),
+ url("/fonts/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype");
 font-weight: 700;
 }

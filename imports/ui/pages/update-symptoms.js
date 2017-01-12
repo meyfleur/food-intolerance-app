@@ -1,4 +1,5 @@
 import Symptoms from '../../api/symptoms'
+import Bloodhound from '../../js/bloodhound.js'
 import './update-symptoms.html'
 
 Template.updateSymptoms.onCreated(function(){
@@ -35,7 +36,7 @@ Template.updateSymptoms.events({
     evt.preventDefault()
     const target = evt.target
     const physicalValue = $('#physical-state-slider').data("ionRangeSlider");
-    const intensityValue = $('#symptom-intensity-slider').data("ionRangeSlider");
+    const intensityValue = $('#intensity-slider').data("ionRangeSlider");
     const symptomsset = $(target.symptoms).materialtags('items')
     const symptomsUpdate = {
       date: target.date.value,
@@ -71,8 +72,6 @@ Template.updateSymptoms.events({
 function setupJQueryHooks (fields){
   const { intensity, physicalState, date } = fields
 
-  $('input[data-role=materialtags]').materialtags()
-
   $('.datepicker').pickadate({
     close: 'submit',
     clear: '',
@@ -87,15 +86,32 @@ function setupJQueryHooks (fields){
    hour24: true
  });
 
- $('#symptom-intensity-slider').ionRangeSlider({
-     values: ['none','sensible','light', 'middle', 'strong'],
-     grid: true,
-     from: intensity
-  });
-
   $('#physical-state-slider').ionRangeSlider({
-    values: ['none','healthy', 'ailing', 'sick'],
+    values: ['sick','ailing','neither','normal','healthy'],
     grid: true,
     from: physicalState
   });
+
+  $('#intensity-slider').ionRangeSlider({
+      values: ['strong','middle','neither','light','sensible'],
+      grid: true,
+      from: intensity
+   });
+
+  let symptoms = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    local: require('../../api/data/symptoms.json')
+  })
+
+  $('input[data-role=materialtags]').materialtags({
+    typeaheadjs: {
+      hint: false,
+      highlight: true,
+           name: 'symptoms',
+           displayKey: 'name',
+           valueKey: 'name',
+           source: symptoms.ttAdapter()
+       }
+  })
 }

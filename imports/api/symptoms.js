@@ -74,17 +74,17 @@ SymptomsSchema = new SimpleSchema({
   intensityName:{
     type: String,
     label: 'intensity',
-    allowedValues: ['none','sensible','light','middle','strong']
+    allowedValues: ['strong','middle','neither','light','sensible']
   },
   physicalStateName:{
     type: String,
     label: 'physical state',
-    allowedValues: ['none','healthy','ailing','sick']
+    allowedValues: ['sick','ailing','neither','normal','healthy']
   },
   physicalState:{
     type: Number,
     label: 'physical state index',
-    allowedValues: [0,1,2,3]
+    allowedValues: [0,1,2,3,4]
   }
 })
 

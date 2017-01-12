@@ -2,13 +2,13 @@ import './layout.html'
 import './_includes/nav.html'
 import './_includes/footer.html'
 
-Template.footer.onRendered(()=>{
+Template.footer.onRendered(function(){
   $('.modal-trigger').leanModal()
 });
 
-Template.nav.onRendered(()=>{
+Template.nav.onRendered(function(){
   $('.button-collapse').sideNav({
-     closeOnClick: true
+     closeOnClick: true,
+     menuWidth: 200
   });
-  $('.collapsible').collapsible()
 });

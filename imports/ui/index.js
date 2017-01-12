@@ -1,9 +1,9 @@
 import { Template } from 'meteor/templating'
 import { ReactiveDict } from 'meteor/reactive-dict';
 import 'ion-rangeslider'
-import 'materialize-tags'
 import 'fullcalendar'
 import '../js/lolliclock.js'
+import '../js/typeahead.js'
 import './layout.js'
 import './pages/settings.js'
 import './pages/add-food.js'

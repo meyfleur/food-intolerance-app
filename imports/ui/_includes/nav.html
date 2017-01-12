@@ -4,47 +4,34 @@
             <div class="nav-wrapper container">
             {{#if currentUser}}
                 <a href="{{pathFor '/dashboard'}}" class="brand-logo">Logo</a>
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a data-activates="nav-mobile" class="button-collapse waves-effect waves-light hide-on-med-and-up">
+                  <i class="ion-navicon"></i>
+                </a>
 
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{pathFor '/dashboard'}}">Dashboard</a></li>
-                    <li><a href="{{pathFor '/food-symptoms-list'}}">List</a></li>
-                    <li><a href="{{pathFor '/results'}}">Results</a></li>
+                <ul class="right hide-on-small-only">
+                    <li><a href="{{pathFor '/dashboard'}}"><i class="ion-home"><span>Dashboard</span></i></a></li>
+                    <li><a href="{{pathFor '/food-symptoms-list'}}"><i class="ion-android-list"><span>List</span></i></a></li>
+                    <li><a href="{{pathFor '/results'}}"><i class="ion-podium"><span>Results</span></i></a></li>
                     <li class="dropdown">
                         <a href="">
-                            <i class="ion-person"></i>
-                            <span>{{currentUser.username}}</span>
+                            <i class="ion-person"><span class="username">{{currentUser.username}}</span></i>
                         </a>
                         <ul class="dropdown-list">
-                            <li><a href="{{pathFor '/settings'}}">Settings</a></li>
+                            <li><a href="{{pathFor '/settings'}}"><i class="ion-gear-a"><span>Settings</span></i></a></li>
                             {{> atNavButton}}
                         </ul>
                     </li>
                 </ul>
-                <ul class="side-nav" id="slide-out">
+                <ul class="side-nav" id="nav-mobile">
                   <li><div class="userView">
-                      <div class="background">
-                        <img src="images/office.jpg">
-                      </div>
-                      <a href="#!name">
-                        <i class="ion-person"></i>
-                        <span class="white-text name">{{currentUser.username}}</span>
-                      </a>
+                        <p class="name"><i class="ion-person"></i> {{currentUser.username}}</p>
                     </div>
                   </li>
-                  <li><a href="{{pathFor '/dashboard'}}">Dashboard</a></li>
-                  <li><a href="{{pathFor '/food-symptoms-list'}}">List</a></li>
-                  <li><a href="{{pathFor '/results'}}">Results</a></li>
-                  <li class="collapsible collapsible-accordion">
-                      <a href="" class="collapsible-header">
-                          <i class="ion-person"></i>
-                          <span>{{currentUser.username}}</span>
-                      </a>
-                      <ul class="collapsible-body">
-                          <li><a href="{{pathFor '/settings'}}">Settings</a></li>
-                          {{> atNavButton}}
-                      </ul>
-                  </li>
+                  <li><a href="{{pathFor '/dashboard'}}"><span><i class="ion-home"></i> Dashboard</span></a></li>
+                  <li><a href="{{pathFor '/food-symptoms-list'}}"><span><i class="ion-android-list"></i> List</span></a></li>
+                  <li><a href="{{pathFor '/results'}}"><span><i class="ion-podium"></i> Results</span></a></li>
+                  <li><a href="{{pathFor '/settings'}}"><span><i class="ion-gear-a"></i> Settings</span></a></li>
+                  <li class="btn-sign-out">{{> atNavButton}}</li>
                 </ul>
                 {{else}}
                 <a class="brand-logo" href="{{pathFor '/signin'}}">Logo</a>

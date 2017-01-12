@@ -1,5 +1,5 @@
 import './add-symptoms.html'
-
+import Bloodhound from '../../js/bloodhound.js'
 
 Template.addSymptoms.inheritsHelpersFrom('addFood')
 
@@ -27,7 +27,6 @@ Template.addSymptoms.events({
        physicalStateName: target.physicalState.value,
        notes: target.notes.value
      }
-
      Meteor.call('insertSymptoms', symptomsEntry, (err)=>{
        if (err) {
          console.log(err)
@@ -43,9 +42,25 @@ Template.addSymptoms.events({
   }
 });
 
-Template.addSymptoms.onRendered(function(){
 
-  $('input[data-role=materialtags]').materialtags()
+Template.addSymptoms.helpers({
+  // symptomsJson(){
+  //   let symptoms = []
+  //   Meteor.call('getJson', function(err, result){
+  //     if(err){
+  //       console.log("error", err);
+  //     } else{
+  //       result.map(function(el) {
+  //           symptoms.push(el.name)
+  //       });
+  //       console.log(symptoms)
+  //       return symptoms
+  //     }
+  //   });
+  // },
+});
+
+Template.addSymptoms.onRendered(function(){
 
   $('.datepicker').pickadate({
     close: 'submit',
@@ -59,19 +74,35 @@ Template.addSymptoms.onRendered(function(){
   $('.timepicker').lolliclock();
 
   $('#symptom-intensity-slider').ionRangeSlider({
-      values: ['none','sensible','light', 'middle', 'strong'],
+      values: ['strong','middle','neither','light','sensible'],
       grid: true,
-      from: 0
+      from: 2
    });
 
    $('#physical-state-slider').ionRangeSlider({
-     values: ['none','healthy', 'ailing', 'sick'],
+     values: ['sick','ailing','neither','normal','healthy'],
      grid: true,
-     from: 0
+     from: 2
    });
 
    $('.durationpicker').lolliclock({
      hour24: true
    });
 
+   let symptoms = new Bloodhound({
+     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+     queryTokenizer: Bloodhound.tokenizers.whitespace,
+     local: require('../../api/data/symptoms.json')
+   })
+
+   $('input[data-role=materialtags]').materialtags({
+     typeaheadjs: {
+       hint: false,
+       highlight: true,
+            name: 'symptoms',
+            displayKey: 'name',
+            valueKey: 'name',
+            source: symptoms.ttAdapter()
+        }
+   })
 });

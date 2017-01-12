@@ -1,5 +1,7 @@
 import Food from '../../api/food'
+import Bloodhound from '../../js/bloodhound.js'
 import './update-food.html'
+const levenshtein = require('fast-levenshtein');
 
 Template.updateFood.onCreated(function(){
 
@@ -78,7 +80,6 @@ function setupJQueryHooks( fields ) {
 
   const { date, condition, stressLvl } = fields
 
-  $('input[data-role=materialtags]').materialtags()
   $('.timepicker').lolliclock();
 
   $('.datepicker').pickadate({
@@ -90,14 +91,35 @@ function setupJQueryHooks( fields ) {
   });
 
   $('#stress-level-slider').ionRangeSlider({
-    values: ['none','relaxed','normal','light stressed','stressed'],
+    values: ['stressed','light stressed','neither','unstressed','relaxed'],
     grid: true,
     from: stressLvl
   });
 
   $('#condition-slider').ionRangeSlider({
-    values: ['none','calmly','normal','in a hurry','stressed'],
+    values: ['very fast','fast','neither','slow','very slow'],
     grid: true,
     from: condition
   });
+
+  let food = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('Long_Desc'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    local: require('../../api/data/food.json'),
+    sorter: function(a, b){
+      let InputString = $('.tt-input').val()
+      return levenshtein.get(a.Long_Desc, InputString) - levenshtein.get(b.Long_Desc, InputString);
+    }
+  })
+
+  $('input[name=drink]').materialtags()
+
+  $('input[name=food]').materialtags({
+    typeaheadjs: {
+           name: 'food',
+           displayKey: 'Long_Desc',
+           valueKey: 'Long_Desc',
+           source: food.ttAdapter()
+       }
+  })
 }

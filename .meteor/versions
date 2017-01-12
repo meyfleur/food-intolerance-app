@@ -14,6 +14,7 @@ autoupdate@1.2.11
 babel-compiler@6.9.1_1
 babel-runtime@0.1.11_1
 base64@1.0.9
+benan789:materialize-tagsinput@0.0.1
 binary-heap@1.0.9
 blaze@2.1.8
 blaze-html-templates@1.0.4
@@ -40,6 +41,7 @@ facebook@1.2.8
 fastclick@1.0.12
 fourseven:scss@3.10.0
 geojson-utils@1.0.9
+harrison:papa-parse@1.1.1
 hot-code-push@1.0.4
 html-tools@1.0.10
 htmljs@1.0.10

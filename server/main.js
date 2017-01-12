@@ -6,3 +6,4 @@ import '../imports/api/food';
 import '../imports/api/symptoms';
 import '../imports/api/methods/food-methods';
 import '../imports/api/methods/symptoms-methods';
+import '../imports/api/methods/parser';

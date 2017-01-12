@@ -1,0 +1,89 @@
+/** date time picker **/
+.picker__frame{
+  width: 100%;
+  max-width: 400px;
+}
+div.lolliclock-popover{
+  width: 290px;
+}
+
+/** materialize-tags **/
+.materialize-tags{
+  margin-bottom: 20px;
+  .tt-input{
+    font-weight: 400;
+  }
+  .tag.badge{
+    background: $turqoise;
+    .mdi-content-clear{
+      transition: 500ms;
+      &:hover{
+        background: $dark-turqoise;
+      }
+    }
+    .mdi-content-clear[data-role=remove]:before{
+      content: "x";
+      font-size: 16px;
+      font-weight: bold;
+      padding: 0 5px;
+    }
+  }
+}
+
+/** typeaheadJs **/
+.twitter-typeahead{
+  .visuallyhidden{
+    display: none;
+  }
+  .tt-menu{
+    background: $white;
+    width: 100%;
+    min-width: 200px;
+    text-align: left;
+    padding: 0 15px;
+    border: 1px solid $turqoise;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 2px;
+    font-weight: 400;
+    .tt-cursor{
+      cursor: pointer;
+      background: $turqoise;
+      color: $white;
+      font-weight: 400;
+    }
+  }
+}
+
+/** ionRangeSlider **/
+.irs{
+  margin-top: 10px;
+  .irs-grid-text{
+    font-size: 11px;
+  }
+  .irs-from, .irs-to, .irs-single{
+    background: $turqoise;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  .irs-from:after, .irs-to:after, .irs-single:after{
+    border-top-color: $turqoise;
+  }
+  .irs-line{
+    background: url(../img/slider.png) no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+  }
+  .irs-bar, .irs-bar-edge, .irs-line-mid, .irs-line-left, .irs-line-right{
+    background: none;
+  }
+  .irs-slider{
+    background: url(../img/sprite-skin-flat.png) no-repeat;
+    background-position: -1px -120px;
+    background-size: inherit;
+    &:hover{
+      background-position: -1px -150px;
+      cursor: pointer;
+    }
+  }
+}
