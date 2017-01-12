@@ -66,8 +66,8 @@ function setupCalendar(events){
     }
     let SymptomsDescrip =  {
       'Duration': duration + ' hours',
-      'Physical State': physicalStateName,
       'Intensity': intensityName,
+      'Physical State': physicalStateName,
       'Medicaments': medicaments ? medicaments : '-',
       'Notes': notes ? notes : '-'
     }
@@ -138,44 +138,41 @@ function changeViewMobile(options){
 }
 
 function clickDelete(modalBtn, event, element){
-    element.find(modalBtn).click(function(){
-    eventId = event._id
-    slug = event.slug
+    element.find(modalBtn).click(function(evt){
+      eventId = event._id
+      slug = event.slug
 
-    if(slug == 'food'){
-      $('#deleteFood').click(function(){
-        console.log(eventId)
-        Meteor.call('deleteFood', eventId, (err)=>{
-          if(err){
-            console.log(err)
-            Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
-          } else {
-            $('#calendar').fullCalendar( 'removeEvents', eventId)
-            Materialize.toast('<i class="ion-checkmark-round"></i>', 2000, 'teal lighten-1')
-            Meteor.setTimeout(function(){
-              $('#calendar').fullCalendar( 'changeView', 'month')
-            }, 3000);
-          }
-        })
-      })
-    } else {
-      $('#deleteSymptoms').click(function(){
-        console.log(eventId)
-        console.log(event)
-        Meteor.call('deleteSymptoms', eventId, (err)=>{
-          if(err){
-            console.log(err)
-            Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
-          } else {
-            Materialize.toast('<i class="ion-checkmark-round"></i>', 2000, 'teal lighten-1')
-            Meteor.setTimeout(function(){
+      if(slug == 'food'){
+        $('#deleteFood').click(function(){
+          Meteor.call('deleteFood', eventId, (err)=>{
+            if(err){
+              console.log(err)
+              Materialize.toast('<i class="ion-close-round"></i> Validation Error', 1000, 'red')
+            } else {
               $('#calendar').fullCalendar( 'removeEvents', eventId)
-              $('#calendar').fullCalendar( 'changeView', 'month')
-            }, 3000);
-          }
+              Materialize.toast('<i class="ion-checkmark-round"></i>', 1000, 'teal lighten-1')
+              Meteor.setTimeout(function(){
+                $('#calendar').fullCalendar( 'changeView', 'month')
+              }, 2000);
+            }
+          })
         })
-      })
-    }
+      } else {
+        $('#deleteSymptoms').click(function(){
+          Meteor.call('deleteSymptoms', eventId, (err)=>{
+            if(err){
+              console.log(err)
+              Materialize.toast('<i class="ion-close-round"></i> Validation Error',1000, 'red')
+            } else {
+              Materialize.toast('<i class="ion-checkmark-round"></i>',1000, 'teal lighten-1')
+              Meteor.setTimeout(function(){
+                $('#calendar').fullCalendar( 'removeEvents', eventId)
+                $('#calendar').fullCalendar( 'changeView', 'month')
+              }, 2000);
+            }
+          })
+        })
+      }
   })
 }
 

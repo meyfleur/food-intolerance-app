@@ -36,7 +36,7 @@ Template.updateSymptoms.events({
     evt.preventDefault()
     const target = evt.target
     const physicalValue = $('#physical-state-slider').data("ionRangeSlider");
-    const intensityValue = $('#symptom-intensity-slider').data("ionRangeSlider");
+    const intensityValue = $('#intensity-slider').data("ionRangeSlider");
     const symptomsset = $(target.symptoms).materialtags('items')
     const symptomsUpdate = {
       date: target.date.value,
@@ -72,6 +72,32 @@ Template.updateSymptoms.events({
 function setupJQueryHooks (fields){
   const { intensity, physicalState, date } = fields
 
+  $('.datepicker').pickadate({
+    close: 'submit',
+    clear: '',
+    onStart: function() {
+       this.set('select', date)
+     }
+ });
+
+ $('.timepicker').lolliclock();
+
+ $('.durationpicker').lolliclock({
+   hour24: true
+ });
+
+  $('#physical-state-slider').ionRangeSlider({
+    values: ['sick','ailing','neither','normal','healthy'],
+    grid: true,
+    from: physicalState
+  });
+
+  $('#intensity-slider').ionRangeSlider({
+      values: ['strong','middle','neither','light','sensible'],
+      grid: true,
+      from: intensity
+   });
+
   let symptoms = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -88,30 +114,4 @@ function setupJQueryHooks (fields){
            source: symptoms.ttAdapter()
        }
   })
-
-  $('.datepicker').pickadate({
-    close: 'submit',
-    clear: '',
-    onStart: function() {
-       this.set('select', date)
-     }
- });
-
- $('.timepicker').lolliclock();
-
- $('.durationpicker').lolliclock({
-   hour24: true
- });
-
- $('#symptom-intensity-slider').ionRangeSlider({
-     values: ['none','sensible','light', 'middle', 'strong'],
-     grid: true,
-     from: intensity
-  });
-
-  $('#physical-state-slider').ionRangeSlider({
-    values: ['none','healthy', 'ailing', 'sick'],
-    grid: true,
-    from: physicalState
-  });
 }

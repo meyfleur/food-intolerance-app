@@ -27,7 +27,6 @@ Template.addSymptoms.events({
        physicalStateName: target.physicalState.value,
        notes: target.notes.value
      }
-
      Meteor.call('insertSymptoms', symptomsEntry, (err)=>{
        if (err) {
          console.log(err)
@@ -75,15 +74,15 @@ Template.addSymptoms.onRendered(function(){
   $('.timepicker').lolliclock();
 
   $('#symptom-intensity-slider').ionRangeSlider({
-      values: ['none','sensible','light', 'middle', 'strong'],
+      values: ['strong','middle','neither','light','sensible'],
       grid: true,
-      from: 0
+      from: 2
    });
 
    $('#physical-state-slider').ionRangeSlider({
-     values: ['none','healthy', 'ailing', 'sick'],
+     values: ['sick','ailing','neither','normal','healthy'],
      grid: true,
-     from: 0
+     from: 2
    });
 
    $('.durationpicker').lolliclock({
@@ -106,5 +105,4 @@ Template.addSymptoms.onRendered(function(){
             source: symptoms.ttAdapter()
         }
    })
-
 });

@@ -80,12 +80,12 @@ FoodSchema = new SimpleSchema({
   stressLvlName:{
     type: String,
     label: 'current stress-level:',
-    allowedValues: ['none','relaxed','normal','light stressed','stressed']
+    allowedValues: ['stressed','light stressed','neither','unstressed','relaxed']
   },
   conditionName:{
     type: String,
     label: 'current condition:',
-    allowedValues: ['none','calmly','normal','in a hurry','stressed']
+    allowedValues: ['very fast','fast','neither','slow','very slow']
   },
   condition:{
     type: Number,

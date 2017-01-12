@@ -5,12 +5,11 @@ html {
 
 html body {
   height: 100%;
-  /** date time picker **/
 }
 
 html body #__blaze-root .wrapper {
   height: auto;
-  min-height: calc(100vh - 135px);
+  min-height: calc(100vh - 154px);
 }
 
 html body a {
@@ -27,10 +26,6 @@ html body .btn {
   padding: 0 20px;
 }
 
-html body #updateSymptoms:hover i.ion-edit, html body #updateFood:hover i.ion-edit {
-  background-color: #2bbbad !important;
-}
-
 html body h5 {
   font-weight: bold;
   margin: 25px 0 20px;
@@ -42,140 +37,6 @@ html body i {
   line-height: 24px;
   display: inline;
   font-size: 25px;
-}
-
-html body .materialize-tags {
-  font-weight: lighter;
-  margin-bottom: 20px;
-}
-
-html body .materialize-tags .tt-input {
-  font-weight: 400;
-}
-
-html body .materialize-tags .tag.badge {
-  background: #26a69a;
-}
-
-html body .materialize-tags .tag.badge .mdi-content-clear {
-  transition: 500ms;
-}
-
-html body .materialize-tags .tag.badge .mdi-content-clear:hover {
-  background: #1e8c81;
-}
-
-html body .materialize-tags .tag.badge .mdi-content-clear[data-role=remove]:before {
-  content: "x";
-  font-size: 16px;
-  font-weight: bold;
-  padding: 0 5px;
-}
-
-html body .twitter-typeahead .visuallyhidden {
-  display: none;
-}
-
-html body .twitter-typeahead .tt-menu {
-  background: #ffffff;
-  width: 100%;
-  text-align: center;
-  border: 1px solid #26a69a;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  margin-top: 2px;
-  font-weight: 400;
-}
-
-html body .twitter-typeahead .tt-menu .tt-cursor {
-  cursor: pointer;
-  background: #26a69a;
-  color: #ffffff;
-  font-weight: 400;
-}
-
-html body .material-icons {
-  vertical-align: text-bottom;
-  font-size: 18px;
-}
-
-html body .nav-wrapper li a, html body .nav-wrapper span {
-  font-size: 18px;
-  font-style: normal;
-}
-
-html body .nav-wrapper .username {
-  text-transform: capitalize;
-}
-
-html body .nav-wrapper i:before {
-  padding-right: 10px;
-}
-
-html body .nav-wrapper .dropdown {
-  position: relative;
-  z-index: 9;
-}
-
-html body .nav-wrapper .dropdown .dropdown-list {
-  display: none;
-  position: absolute;
-  padding: 0;
-  background-color: #f9f9f9;
-  min-width: 170px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-html body .nav-wrapper .dropdown .dropdown-list li {
-  width: 100%;
-}
-
-html body .nav-wrapper .dropdown .dropdown-list li a {
-  width: 100%;
-  color: #ee6e73;
-}
-
-html body .nav-wrapper .dropdown .dropdown-list #at-nav-button {
-  padding: 0 28px;
-}
-
-html body .nav-wrapper .dropdown:hover .dropdown-list {
-  display: block;
-}
-
-html body .picker__frame {
-  width: 100%;
-  max-width: 400px;
-}
-
-html body div.lolliclock-popover {
-  width: 290px;
-}
-
-html body .irs {
-  margin-top: 10px;
-}
-
-html body .irs .irs-grid-text {
-  font-size: 11px;
-}
-
-html body .irs .irs-from, html body .irs .irs-to, html body .irs .irs-single {
-  background: #26a69a;
-  font-size: 11px;
-}
-
-html body .irs .irs-from:after, html body .irs .irs-to:after, html body .irs .irs-single:after {
-  border-top-color: #26a69a;
-}
-
-html body footer .modal {
-  max-height: 100%;
-}
-
-html body footer .footer-copyright .data_protection a {
-  margin-left: 10px;
 }
 
 .settings .at-title {
@@ -231,20 +92,6 @@ html body footer .footer-copyright .data_protection a {
   margin-bottom: 30px;
 }
 
-.chips {
-  display: inline-block;
-  height: 32px;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
-  line-height: 32px;
-  padding: 0 12px;
-  border-radius: 16px;
-  background-color: #e4e4e4;
-  margin-bottom: 5px;
-  margin-right: 5px;
-}
-
 .add-symptoms .notes, .add-food .notes {
   padding: 0;
 }
@@ -253,38 +100,42 @@ text {
   display: none;
 }
 
+#updateSymptoms:hover i.ion-edit, #updateFood:hover i.ion-edit {
+  background-color: #2bbbad !important;
+}
+
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Thin), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.eot");
-  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Thin.ttf") format("truetype");
+  src: local(Roboto Thin), url("/fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot");
+  src: url("/fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot?") format("embedded-opentype"), url("/fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff") format("woff"), url("/fonts/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype");
   font-weight: 200;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Light), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.eot");
-  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Light.ttf") format("truetype");
+  src: local(Roboto Light), url("/fonts/roboto_light_macroman/Roboto-Light-webfont.eot");
+  src: url("/fonts/roboto_light_macroman/Roboto-Light-webfont.eot?") format("embedded-opentype"), url("/fonts/roboto_light_macroman/Roboto-Light-webfont.woff") format("woff"), url("/fonts/roboto_light_macroman/Roboto-Light-webfont.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Regular), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.eot");
-  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  src: local(Roboto Regular), url("/fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("/fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?") format("embedded-opentype"), url("/fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("/fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.eot");
-  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  src: local(Roboto Medium), url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.eot");
+  src: url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.eot?") format("embedded-opentype"), url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.woff") format("woff"), url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.eot");
-  src: url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.eot?") format("embedded-opentype"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.woff") format("woff"), url("packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  src: local(Roboto Bold), url("/fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot");
+  src: url("/fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot?") format("embedded-opentype"), url("/fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff"), url("/fonts/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype");
   font-weight: 700;
 }
 
@@ -438,4 +289,178 @@ text {
   white-space: normal;
   overflow: hidden;
   margin: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .nav-wrapper .brand-logo {
+    left: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.nav-wrapper li a, .nav-wrapper span {
+  font-size: 18px;
+  font-style: normal;
+}
+
+.nav-wrapper i:before {
+  padding-right: 10px;
+}
+
+.nav-wrapper .button-collapse i:before {
+  font-size: 45px;
+}
+
+.nav-wrapper .side-nav .userView {
+  background-color: #ee6e73;
+  padding: 0 20px;
+}
+
+.nav-wrapper .side-nav .btn-sign-out #at-nav-button {
+  width: 130px;
+}
+
+.nav-wrapper .dropdown {
+  position: relative;
+  z-index: 9;
+}
+
+.nav-wrapper .dropdown .dropdown-list {
+  display: none;
+  position: absolute;
+  padding: 0;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-wrapper .dropdown .dropdown-list li {
+  width: 100%;
+}
+
+.nav-wrapper .dropdown .dropdown-list li a {
+  width: 100%;
+  color: #ee6e73;
+}
+
+.nav-wrapper .dropdown .dropdown-list #at-nav-button {
+  padding: 0 27px;
+}
+
+.nav-wrapper .dropdown:hover .dropdown-list {
+  display: block;
+}
+
+footer .modal {
+  max-height: 100%;
+}
+
+footer .footer-copyright .data_protection a {
+  margin-left: 10px;
+}
+
+/** date time picker **/
+.picker__frame {
+  width: 100%;
+  max-width: 400px;
+}
+
+div.lolliclock-popover {
+  width: 290px;
+}
+
+/** materialize-tags **/
+.materialize-tags {
+  margin-bottom: 20px;
+}
+
+.materialize-tags .tt-input {
+  font-weight: 400;
+}
+
+.materialize-tags .tag.badge {
+  background: #26a69a;
+}
+
+.materialize-tags .tag.badge .mdi-content-clear {
+  transition: 500ms;
+}
+
+.materialize-tags .tag.badge .mdi-content-clear:hover {
+  background: #1e8c81;
+}
+
+.materialize-tags .tag.badge .mdi-content-clear[data-role=remove]:before {
+  content: "x";
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+/** typeaheadJs **/
+.twitter-typeahead .visuallyhidden {
+  display: none;
+}
+
+.twitter-typeahead .tt-menu {
+  background: #ffffff;
+  width: 100%;
+  min-width: 200px;
+  text-align: left;
+  padding: 0 15px;
+  border: 1px solid #26a69a;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 2px;
+  font-weight: 400;
+}
+
+.twitter-typeahead .tt-menu .tt-cursor {
+  cursor: pointer;
+  background: #26a69a;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/** ionRangeSlider **/
+.irs {
+  margin-top: 10px;
+}
+
+.irs .irs-grid-text {
+  font-size: 11px;
+}
+
+.irs .irs-from, .irs .irs-to, .irs .irs-single {
+  background: #26a69a;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.irs .irs-from:after, .irs .irs-to:after, .irs .irs-single:after {
+  border-top-color: #26a69a;
+}
+
+.irs .irs-line {
+  background: url(../img/slider.png) no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+.irs .irs-bar, .irs .irs-bar-edge, .irs .irs-line-mid, .irs .irs-line-left, .irs .irs-line-right {
+  background: none;
+}
+
+.irs .irs-slider {
+  background: url(../img/sprite-skin-flat.png) no-repeat;
+  background-position: -1px -120px;
+  background-size: inherit;
+}
+
+.irs .irs-slider:hover {
+  background-position: -1px -150px;
+  cursor: pointer;
 }

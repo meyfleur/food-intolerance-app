@@ -10,7 +10,7 @@ Meteor.startup(() => {
     };
 
     let path = process.env["PWD"] + "/imports/api/data/"
-    // let file = Assets.getText('FOOD_DES.txt').replace(/\-|  +|^\||\|$/gm,'').replace(/\r\n/,'')
+    // let file = Assets.getText('FOOD_DES.txt').replace(/\-|  +|,|^\||\|$/gm,'').replace(/\r\n/,'')
     //
     // let foodData = Papa.parse(file, {
     //    delimiter: '|',
