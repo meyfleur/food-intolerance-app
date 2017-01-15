@@ -39,6 +39,11 @@ html body i {
   font-size: 25px;
 }
 
+html body .toast i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
 .settings .at-title {
   display: none;
 }
@@ -82,6 +87,134 @@ html body i {
 
 .dashboard .add-food .ion-knife, .dashboard .add-food .ion-pizza, .dashboard .add-symptoms .ion-knife, .dashboard .add-symptoms .ion-pizza, .dashboard .list .ion-knife, .dashboard .list .ion-pizza, .dashboard .results .ion-knife, .dashboard .results .ion-pizza {
   margin-right: 10px;
+}
+
+.results .info-icon {
+  display: inline;
+  float: left;
+}
+
+@media screen and (max-width: 600px) {
+  .results .info-icon {
+    float: none;
+    display: block;
+  }
+}
+
+.results .info-box {
+  border: 1px solid #666666;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 10px;
+  max-width: 405px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.results .info-box .info-text {
+  display: inline;
+}
+
+.results .info-box i {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.results h6 {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.results .week {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.results .symptom-course {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.results .food-intolerance h6, .results .symptom-course h6 {
+  float: left;
+}
+
+.results .food-intolerance .info-icon, .results .symptom-course .info-icon {
+  float: none;
+  margin: 5px 0 0 10px;
+  display: inline-block;
+}
+
+.results .food-intolerance .info-icon:hover + .info-box, .results .symptom-course .info-icon:hover + .info-box {
+  display: block;
+}
+
+.results .food-intolerance .info-box, .results .symptom-course .info-box {
+  display: none;
+  margin-top: 15px;
+  max-width: 424px;
+}
+
+.results .ct-perfect-fourth > svg {
+  position: relative;
+  min-height: 350px;
+}
+
+@media screen and (max-width: 600px) {
+  .results .ct-perfect-fourth > svg {
+    min-height: 250px;
+  }
+}
+
+.results .ct-perfect-fourth:before {
+  padding-bottom: 0;
+}
+
+.results .ct-perfect-fourth .ct-series-a .ct-line, .results .ct-perfect-fourth .ct-series-a .ct-point {
+  stroke: #FF8F00;
+}
+
+.results .ct-perfect-fourth .ct-series-a .ct-bar {
+  stroke: #29B6F6;
+  stroke-width: 25px;
+}
+
+.results .ct-perfect-fourth .ct-series-b .ct-line, .results .ct-perfect-fourth .ct-series-b .ct-point {
+  stroke: #f44336;
+}
+
+.results .ct-perfect-fourth .ct-label.ct-vertical.ct-start, .results .ct-perfect-fourth .ct-label.ct-horizontal.ct-end {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  .results .legende {
+    width: 300px;
+  }
+}
+
+.results .legende .ct-series-a {
+  background: #FF8F00;
+}
+
+.results .legende .ct-series-b {
+  background: #f44336;
+}
+
+.results .legende .ct-series-c {
+  background: #fdd835;
+}
+
+.results .legende .circle {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.results .legende span {
+  margin-right: 20px;
 }
 
 .add-symptoms .intensity {
@@ -356,6 +489,11 @@ text {
 
 footer .modal {
   max-height: 100%;
+}
+
+footer .title {
+  font-weight: 600;
+  font-size: 16px;
 }
 
 footer .footer-copyright .data_protection a {

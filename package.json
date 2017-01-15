@@ -9,7 +9,6 @@
     "dotenv-safe": "^3.0.0",
     "fullcalendar": "^3.1.0",
     "ion-rangeslider": "^2.1.4",
-    "materialize-tags": "^1.0.0",
     "meteor-node-stubs": "^0.2.4"
   }
 }

@@ -33,31 +33,13 @@ Template.addSymptoms.events({
          Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
 
        } else {
-         Materialize.toast('<i class="ion-checkmark-round"></i>',2000,'teal lighten-1')
+         Materialize.toast('<i class="ion-checkmark-round"></i>'+'Entry added',2000,'teal lighten-1')
            Meteor.setTimeout(function(){
              FlowRouter.go('/food-symptoms-list')
            }, 3000);
        }
     });
   }
-});
-
-
-Template.addSymptoms.helpers({
-  // symptomsJson(){
-  //   let symptoms = []
-  //   Meteor.call('getJson', function(err, result){
-  //     if(err){
-  //       console.log("error", err);
-  //     } else{
-  //       result.map(function(el) {
-  //           symptoms.push(el.name)
-  //       });
-  //       console.log(symptoms)
-  //       return symptoms
-  //     }
-  //   });
-  // },
 });
 
 Template.addSymptoms.onRendered(function(){

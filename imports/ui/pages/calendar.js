@@ -61,7 +61,7 @@ function setupCalendar(events){
       'Drink': drink,
       'Stress Level': stressLvlName,
       'Condition': conditionName,
-      'Medicaments': medicaments ? medicaments : '-',
+      'Medicaments/ Supplements': medicaments ? medicaments : '-',
       'Notes': notes ? notes : '-'
     }
     let SymptomsDescrip =  {
@@ -124,8 +124,8 @@ function setupCalendar(events){
   }
 
   $('#calendar').fullCalendar(options)
-
   changeViewMobile()
+
 }
 
 function changeViewMobile(options){
@@ -150,7 +150,7 @@ function clickDelete(modalBtn, event, element){
               Materialize.toast('<i class="ion-close-round"></i> Validation Error', 1000, 'red')
             } else {
               $('#calendar').fullCalendar( 'removeEvents', eventId)
-              Materialize.toast('<i class="ion-checkmark-round"></i>', 1000, 'teal lighten-1')
+              Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry deleted', 1000, 'teal lighten-1')
               Meteor.setTimeout(function(){
                 $('#calendar').fullCalendar( 'changeView', 'month')
               }, 2000);
@@ -164,7 +164,7 @@ function clickDelete(modalBtn, event, element){
               console.log(err)
               Materialize.toast('<i class="ion-close-round"></i> Validation Error',1000, 'red')
             } else {
-              Materialize.toast('<i class="ion-checkmark-round"></i>',1000, 'teal lighten-1')
+              Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry deleted',1000, 'teal lighten-1')
               Meteor.setTimeout(function(){
                 $('#calendar').fullCalendar( 'removeEvents', eventId)
                 $('#calendar').fullCalendar( 'changeView', 'month')

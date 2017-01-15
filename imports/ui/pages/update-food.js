@@ -61,7 +61,7 @@ Template.updateFood.events({
         console.log(err)
         Materialize.toast('<i class="ion-close-round"></i>'+ err, 2000, 'red')
       } else {
-        Materialize.toast('<i class="ion-checkmark-round"></i>',2000,'teal lighten-1')
+        Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry updated',2000,'teal lighten-1')
           Meteor.setTimeout(function(){
             FlowRouter.go('/food-symptoms-list')
         }, 3000);

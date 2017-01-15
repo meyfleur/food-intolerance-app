@@ -42,34 +42,11 @@ Template.addFood.events({
           console.log(err)
           Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
         } else {
-          Materialize.toast('<i class="ion-checkmark-round"></i>', 2000, 'teal lighten-1')
+          Materialize.toast('<i class="ion-checkmark-round"></i>'+'Entry added', 2000, 'teal lighten-1')
           Meteor.setTimeout(()=> FlowRouter.go('/food-symptoms-list'), 3000);
         }
       });
-   },
-   /*Template.foo.events({
-     'submit': (event, instance) => {
-       Meteor.call('method', (err) => {
-         if (ValidationError.is(err)) {
-           err.details.forEach((fieldError) => {
-             instance.state.set(`error-${fieldError.name}`: fieldError.type);
-           });
-         }
-       });
-     }
-   });*/
-
-  /* 'reset .insert-food'(evt){
-      evt.preventDefault()
-      const target = evt.target
-      target.food.value = ''
-      target.drink.value = ''
-      target.medicaments.value = ''
-      target.notes.value = ''
-      $('#stress-level-slider').data("ionRangeSlider").reset();
-      $('#condition-slider').data("ionRangeSlider").reset();
-   },*/
-
+   }
 });
 
 Template.addFood.onCreated(function(){
