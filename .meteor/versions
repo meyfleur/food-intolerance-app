@@ -59,6 +59,7 @@ mdg:validated-method@1.1.0
 mdg:validation-error@0.2.0
 meteor@1.2.17_1
 meteor-base@1.0.4
+mfpierre:chartist-js@1.6.3
 minifier-css@1.1.13
 minifier-js@1.2.14_1
 minimongo@1.0.17

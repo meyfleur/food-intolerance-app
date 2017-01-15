@@ -1,3 +1,110 @@
 .results{
+  .info-icon{
+    display: inline;
+    float: left;
+    @media screen and (max-width: $break-small) {
+      float: none;
+      display: block;
+    }
+  }
+  .info-box{
+    border: 1px solid $dark-grey;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 10px;
+    max-width: 405px;
+    width: 100%;
+    margin-bottom: 20px;
+    .info-text{
+      display: inline;
+    }
+    i{
+      vertical-align: middle;
+      padding-right: 5px;
+    }
+  }
+  h6{
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .week{
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .symptom-course{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .food-intolerance, .symptom-course{
+    h6{
+      float: left;
+    }
+    .info-icon{
+      float: none;
+      margin: 5px 0 0 10px;
+      display: inline-block;
+      &:hover + .info-box{
+          display: block;
+      }
+    }
+    .info-box{
+      display: none;
+      margin-top: 15px;
+      max-width: 424px;
+    }
+  }
+  .ct-perfect-fourth > svg{
+    position: relative;
+    min-height: 350px;
+    @media screen and (max-width: $break-small) {
+      min-height: 250px;
+    }
+  }
+  .ct-perfect-fourth:before{
+    padding-bottom: 0;
+  }
+  .ct-perfect-fourth{
+    .ct-series-a {
+      .ct-line, .ct-point {
+        stroke: $light-orange;
+      }
+      .ct-bar{
+        stroke: $light-blue;
+        stroke-width: 25px;
+      }
+    }
+    .ct-series-b{
+      .ct-line, .ct-point {
+        stroke: $red;
+      }
+    }
+    .ct-label.ct-vertical.ct-start, .ct-label.ct-horizontal.ct-end{
+      font-weight: 600;
+    }
+  }
+  .legende{
+    @media screen and (max-width: $break-small) {
+      width: 300px;
+    }
+    .ct-series-a {
+      background: $light-orange;
+    }
+    .ct-series-b {
+      background: $red;
+    }
+    .ct-series-c {
+      background: $yellow;
+    }
+    .circle {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    span{
+      margin-right: 20px;
+    }
+  }
 
 }

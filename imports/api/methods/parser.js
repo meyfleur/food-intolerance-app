@@ -22,15 +22,3 @@ Meteor.methods({
       return data
     }
   });
-
-      // return fs.readFile(file, function(err, data){
-      //   if(err) console.log(err)
-      //   console.log(data)
-      //   return data
-      //
-      //   // for (var row in rows) {
-      //   //   console.log(row)
-      //   // }
-      // })
-    //  file = JSON.parse(Assets.getText(file_name))
-    //  return file
