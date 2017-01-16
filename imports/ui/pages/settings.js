@@ -31,10 +31,13 @@ Template.settings.events({
 
         if(username != user.username){
             Meteor.call('changeUsername', username, (err) => {
-              if(err)
-                Materialize.toast('<i class="ion-close-round"></i>', 8000, 'red')
-              else
+              if(err){
+                $('#username').removeClass('valid').addClass('invalid')
+                Materialize.toast('<i class="ion-close-round"></i> Username already exist', 8000, 'red')
+              }
+              else{
                 Materialize.toast('<i class="ion-checkmark-round"></i>',8000,'teal lighten-1');
+              }
             })
         }
 

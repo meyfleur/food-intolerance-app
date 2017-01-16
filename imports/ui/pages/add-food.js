@@ -39,7 +39,7 @@ Template.addFood.events({
 
       Meteor.call('insertFood', foodEntry, (err)=>{
         if (err) {
-          console.log(err)
+          throw err
           Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
         } else {
           Materialize.toast('<i class="ion-checkmark-round"></i>'+'Entry added', 2000, 'teal lighten-1')
