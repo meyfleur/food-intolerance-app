@@ -9,6 +9,14 @@ html{
         min-height: calc(100vh - 154px);
       }
     }
+    .at-result{
+      margin: 0 15px;
+      background: $turqoise;
+      display: inline-block;
+      color: #ffffff;
+      padding: 10px 5px;
+      border-radius: 5px;
+    }
     a{
       @include transition(.6s);
     }
