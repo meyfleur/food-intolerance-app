@@ -1,0 +1,25 @@
+.results .info-icon {
+  display: inline;
+  float: left;
+}
+
+.results .info-box {
+  font-weight: 500;
+  max-width: 490px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.results .info-box .info-text {
+  display: inline;
+}
+
+.results .info-box i {
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.results h6 {
+  font-weight: 500;
+  font-size: 20px;
+}

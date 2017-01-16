@@ -1,0 +1,128 @@
+.fc-left{
+  h2{
+    font-size: 22px;
+  }
+}
+.eventBtn{
+  .btn{
+    margin-left: 10px;
+  }
+}
+.fc-button{
+  background-image: none;
+  &:hover{
+    background: #2BBBAD;
+  }
+  &:focus{
+    background: #f5f5f5;
+  }
+}
+.fc-toolbar {
+  .fc-state-active{
+    background: #2BBBAD;
+  }
+  .fc-left{
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .fc-center{
+    @media screen and (max-width: $break-small) {
+      display: block !important;
+    }
+    @media screen and (max-width: 700px) {
+      .fc-month-button{
+          display: none;
+      }
+      .fc-listWeek-button{
+         border-top-left-radius: 4px;
+         border-bottom-left-radius: 4px;
+      }
+    }
+  }
+  .filter{
+    height: 40px;
+    width: 50%;
+    display: inline-block;
+    margin: 0;
+    #search{
+      margin: 0;
+      border-bottom: 1px solid #000000;
+      &:focus{
+        border-bottom: 1px solid #000000;
+      }
+    }
+    .ion-search{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-size: 22px;
+    }
+    .ion-close-round{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .legende{
+    min-height: 20px;
+    margin-top: 10px;
+    span{
+      padding: 0;
+      margin: 10px 15px 0 5px;
+    }
+    .circle{
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .food{
+      background: $light-blue;
+    }
+    .symptoms{
+      background: $light-orange;
+      margin-left: 10px;
+    }
+  }
+}
+.fc-view-container{
+  .fc-scroller{
+    height: auto !important;
+    overflow: hidden !important;
+    .fc-list-item{
+      &:hover td{
+        background: #ffffff;
+      }
+    }
+  }
+  .fc-event-container{
+    margin: 0 5%;
+    .fc-content{
+      span.fc-title {
+        display: block;
+      }
+      @media screen and (max-width: $break-small) {
+        white-space: normal;
+      }
+    }
+    .fc-day-grid-event{
+      &:hover{
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      @media screen and (max-width: $break-small) {
+        margin: 0;
+      }
+      .fc-content {
+          white-space: normal;
+          overflow: hidden;
+          margin: 5px;
+      }
+    }
+  }
+}

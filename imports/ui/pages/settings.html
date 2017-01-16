@@ -1,0 +1,38 @@
+<template name="settings">
+    <div class="settings">
+        <div class="container">
+            <h5><i class="ion-gear-a"></i>
+              Settings
+            </h5>
+            <div class="row">
+                <div class="col s12 m6">
+                    <form class="user-details">
+                        <div class="row">
+                            <div class="at-input input-field col s12">
+                                <input value="{{currentUser.username}}" id="username" type="text" class="validate">
+                                <label class="active" for="username">Username</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="at-input input-field col s12">
+                                <input value="{{userEmails}}" id="email" type="email" class="validate">
+                                <label class="active" for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <button class="reset-fields waves-effect red btn left" type="reset">
+                                Cancel
+                            </button>
+                        </div>
+                        <div class="input-field">
+                            <button class="waves-effect waves-green btn left" type="submit">Update Profile</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col s12 m6">
+                    {{> atForm state="changePwd"}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

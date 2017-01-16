@@ -1,0 +1,39 @@
+/* CSS declarations go here */
+html{
+  height: 100%;
+  body{
+    height: 100%;
+    #__blaze-root{
+      .wrapper{
+        height: auto;
+        min-height: calc(100vh - 154px);
+      }
+    }
+    a{
+      @include transition(.6s);
+    }
+    .btn{
+        border-radius: 5px;
+        color: #ffffff;
+        padding: 0 20px;
+    }
+
+    h5{
+      font-weight: bold;
+      margin: 25px 0 20px;
+      display: inline-block;
+    }
+    i{
+      height: auto;
+      line-height: 24px;
+      display: inline;
+      font-size: 25px;
+    }
+    .toast{
+      i{
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

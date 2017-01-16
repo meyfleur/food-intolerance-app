@@ -1,0 +1,21 @@
+.add-symptoms{
+  .intensity{
+    margin-bottom: 30px;
+  }
+}
+
+.add-food{
+  .stress{
+    margin-bottom: 30px;
+  }
+}
+
+.add-symptoms, .add-food{
+  .notes{
+    padding: 0;
+  }
+}
+
+text{
+  display: none
+}

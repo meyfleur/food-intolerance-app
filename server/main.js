@@ -1,5 +1,9 @@
-import { Meteor } from 'meteor/meteor';
+import {Meteor} from 'meteor/meteor'
+import '../imports/startup/server/index';
+import '../imports/api/methods/account-methods';
 
-Meteor.startup(() => {
-  // code to run on server at startup
-});
+import '../imports/api/food';
+import '../imports/api/symptoms';
+import '../imports/api/methods/food-methods';
+import '../imports/api/methods/symptoms-methods';
+import '../imports/api/methods/parser';
