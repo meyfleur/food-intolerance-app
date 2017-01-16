@@ -7,6 +7,7 @@
   "dependencies": {
     "bcrypt": "^0.8.7",
     "dotenv-safe": "^3.0.0",
+    "fast-levenshtein": "^2.0.6",
     "fullcalendar": "^3.1.0",
     "ion-rangeslider": "^2.1.4",
     "meteor-node-stubs": "^0.2.4"
