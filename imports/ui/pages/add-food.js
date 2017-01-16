@@ -47,8 +47,8 @@ Template.addFood.events({
         }
       });
    },
-   'click .timepicker'(evt){
-     evt.preventDefault()
+   'focus .timepicker'(evt){
+     $('.timepicker').trigger('blur');
    }
 });
 

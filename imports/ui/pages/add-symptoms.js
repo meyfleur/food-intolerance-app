@@ -39,9 +39,6 @@ Template.addSymptoms.events({
            }, 3000);
        }
     });
-  },
-  'click .timepicker'(evt){
-    evt.preventDefault()
   }
 });
 
