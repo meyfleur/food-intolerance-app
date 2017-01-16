@@ -46,6 +46,9 @@ Template.addFood.events({
           Meteor.setTimeout(()=> FlowRouter.go('/food-symptoms-list'), 3000);
         }
       });
+   },
+   'click .timepicker'(evt){
+     evt.preventDefault()
    }
 });
 
