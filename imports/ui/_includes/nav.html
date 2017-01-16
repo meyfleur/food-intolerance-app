@@ -4,7 +4,7 @@
             <div class="nav-wrapper container">
             {{#if currentUser}}
                 <a href="{{pathFor '/dashboard'}}" class="brand-logo">Logo</a>
-                <a data-activates="nav-mobile" class="button-collapse waves-effect waves-light hide-on-med-and-up">
+                <a hef="#" data-activates="nav-mobile" class="button-collapse hide-on-med-and-up">
                   <i class="ion-navicon"></i>
                 </a>
 
@@ -22,21 +22,21 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="side-nav" id="nav-mobile">
-                  <li><div class="userView">
-                        <p class="name"><i class="ion-person"></i> {{currentUser.username}}</p>
-                    </div>
-                  </li>
-                  <li><a href="{{pathFor '/dashboard'}}"><span><i class="ion-home"></i> Dashboard</span></a></li>
-                  <li><a href="{{pathFor '/food-symptoms-list'}}"><span><i class="ion-android-list"></i> List</span></a></li>
-                  <li><a href="{{pathFor '/results'}}"><span><i class="ion-podium"></i> Results</span></a></li>
-                  <li><a href="{{pathFor '/settings'}}"><span><i class="ion-gear-a"></i> Settings</span></a></li>
-                  <li class="btn-sign-out">{{> atNavButton}}</li>
-                </ul>
                 {{else}}
                 <a class="brand-logo" href="{{pathFor '/sign-in'}}">Logo</a>
             {{/if}}
             </div>
+            <ul class="side-nav" id="nav-mobile" style="transform: translateX(-100%)">
+              <li><div class="userView">
+                    <p class="name"><i class="ion-person"></i> {{currentUser.username}}</p>
+                </div>
+              </li>
+              <li><a href="{{pathFor '/dashboard'}}"><span><i class="ion-home"></i> Dashboard</span></a></li>
+              <li><a href="{{pathFor '/food-symptoms-list'}}"><span><i class="ion-android-list"></i> List</span></a></li>
+              <li><a href="{{pathFor '/results'}}"><span><i class="ion-podium"></i> Results</span></a></li>
+              <li><a href="{{pathFor '/settings'}}"><span><i class="ion-gear-a"></i> Settings</span></a></li>
+              <li class="btn-sign-out">{{> atNavButton}}</li>
+            </ul>
         </nav>
     </header>
 </template>
