@@ -1,6 +1,7 @@
 <template name="updateSymptoms">
     <div class="update-symptoms">
         <div class="container">
+          {{#if Template.subscriptionsReady}}
             <h5>
               <i class="ion-ios-pulse-strong"></i>
               <i class="ion-ios-body"></i>
@@ -50,6 +51,11 @@
            </div>
          </form>
          {{/with}}
+         {{else}}
+           <div class="progress">
+               <div class="indeterminate"></div>
+           </div>
+         {{/if}}
       </div>
     </div>
 </template>
