@@ -425,15 +425,6 @@ text {
   font-size: 45px;
 }
 
-.nav-wrapper .side-nav .userView {
-  background-color: #ee6e73;
-  padding: 0 20px;
-}
-
-.nav-wrapper .side-nav .btn-sign-out #at-nav-button {
-  width: 130px;
-}
-
 .nav-wrapper .dropdown {
   position: relative;
   z-index: 9;
@@ -465,6 +456,23 @@ text {
 
 .nav-wrapper .dropdown:hover .dropdown-list {
   display: block;
+}
+
+.side-nav .userView {
+  background-color: #ee6e73;
+  padding: 0 20px;
+}
+
+.side-nav li a {
+  padding: 0 20px;
+}
+
+.side-nav li a i {
+  padding-right: 10px;
+}
+
+.side-nav .btn-sign-out #at-nav-button {
+  width: 140px;
 }
 
 footer .modal {

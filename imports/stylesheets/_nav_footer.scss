@@ -22,17 +22,6 @@
       }
     }
   }
-  .side-nav{
-    .userView{
-      background-color: $light-pink;
-      padding: 0 20px;
-    }
-    .btn-sign-out{
-      #at-nav-button{
-        width: 130px;
-      }
-    }
-  }
   .dropdown {
     position: relative;
     z-index: 9;
@@ -61,7 +50,23 @@
     display: block;
   }
 }
-
+.side-nav{
+  .userView{
+    background-color: $light-pink;
+    padding: 0 20px;
+  }
+  li a{
+    padding: 0 20px;
+    i{
+      padding-right: 10px;
+    }
+  }
+  .btn-sign-out{
+    #at-nav-button{
+      width: 140px;
+    }
+  }
+}
 footer{
   .modal{
     max-height: 100%;
