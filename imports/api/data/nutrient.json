@@ -1,0 +1,602 @@
+[
+  {
+    "Nutr_No": " 203",
+    "NutrDesc": " Protein"
+  },
+  {
+    "Nutr_No": " 204",
+    "NutrDesc": " Total lipid (fat)"
+  },
+  {
+    "Nutr_No": " 205",
+    "NutrDesc": " Carbohydrate by difference"
+  },
+  {
+    "Nutr_No": " 207",
+    "NutrDesc": " Ash"
+  },
+  {
+    "Nutr_No": " 208",
+    "NutrDesc": " Energy"
+  },
+  {
+    "Nutr_No": " 209",
+    "NutrDesc": " Starch"
+  },
+  {
+    "Nutr_No": " 210",
+    "NutrDesc": " Sucrose"
+  },
+  {
+    "Nutr_No": " 211",
+    "NutrDesc": " Glucose (dextrose)"
+  },
+  {
+    "Nutr_No": " 212",
+    "NutrDesc": " Fructose"
+  },
+  {
+    "Nutr_No": " 213",
+    "NutrDesc": " Lactose"
+  },
+  {
+    "Nutr_No": " 214",
+    "NutrDesc": " Maltose"
+  },
+  {
+    "Nutr_No": " 221",
+    "NutrDesc": " Alcohol ethyl"
+  },
+  {
+    "Nutr_No": " 255",
+    "NutrDesc": " Water"
+  },
+  {
+    "Nutr_No": " 257",
+    "NutrDesc": " Adjusted Protein"
+  },
+  {
+    "Nutr_No": " 262",
+    "NutrDesc": " Caffeine"
+  },
+  {
+    "Nutr_No": " 263",
+    "NutrDesc": " Theobromine"
+  },
+  {
+    "Nutr_No": " 268",
+    "NutrDesc": " Energy"
+  },
+  {
+    "Nutr_No": " 269",
+    "NutrDesc": " Sugars total"
+  },
+  {
+    "Nutr_No": " 287",
+    "NutrDesc": " Galactose"
+  },
+  {
+    "Nutr_No": " 291",
+    "NutrDesc": " Fiber total dietary"
+  },
+  {
+    "Nutr_No": " 301",
+    "NutrDesc": " Calcium Ca"
+  },
+  {
+    "Nutr_No": " 303",
+    "NutrDesc": " Iron Fe"
+  },
+  {
+    "Nutr_No": " 304",
+    "NutrDesc": " Magnesium Mg"
+  },
+  {
+    "Nutr_No": " 305",
+    "NutrDesc": " Phosphorus P"
+  },
+  {
+    "Nutr_No": " 306",
+    "NutrDesc": " Potassium K"
+  },
+  {
+    "Nutr_No": " 307",
+    "NutrDesc": " Sodium Na"
+  },
+  {
+    "Nutr_No": " 309",
+    "NutrDesc": " Zinc Zn"
+  },
+  {
+    "Nutr_No": " 312",
+    "NutrDesc": " Copper Cu"
+  },
+  {
+    "Nutr_No": " 313",
+    "NutrDesc": " Fluoride F"
+  },
+  {
+    "Nutr_No": " 315",
+    "NutrDesc": " Manganese Mn"
+  },
+  {
+    "Nutr_No": " 317",
+    "NutrDesc": " Selenium Se"
+  },
+  {
+    "Nutr_No": " 318",
+    "NutrDesc": " Vitamin A IU"
+  },
+  {
+    "Nutr_No": " 319",
+    "NutrDesc": " Retinol"
+  },
+  {
+    "Nutr_No": " 320",
+    "NutrDesc": " Vitamin A RAE"
+  },
+  {
+    "Nutr_No": " 321",
+    "NutrDesc": " Carotene beta"
+  },
+  {
+    "Nutr_No": " 322",
+    "NutrDesc": " Carotene alpha"
+  },
+  {
+    "Nutr_No": " 323",
+    "NutrDesc": " Vitamin E (alphatocopherol)"
+  },
+  {
+    "Nutr_No": " 324",
+    "NutrDesc": " Vitamin D"
+  },
+  {
+    "Nutr_No": " 325",
+    "NutrDesc": " Vitamin D2 (ergocalciferol)"
+  },
+  {
+    "Nutr_No": " 326",
+    "NutrDesc": " Vitamin D3 (cholecalciferol)"
+  },
+  {
+    "Nutr_No": " 328",
+    "NutrDesc": " Vitamin D (D2 + D3)"
+  },
+  {
+    "Nutr_No": " 334",
+    "NutrDesc": " Cryptoxanthin beta"
+  },
+  {
+    "Nutr_No": " 337",
+    "NutrDesc": " Lycopene"
+  },
+  {
+    "Nutr_No": " 338",
+    "NutrDesc": " Lutein + zeaxanthin"
+  },
+  {
+    "Nutr_No": " 341",
+    "NutrDesc": " Tocopherol beta"
+  },
+  {
+    "Nutr_No": " 342",
+    "NutrDesc": " Tocopherol gamma"
+  },
+  {
+    "Nutr_No": " 343",
+    "NutrDesc": " Tocopherol delta"
+  },
+  {
+    "Nutr_No": " 344",
+    "NutrDesc": " Tocotrienol alpha"
+  },
+  {
+    "Nutr_No": " 345",
+    "NutrDesc": " Tocotrienol beta"
+  },
+  {
+    "Nutr_No": " 346",
+    "NutrDesc": " Tocotrienol gamma"
+  },
+  {
+    "Nutr_No": " 347",
+    "NutrDesc": " Tocotrienol delta"
+  },
+  {
+    "Nutr_No": " 401",
+    "NutrDesc": " Vitamin C total ascorbic acid"
+  },
+  {
+    "Nutr_No": " 404",
+    "NutrDesc": " Thiamin"
+  },
+  {
+    "Nutr_No": " 405",
+    "NutrDesc": " Riboflavin"
+  },
+  {
+    "Nutr_No": " 406",
+    "NutrDesc": " Niacin"
+  },
+  {
+    "Nutr_No": " 410",
+    "NutrDesc": " Pantothenic acid"
+  },
+  {
+    "Nutr_No": " 415",
+    "NutrDesc": " Vitamin B6"
+  },
+  {
+    "Nutr_No": " 417",
+    "NutrDesc": " Folate total"
+  },
+  {
+    "Nutr_No": " 418",
+    "NutrDesc": " Vitamin B12"
+  },
+  {
+    "Nutr_No": " 421",
+    "NutrDesc": " Choline total"
+  },
+  {
+    "Nutr_No": " 428",
+    "NutrDesc": " Menaquinone4"
+  },
+  {
+    "Nutr_No": " 429",
+    "NutrDesc": " Dihydrophylloquinone"
+  },
+  {
+    "Nutr_No": " 430",
+    "NutrDesc": " Vitamin K (phylloquinone)"
+  },
+  {
+    "Nutr_No": " 431",
+    "NutrDesc": " Folic acid"
+  },
+  {
+    "Nutr_No": " 432",
+    "NutrDesc": " Folate food"
+  },
+  {
+    "Nutr_No": " 435",
+    "NutrDesc": " Folate DFE"
+  },
+  {
+    "Nutr_No": " 454",
+    "NutrDesc": " Betaine"
+  },
+  {
+    "Nutr_No": " 501",
+    "NutrDesc": " Tryptophan"
+  },
+  {
+    "Nutr_No": " 502",
+    "NutrDesc": " Threonine"
+  },
+  {
+    "Nutr_No": " 503",
+    "NutrDesc": " Isoleucine"
+  },
+  {
+    "Nutr_No": " 504",
+    "NutrDesc": " Leucine"
+  },
+  {
+    "Nutr_No": " 505",
+    "NutrDesc": " Lysine"
+  },
+  {
+    "Nutr_No": " 506",
+    "NutrDesc": " Methionine"
+  },
+  {
+    "Nutr_No": " 507",
+    "NutrDesc": " Cystine"
+  },
+  {
+    "Nutr_No": " 508",
+    "NutrDesc": " Phenylalanine"
+  },
+  {
+    "Nutr_No": " 509",
+    "NutrDesc": " Tyrosine"
+  },
+  {
+    "Nutr_No": " 510",
+    "NutrDesc": " Valine"
+  },
+  {
+    "Nutr_No": " 511",
+    "NutrDesc": " Arginine"
+  },
+  {
+    "Nutr_No": " 512",
+    "NutrDesc": " Histidine"
+  },
+  {
+    "Nutr_No": " 513",
+    "NutrDesc": " Alanine"
+  },
+  {
+    "Nutr_No": " 514",
+    "NutrDesc": " Aspartic acid"
+  },
+  {
+    "Nutr_No": " 515",
+    "NutrDesc": " Glutamic acid"
+  },
+  {
+    "Nutr_No": " 516",
+    "NutrDesc": " Glycine"
+  },
+  {
+    "Nutr_No": " 517",
+    "NutrDesc": " Proline"
+  },
+  {
+    "Nutr_No": " 518",
+    "NutrDesc": " Serine"
+  },
+  {
+    "Nutr_No": " 521",
+    "NutrDesc": " Hydroxyproline"
+  },
+  {
+    "Nutr_No": " 573",
+    "NutrDesc": " Vitamin E added"
+  },
+  {
+    "Nutr_No": " 578",
+    "NutrDesc": " Vitamin B12 added"
+  },
+  {
+    "Nutr_No": " 601",
+    "NutrDesc": " Cholesterol"
+  },
+  {
+    "Nutr_No": " 605",
+    "NutrDesc": " Fatty acids total trans"
+  },
+  {
+    "Nutr_No": " 606",
+    "NutrDesc": " Fatty acids total saturated"
+  },
+  {
+    "Nutr_No": " 607",
+    "NutrDesc": " 4:0"
+  },
+  {
+    "Nutr_No": " 608",
+    "NutrDesc": " 6:0"
+  },
+  {
+    "Nutr_No": " 609",
+    "NutrDesc": " 8:0"
+  },
+  {
+    "Nutr_No": " 610",
+    "NutrDesc": " 10:0"
+  },
+  {
+    "Nutr_No": " 611",
+    "NutrDesc": " 12:0"
+  },
+  {
+    "Nutr_No": " 612",
+    "NutrDesc": " 14:0"
+  },
+  {
+    "Nutr_No": " 613",
+    "NutrDesc": " 16:0"
+  },
+  {
+    "Nutr_No": " 614",
+    "NutrDesc": " 18:0"
+  },
+  {
+    "Nutr_No": " 615",
+    "NutrDesc": " 20:0"
+  },
+  {
+    "Nutr_No": " 617",
+    "NutrDesc": " 18:1 undifferentiated"
+  },
+  {
+    "Nutr_No": " 618",
+    "NutrDesc": " 18:2 undifferentiated"
+  },
+  {
+    "Nutr_No": " 619",
+    "NutrDesc": " 18:3 undifferentiated"
+  },
+  {
+    "Nutr_No": " 620",
+    "NutrDesc": " 20:4 undifferentiated"
+  },
+  {
+    "Nutr_No": " 621",
+    "NutrDesc": " 22:6 n3 (DHA)"
+  },
+  {
+    "Nutr_No": " 624",
+    "NutrDesc": " 22:0"
+  },
+  {
+    "Nutr_No": " 625",
+    "NutrDesc": " 14:1"
+  },
+  {
+    "Nutr_No": " 626",
+    "NutrDesc": " 16:1 undifferentiated"
+  },
+  {
+    "Nutr_No": " 627",
+    "NutrDesc": " 18:4"
+  },
+  {
+    "Nutr_No": " 628",
+    "NutrDesc": " 20:1"
+  },
+  {
+    "Nutr_No": " 629",
+    "NutrDesc": " 20:5 n3 (EPA)"
+  },
+  {
+    "Nutr_No": " 630",
+    "NutrDesc": " 22:1 undifferentiated"
+  },
+  {
+    "Nutr_No": " 631",
+    "NutrDesc": " 22:5 n3 (DPA)"
+  },
+  {
+    "Nutr_No": " 636",
+    "NutrDesc": " Phytosterols"
+  },
+  {
+    "Nutr_No": " 638",
+    "NutrDesc": " Stigmasterol"
+  },
+  {
+    "Nutr_No": " 639",
+    "NutrDesc": " Campesterol"
+  },
+  {
+    "Nutr_No": " 641",
+    "NutrDesc": " Betasitosterol"
+  },
+  {
+    "Nutr_No": " 645",
+    "NutrDesc": " Fatty acids total monounsaturated"
+  },
+  {
+    "Nutr_No": " 646",
+    "NutrDesc": " Fatty acids total polyunsaturated"
+  },
+  {
+    "Nutr_No": " 652",
+    "NutrDesc": " 15:0"
+  },
+  {
+    "Nutr_No": " 653",
+    "NutrDesc": " 17:0"
+  },
+  {
+    "Nutr_No": " 654",
+    "NutrDesc": " 24:0"
+  },
+  {
+    "Nutr_No": " 662",
+    "NutrDesc": " 16:1 t"
+  },
+  {
+    "Nutr_No": " 663",
+    "NutrDesc": " 18:1 t"
+  },
+  {
+    "Nutr_No": " 664",
+    "NutrDesc": " 22:1 t"
+  },
+  {
+    "Nutr_No": " 665",
+    "NutrDesc": " 18:2 t not further defined"
+  },
+  {
+    "Nutr_No": " 666",
+    "NutrDesc": " 18:2 i"
+  },
+  {
+    "Nutr_No": " 669",
+    "NutrDesc": " 18:2 tt"
+  },
+  {
+    "Nutr_No": " 670",
+    "NutrDesc": " 18:2 CLAs"
+  },
+  {
+    "Nutr_No": " 671",
+    "NutrDesc": " 24:1 c"
+  },
+  {
+    "Nutr_No": " 672",
+    "NutrDesc": " 20:2 n6 cc"
+  },
+  {
+    "Nutr_No": " 673",
+    "NutrDesc": " 16:1 c"
+  },
+  {
+    "Nutr_No": " 674",
+    "NutrDesc": " 18:1 c"
+  },
+  {
+    "Nutr_No": " 675",
+    "NutrDesc": " 18:2 n6 cc"
+  },
+  {
+    "Nutr_No": " 676",
+    "NutrDesc": " 22:1 c"
+  },
+  {
+    "Nutr_No": " 685",
+    "NutrDesc": " 18:3 n6 ccc"
+  },
+  {
+    "Nutr_No": " 687",
+    "NutrDesc": " 17:1"
+  },
+  {
+    "Nutr_No": " 689",
+    "NutrDesc": " 20:3 undifferentiated"
+  },
+  {
+    "Nutr_No": " 693",
+    "NutrDesc": " Fatty acids total transmonoenoic"
+  },
+  {
+    "Nutr_No": " 695",
+    "NutrDesc": " Fatty acids total transpolyenoic"
+  },
+  {
+    "Nutr_No": " 696",
+    "NutrDesc": " 13:0"
+  },
+  {
+    "Nutr_No": " 697",
+    "NutrDesc": " 15:1"
+  },
+  {
+    "Nutr_No": " 851",
+    "NutrDesc": " 18:3 n3 ccc (ALA)"
+  },
+  {
+    "Nutr_No": " 852",
+    "NutrDesc": " 20:3 n3"
+  },
+  {
+    "Nutr_No": " 853",
+    "NutrDesc": " 20:3 n6"
+  },
+  {
+    "Nutr_No": " 855",
+    "NutrDesc": " 20:4 n6"
+  },
+  {
+    "Nutr_No": " 856",
+    "NutrDesc": " 18:3i"
+  },
+  {
+    "Nutr_No": " 857",
+    "NutrDesc": " 21:5"
+  },
+  {
+    "Nutr_No": " 858",
+    "NutrDesc": " 22:4"
+  },
+  {
+    "Nutr_No": " 859",
+    "NutrDesc": " 18:111 t (18:1t n7)"
+  }
+]

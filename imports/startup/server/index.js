@@ -9,20 +9,11 @@ Meteor.startup(() => {
         return Meteor.absoluteUrl('reset-password/' + token)
     };
 
-    let path = process.env["PWD"] + "/imports/api/data/"
-    // let file = Assets.getText('FOOD_DES.txt').replace(/\-|  +|,|^\||\|$/gm,'').replace(/\r\n/,'')
-    //
-    // let foodData = Papa.parse(file, {
-    //    delimiter: '|',
-    //    header: true,
-    //    skipEmptyLines: true,
-    //    complete: function(results) {
-    //      const {data} = results
-    //      let test = JSON.stringify(data,null,2)
-    //       fs.writeFile(path+'food.json', test,(err)=>{
-    //         if(err) throw err
-    //         console.log('done')
-    //       })
-    //    }
-    // })
+    // Meteor.call('getJson', 'NUTR_DEF.txt', 'nutrient.json', function(error, result){
+    //   if(error){
+    //     console.log("error", error);
+    //   } else {
+    //     return result
+    //   }
+    // });
 });

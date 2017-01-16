@@ -10,38 +10,27 @@ Template.calendar.onCreated(function(){
   instance.getSymptomEvents = new ReactiveDict()
   instance.events = new ReactiveDict()
 
-  console.log('oncreated')
-
   this.autorun(()=>{
-    console.log('handle ready')
     this.subscribe('food', function(){
-
         let foodEvents = Food.find({createdBy: Meteor.userId()},{fields:{createdBy:0, createdAt:0, username:0}}).fetch()
-
-        console.log('set foodEvents',foodEvents)
         instance.getFoodEvents.set('food', foodEvents)
     }),
+
     this.subscribe('symptoms', function(){
-
       let symptomEvents = Symptoms.find({createdBy: Meteor.userId()},{fields:{createdBy:0, createdAt:0, username:0}}).fetch()
-
       instance.getSymptomEvents.set('symptoms', symptomEvents)
-      console.log('set symptomEvents',symptomEvents)
 
       Tracker.afterFlush(()=>{
-         console.log('tracker start')
          let events = []
          const foodEvents = instance.getFoodEvents.get('food')
          const symptomEvents = instance.getSymptomEvents.get('symptoms')
-         console.log('get food events', foodEvents)
-         console.log('get symptom events', symptomEvents)
+
          foodEvents.map((event)=>{
            events.push(event)
          })
          symptomEvents.map((event)=>{
            events.push(event)
          })
-         console.log('push events to array',events)
          setupCalendar(events)
          addLegende('.fc-toolbar')
       })
@@ -50,7 +39,6 @@ Template.calendar.onCreated(function(){
 })
 
 function setupCalendar(events){
-  console.log('events in calendar', events)
   formatEvents = events.map((event)=>{
     const { slug, _id, food, symptoms, drink, stressLvlName, conditionName, medicaments, notes, physicalStateName, intensityName} = event
     let { date, time, duration} = event
@@ -83,8 +71,6 @@ function setupCalendar(events){
     }
     return events
   })
-
-  console.log('formated events',formatEvents)
 
   let options = {
     header: {
@@ -134,13 +120,21 @@ function responsiveCheck(){
     let size = $(window).width()
     if(size < 700){
       $('#calendar').fullCalendar('changeView', 'listWeek')
+      $('#calendar').fullCalendar({
+        header: {
+           center: 'listWeek,listDay',
+           right: 'prev,next'
+
+        },
+        defaultView: 'listWeek',
+        right: 'prev,next'
+      })
     }
   })
 }
 
-function changeViewMobile(options){
+function changeViewMobile(){
   if(md.mobile()){
-    console.log('mobile')
     $('#calendar').fullCalendar({
       header: {
          center: 'listWeek,listDay',
@@ -161,7 +155,7 @@ function clickDelete(modalBtn, event, element){
         $('#deleteFood').click(function(){
           Meteor.call('deleteFood', eventId, (err)=>{
             if(err){
-              console.log(err)
+              throw err
               Materialize.toast('<i class="ion-close-round"></i> Validation Error', 1000, 'red')
             } else {
               $('#calendar').fullCalendar( 'removeEvents', eventId)
@@ -180,7 +174,7 @@ function clickDelete(modalBtn, event, element){
         $('#deleteSymptoms').click(function(){
           Meteor.call('deleteSymptoms', eventId, (err)=>{
             if(err){
-              console.log(err)
+              throw err
               Materialize.toast('<i class="ion-close-round"></i> Validation Error',1000, 'red')
             } else {
               $('#calendar').fullCalendar( 'removeEvents', eventId)

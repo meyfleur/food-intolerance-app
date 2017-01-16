@@ -52,7 +52,7 @@ Template.updateSymptoms.events({
 
     Meteor.call('updateSymptoms', symptomsUpdate, this._id, (err)=>{
       if(err){
-        console.log(err)
+        throw error
         Materialize.toast('<i class="ion-close-round"></i>'+ err, 2000, 'red')
       } else {
         Materialize.toast('<i class="ion-checkmark-round"></i>'+'Entry updated',2000,'teal lighten-1')
