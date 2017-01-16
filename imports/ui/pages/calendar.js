@@ -1,6 +1,8 @@
 import Food from '../../api/food'
 import Symptoms from '../../api/symptoms'
 import './calendar.html'
+var MobileDetect = require('mobile-detect')
+md = new MobileDetect(window.navigator.userAgent)
 
 Template.calendar.onCreated(function(){
   const instance = this
@@ -42,7 +44,6 @@ Template.calendar.onCreated(function(){
          console.log('push events to array',events)
          setupCalendar(events)
          addLegende('.fc-toolbar')
-         //addFilter('.fc-toolbar')
       })
     })
   })
@@ -124,17 +125,31 @@ function setupCalendar(events){
   }
 
   $('#calendar').fullCalendar(options)
+  responsiveCheck()
   changeViewMobile()
-
 }
 
-function changeViewMobile(options){
+function responsiveCheck(){
   $(window).resize(function(event) {
     let size = $(window).width()
     if(size < 700){
       $('#calendar').fullCalendar('changeView', 'listWeek')
     }
   })
+}
+
+function changeViewMobile(options){
+  if(md.mobile()){
+    console.log('mobile')
+    $('#calendar').fullCalendar({
+      header: {
+         center: 'listWeek,listDay',
+         right: 'prev,next'
+      },
+      defaultView: 'listWeek'
+    })
+    $('#calendar').fullCalendar('changeView', 'listWeek')
+  }
 }
 
 function clickDelete(modalBtn, event, element){
@@ -152,7 +167,11 @@ function clickDelete(modalBtn, event, element){
               $('#calendar').fullCalendar( 'removeEvents', eventId)
               Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry deleted', 1000, 'teal lighten-1')
               Meteor.setTimeout(function(){
-                $('#calendar').fullCalendar( 'changeView', 'month')
+                if(md.mobile()){
+                  $('#calendar').fullCalendar( 'changeView', 'listWeek')
+                } else {
+                  $('#calendar').fullCalendar( 'changeView', 'month')
+                }
               }, 2000);
             }
           })
@@ -164,10 +183,14 @@ function clickDelete(modalBtn, event, element){
               console.log(err)
               Materialize.toast('<i class="ion-close-round"></i> Validation Error',1000, 'red')
             } else {
+              $('#calendar').fullCalendar( 'removeEvents', eventId)
               Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry deleted',1000, 'teal lighten-1')
               Meteor.setTimeout(function(){
-                $('#calendar').fullCalendar( 'removeEvents', eventId)
-                $('#calendar').fullCalendar( 'changeView', 'month')
+                if(md.mobile()){
+                  $('#calendar').fullCalendar( 'changeView', 'listWeek')
+                } else {
+                  $('#calendar').fullCalendar( 'changeView', 'month')
+                }
               }, 2000);
             }
           })
@@ -198,10 +221,6 @@ function addDescription(obj, event, element){
   for (const [key, val] of Object.entries(description)) {
       element.find(obj).append('<div>'+ key + ': ' + val + '</div>')
   }
-}
-
-function addFilter(obj, element){
-  $(obj).append('<span>Filter: </span><div class="filter input-field"><input id="search" type="search"><i class="ion-close-round"></i></div>')
 }
 
 function addLegende(el){
