@@ -67,7 +67,7 @@ function setupCalendar(events){
       title: food ? food.join(', ') : symptoms.join(', '),
       start: date+time,
       color: food ? '#29B6F6' : '#FF8F00',
-      description: slug == 'food' ? FoodDescrip : SymptomsDescrip
+      description: slug == 'Food' ? FoodDescrip : SymptomsDescrip
     }
     return events
   })
@@ -147,49 +147,28 @@ function changeViewMobile(){
 }
 
 function clickDelete(modalBtn, event, element){
-    element.find(modalBtn).click(function(evt){
-      eventId = event._id
-      slug = event.slug
+  element.find(modalBtn).click(function(evt){
+    eventId = event._id
+    slug = event.slug
 
-      if(slug == 'food'){
-        $('#deleteFood').click(function(){
-          Meteor.call('deleteFood', eventId, (err)=>{
-            if(err){
-              throw err
-              Materialize.toast('<i class="ion-close-round"></i> Validation Error', 1000, 'red')
+    $('#delete'+slug).click(function(){
+      Meteor.call('delete'+slug, eventId, (err)=>{
+        if(err){
+          throw err
+          Materialize.toast('<i class="ion-close-round"></i> Validation Error', 1000, 'red')
+        } else {
+          $('#calendar').fullCalendar( 'removeEvents', eventId)
+          Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry deleted', 1000, 'teal lighten-1')
+          Meteor.setTimeout(function(){
+            if(md.mobile()){
+              $('#calendar').fullCalendar( 'changeView', 'listWeek')
             } else {
-              $('#calendar').fullCalendar( 'removeEvents', eventId)
-              Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry deleted', 1000, 'teal lighten-1')
-              Meteor.setTimeout(function(){
-                if(md.mobile()){
-                  $('#calendar').fullCalendar( 'changeView', 'listWeek')
-                } else {
-                  $('#calendar').fullCalendar( 'changeView', 'month')
-                }
-              }, 2000);
+              $('#calendar').fullCalendar( 'changeView', 'month')
             }
-          })
-        })
-      } else {
-        $('#deleteSymptoms').click(function(){
-          Meteor.call('deleteSymptoms', eventId, (err)=>{
-            if(err){
-              throw err
-              Materialize.toast('<i class="ion-close-round"></i> Validation Error',1000, 'red')
-            } else {
-              $('#calendar').fullCalendar( 'removeEvents', eventId)
-              Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry deleted',1000, 'teal lighten-1')
-              Meteor.setTimeout(function(){
-                if(md.mobile()){
-                  $('#calendar').fullCalendar( 'changeView', 'listWeek')
-                } else {
-                  $('#calendar').fullCalendar( 'changeView', 'month')
-                }
-              }, 2000);
-            }
-          })
-        })
-      }
+          }, 2000);
+        }
+      })
+    })
   })
 }
 
@@ -197,17 +176,13 @@ function clickUpdate(obj, event, element){
   element.find(obj).click(function(){
     const eventId = event._id
     const slug = event.slug
-    slug == 'food' ? FlowRouter.go('/update-food/'+ eventId) : FlowRouter.go('/update-symptoms/'+ eventId)
+    slug == 'Food' ? FlowRouter.go('/update-food/'+ eventId) : FlowRouter.go('/update-symptoms/'+ eventId)
 
   })
 }
 
 function addEventBtns(listEl, element, event){
-  if(event.slug == 'food'){
-    element.find(listEl).append('<div class="eventBtn"><a id="updateFood" class="waves-effect waves-light btn right"><i class="ion-edit waves-effect teal lighten-1"></i></a><a href="#modalDeleteFood" class="modal-trigger waves-effect waves-light btn right red"><i class="ion-trash-b red"></i></a></div>')
-  } else {
-    element.find(listEl).append('<div class="eventBtn"><a id="updateSymptoms" class="waves-effect waves-light btn right"><i class="ion-edit waves-effect teal lighten-1"></i></a><a href="#modalDeleteSymptom" class="modal-trigger waves-effect waves-light btn right red"><i class="ion-trash-b red"></i></a></div>')
-  }
+    element.find(listEl).append('<div class="eventBtn"><a id="update'+event.slug+'" class="waves-effect waves-light btn right"><i class="ion-edit waves-effect teal lighten-1"></i></a><a href="#modalDelete'+event.slug+'" class="modal-trigger waves-effect waves-light btn right red"><i class="ion-trash-b red"></i></a></div>')
 }
 
 function addDescription(obj, event, element){

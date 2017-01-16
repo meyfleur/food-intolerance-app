@@ -24,7 +24,7 @@ Template.addFood.events({
        createdBy: userId,
        username: Meteor.users.findOne(userId).username,
        createdAt: new Date(),
-       slug: 'food',
+       slug: 'Food',
        date: target.datepicker.value,
        time: target.timepicker.value,
        food: foodset,
@@ -46,9 +46,6 @@ Template.addFood.events({
           Meteor.setTimeout(()=> FlowRouter.go('/food-symptoms-list'), 3000);
         }
       });
-   },
-   'click .timepicker'(evt){
-     evt.preventDefault()
    }
 });
 

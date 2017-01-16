@@ -12,6 +12,11 @@ html body #__blaze-root .wrapper {
   min-height: calc(100vh - 154px);
 }
 
+html body input:not([type])[readonly="readonly"] {
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: 1px solid #9e9e9e;
+}
+
 html body .at-result {
   margin: 0 15px;
   background: #26a69a;
@@ -53,7 +58,7 @@ html body .toast i {
   margin-right: 10px;
 }
 
-.settings .at-title {
+.settings .at-title, .settings .at-result {
   display: none;
 }
 
@@ -496,7 +501,7 @@ footer .footer-copyright .data_protection a {
 
 @media screen and (max-width: 600px) {
   .picker__frame {
-    max-width: 330px;
+    max-width: 300px;
   }
 }
 

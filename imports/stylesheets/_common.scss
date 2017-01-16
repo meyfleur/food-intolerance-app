@@ -9,6 +9,10 @@ html{
         min-height: calc(100vh - 154px);
       }
     }
+    input:not([type])[readonly="readonly"]{
+      color: rgba(0, 0, 0, 0.87);
+      border-bottom: 1px solid #9e9e9e;
+    }
     .at-result{
       margin: 0 15px;
       background: $turqoise;

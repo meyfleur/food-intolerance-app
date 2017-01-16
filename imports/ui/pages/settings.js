@@ -33,10 +33,10 @@ Template.settings.events({
             Meteor.call('changeUsername', username, (err) => {
               if(err){
                 $('#username').removeClass('valid').addClass('invalid')
-                Materialize.toast('<i class="ion-close-round"></i> Username already exist', 8000, 'red')
+                Materialize.toast('<i class="ion-close-round"></i> Username already exist', 3000, 'red')
               }
               else{
-                Materialize.toast('<i class="ion-checkmark-round"></i>',8000,'teal lighten-1');
+                Materialize.toast('<i class="ion-checkmark-round"></i> Update Name',3000,'teal lighten-1');
               }
             })
         }
@@ -44,9 +44,9 @@ Template.settings.events({
         if(email != mail) {
             Meteor.call('changeEmail', email, (err) => {
               if(err)
-                Materialize.toast('<i class="ion-close-round"></i>', 8000, 'red')
+                Materialize.toast('<i class="ion-close-round"></i>', 3000, 'red')
               else
-                Materialize.toast('<i class="ion-checkmark-round"></i>', 8000, 'teal lighten-1');
+                Materialize.toast('<i class="ion-checkmark-round"></i> Update Email', 3000, 'teal lighten-1');
             })
         }
     }
