@@ -16,7 +16,7 @@ Template.addSymptoms.events({
        createdBy: userId,
        username: Meteor.users.findOne(userId).username,
        createdAt: new Date(),
-       slug: 'symptoms',
+       slug: 'Symptoms',
        date: target.date.value,
        time: target.timepicker.value,
        duration: target.duration.value,

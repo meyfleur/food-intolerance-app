@@ -10,7 +10,7 @@ AccountsTemplates.configure({
     enablePasswordChange: true,
     texts:{
         button: {
-            changePwd: 'Update Password'
+            changePwd: 'Update'
         }
     },
     defaultLayoutType: 'blaze', // Optional, the default is 'blaze'
