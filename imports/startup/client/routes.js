@@ -3,7 +3,6 @@ import '../../ui/pages/settings.html'
 import '../../ui/pages/results.html'
 import '../../ui/pages/add-food.html'
 import '../../ui/pages/add-symptoms.html'
-import '../../ui/pages/list.html'
 import '../../ui/pages/update-food.html'
 import '../../ui/pages/update-symptoms.html'
 
@@ -79,7 +78,7 @@ FlowRouter.route('/food-symptoms-list/', {
     name: 'list.show',
     action(){
         BlazeLayout.render('layout', {
-            main: 'list',
+            main: 'calendar',
             nav: 'nav',
             footer: 'footer'
         })

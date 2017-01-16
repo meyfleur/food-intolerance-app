@@ -1,23 +1,35 @@
 <template name="calendar">
-  <div id="calendar">
-  <div id="modalDeleteFood" class="modal">
-    <div class="modal-content">
-      <p>Are you sure you want to delete? <br> You can't undo this step</p>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn left red">Cancel</a>
-        <a href="#!" id="deleteFood" class="deleteFood modal-action modal-close waves-effect waves-green btn right">Submit</a>
+  <div class="list container">
+    {{#if Template.subscriptionsReady}}
+    <h5>
+      <i class="ion-android-list"></i>
+      Food-Symptoms List
+    </h5>
+    <div id="calendar">
+      <div id="modalDeleteFood" class="modal">
+        <div class="modal-content">
+          <p>Are you sure you want to delete? <br> You can't undo this step</p>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn left red">Cancel</a>
+            <a href="#!" id="deleteFood" class="deleteFood modal-action modal-close waves-effect waves-green btn right">Submit</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div id="modalDeleteSymptom" class="modal">
-    <div class="modal-content">
-      <p>Are you sure you want to delete? <br> You can't undo this step</p>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn left red">Cancel</a>
-        <a href="#!" id="deleteSymptoms" class=" modal-action modal-close waves-effect waves-green btn right">Submit</a>
+      <div id="modalDeleteSymptom" class="modal">
+        <div class="modal-content">
+          <p>Are you sure you want to delete? <br> You can't undo this step</p>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn left red">Cancel</a>
+            <a href="#!" id="deleteSymptoms" class=" modal-action modal-close waves-effect waves-green btn right">Submit</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    {{else}}
+      <div class="progress">
+          <div class="indeterminate"></div>
+      </div>
+    {{/if}}
   </div>
 </template>

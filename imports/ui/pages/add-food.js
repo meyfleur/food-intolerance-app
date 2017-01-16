@@ -49,10 +49,6 @@ Template.addFood.events({
    }
 });
 
-Template.addFood.onCreated(function(){
-  this.state = new ReactiveDict();
-});
-
 Template.addFood.onRendered(function(){
 
   $('.datepicker').pickadate({
