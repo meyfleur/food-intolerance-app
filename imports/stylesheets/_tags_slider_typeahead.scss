@@ -18,6 +18,8 @@ div.lolliclock-popover{
   }
   .tag.badge{
     background: $turqoise;
+    font-size: 14px;
+    font-weight: 400;
     .mdi-content-clear{
       transition: 500ms;
       &:hover{
@@ -62,6 +64,9 @@ div.lolliclock-popover{
 .irs{
   margin-top: 10px;
   .irs-grid-text{
+    font-size: 11px;
+  }
+  .irs-min, .irs-max{
     font-size: 11px;
   }
   .irs-from, .irs-to, .irs-single{

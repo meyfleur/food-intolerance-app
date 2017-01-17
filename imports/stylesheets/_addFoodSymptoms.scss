@@ -19,3 +19,9 @@
 text{
   display: none
 }
+
+.condition, .stress{
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 15px;
+  }
+}

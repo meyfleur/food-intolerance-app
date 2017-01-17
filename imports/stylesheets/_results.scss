@@ -17,6 +17,10 @@
     margin-bottom: 20px;
     .info-text{
       display: inline;
+      font-size: 14px;
+      @media screen and (max-width: $break-small) {
+        font-size: 13px;
+      }
     }
     i{
       vertical-align: middle;
@@ -84,7 +88,7 @@
   }
   .legende{
     @media screen and (max-width: $break-small) {
-      width: 300px;
+      width: 310px;
     }
     .ct-series-a {
       background: $light-orange;
