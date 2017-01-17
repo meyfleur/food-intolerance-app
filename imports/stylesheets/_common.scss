@@ -13,6 +13,9 @@ html{
       color: rgba(0, 0, 0, 0.87);
       border-bottom: 1px solid #9e9e9e;
     }
+    label, .input-field label.active{
+      font-size: 12px;
+    }
     .at-result{
       margin: 0 15px;
       background: $turqoise;

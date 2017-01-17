@@ -16,6 +16,7 @@
     }
   }
   .button-collapse{
+    margin-top: 4px;
     i{
       &:before{
         font-size: 45px;
@@ -54,9 +55,14 @@
   .userView{
     background-color: $light-pink;
     padding: 0 20px;
+    font-size: 18px;
+    i{
+      padding-right: 10px;
+    }
   }
   li a{
     padding: 0 20px;
+    font-size: 15px;
     i{
       padding-right: 10px;
     }
