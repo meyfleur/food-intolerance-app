@@ -61,7 +61,6 @@ AccountsTemplates.addField({
     errStr: 'username already exists',
     func: function(value){
             var self = this;
-            console.log(self)
             Meteor.call('userExists', value, function(err, userExists){
                 if (!userExists)
                     self.setSuccess();
