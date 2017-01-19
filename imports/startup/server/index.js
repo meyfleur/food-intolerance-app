@@ -3,7 +3,7 @@ let fs = require('fs');
 
 Meteor.startup(() => {
 
-    MAIL_URL="${MAIL_URL:-smtp://${MAILGUN_SMTP_LOGIN}:${MAILGUN_SMTP_PASSWORD}@${MAILGUN_SMTP_SERVER}:${MAILGUN_SMTP_PORT}}"
+    process.env.MAIL_URL
 
     Accounts.urls.resetPassword = function(token) {
         return Meteor.absoluteUrl('reset-password/' + token)
