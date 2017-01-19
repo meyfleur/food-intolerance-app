@@ -1,4 +1,11 @@
 .results{
+  .export{
+    float: right;
+    margin-right: 10px;
+    @media screen and (max-width: $break-small) {
+      float: left;
+    }
+  }
   .info-icon{
     display: inline;
     float: left;
@@ -14,7 +21,7 @@
     padding: 10px;
     max-width: 405px;
     width: 100%;
-    margin-bottom: 20px;
+    margin: 35px 0;
     .info-text{
       display: inline;
       font-size: 14px;
@@ -36,7 +43,7 @@
     font-size: 18px;
   }
   .symptom-course{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
   }
   .food-intolerance, .symptom-course{

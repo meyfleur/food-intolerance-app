@@ -106,6 +106,17 @@ html body .toast i {
   margin-right: 10px;
 }
 
+.results .export {
+  float: right;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .results .export {
+    float: left;
+  }
+}
+
 .results .info-icon {
   display: inline;
   float: left;
@@ -125,7 +136,7 @@ html body .toast i {
   padding: 10px;
   max-width: 405px;
   width: 100%;
-  margin-bottom: 20px;
+  margin: 35px 0;
 }
 
 .results .info-box .info-text {
@@ -155,7 +166,7 @@ html body .toast i {
 }
 
 .results .symptom-course {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 
