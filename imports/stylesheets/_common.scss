@@ -3,7 +3,7 @@ html{
   body{
     #__blaze-root{
       .wrapper{
-        min-height: 100vh;
+        min-height: calc(100vh - 135px);
         padding: 30px 0;
       }
     }
