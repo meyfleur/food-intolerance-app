@@ -32,7 +32,7 @@ Template.updateSymptoms.helpers({
 });
 
 Template.updateSymptoms.events({
-  'submit .update-symptoms'(evt){
+  'submit .form-update-symptoms'(evt){
     evt.preventDefault()
     const target = evt.target
     const physicalValue = $('#physical-state-slider').data("ionRangeSlider");

@@ -31,7 +31,7 @@ Template.updateFood.helpers({
 });
 
 Template.updateFood.events({
-  'submit .update-food'(evt){
+  'submit .form-update-food'(evt){
     evt.preventDefault()
     const target = evt.target
     const foodset = $(target.food).materialtags('items')
