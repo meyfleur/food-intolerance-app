@@ -52,12 +52,11 @@ Template.updateFood.events({
     }
     Meteor.call('updateFood', foodUpdate, this._id, (err)=>{
       if(err){
-        throw err
-        Materialize.toast('<i class="ion-close-round"></i>'+ err, 2000, 'red')
+        Materialize.toast('<i class="ion-close-round"></i>'+ err.reason, 2000, 'red')
       } else {
         Materialize.toast('<i class="ion-checkmark-round"></i>'+' Entry updated',2000,'teal lighten-1')
           Meteor.setTimeout(function(){
-            FlowRouter.go('/food-symptoms-list')
+            FlowRouter.go('list.show')
         }, 3000);
       }
     })
