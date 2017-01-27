@@ -47,7 +47,7 @@ FoodSchema = new SimpleSchema({
   food:{
     type: [String],
     label: 'food:',
-    optional: true
+    minCount: 1
   },
   drink:{
     type: [String],

@@ -39,8 +39,8 @@ Template.addFood.events({
 
       Meteor.call('insertFood', foodEntry, (err)=>{
         if (err) {
-          throw err
-          Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
+          Materialize.toast('<i class="ion-close-round"></i>' + 'You must specify at least one value', 2000, 'red')
+          console.log(err)
         } else {
           Materialize.toast('<i class="ion-checkmark-round"></i>'+'Entry added', 2000, 'teal lighten-1')
           Meteor.setTimeout(()=> FlowRouter.go('/food-symptoms-list'), 3000);
