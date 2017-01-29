@@ -176,7 +176,7 @@ function clickUpdate(obj, event, element){
   element.find(obj).click(function(){
     const eventId = event._id
     const slug = event.slug
-    slug == 'Food' ? FlowRouter.go('updateFood.show', {entry_id: eventId}) : FlowRouter.go('updateSymptoms.show',{entry_id: eventId})
+    slug == 'Food' ? FlowRouter.go('/update-food/'+ eventId) : FlowRouter.go('/update-symptoms/'+ eventId)
 
   })
 }
