@@ -6,7 +6,7 @@ html{
     #__blaze-root{
       .wrapper{
         height: auto;
-        min-height: calc(100vh - 154px);
+        min-height: calc(80vh);
       }
     }
     input:not([type])[readonly="readonly"]{

@@ -74,24 +74,24 @@ Template.addFood.onRendered(function(){
     from: 2
   });
 
-  // let food = new Bloodhound({
-  //   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('Long_Desc'),
-  //   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  //   local: require('../../api/data/food.json'),
-  //   sorter: function(a, b){
-  //     let InputString = $('.tt-input').val()
-  //     return levenshtein.get(a.Long_Desc, InputString) - levenshtein.get(b.Long_Desc, InputString);
-  //   }
-  // })
+  let food = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('Long_Desc'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    local: require('../../api/data/food.json'),
+    sorter: function(a, b){
+      let InputString = $('.tt-input').val()
+      return levenshtein.get(a.Long_Desc, InputString) - levenshtein.get(b.Long_Desc, InputString);
+    }
+  })
 
   $('input[name=drink]').materialtags()
 
   $('input[name=food]').materialtags({
-    // typeaheadjs: {
-    //        name: 'food',
-    //        displayKey: 'Long_Desc',
-    //        valueKey: 'Long_Desc',
-    //        source: food.ttAdapter()
-    //    }
+    typeaheadjs: {
+           name: 'food',
+           displayKey: 'Long_Desc',
+           valueKey: 'Long_Desc',
+           source: food.ttAdapter()
+       }
   })
 });
