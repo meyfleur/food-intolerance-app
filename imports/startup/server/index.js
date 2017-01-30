@@ -3,7 +3,7 @@ let fs = require('fs');
 
 Meteor.startup(() => {
 
-    MAIL_URL = process.env.MAIL_URL
+    process.env.MAIL_URL
 
     Accounts.urls.resetPassword = function(token) {
         return Meteor.absoluteUrl('reset-password/' + token)

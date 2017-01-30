@@ -1,9 +1,12 @@
 /* CSS declarations go here */
 html{
+  height: 100%;
   body{
+    height: 100%;
     #__blaze-root{
       .wrapper{
-        min-height: calc(100vh - 180px);
+        height: auto;
+        min-height: calc(80vh);
       }
     }
     input:not([type])[readonly="readonly"]{
