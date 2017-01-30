@@ -1,15 +1,6 @@
 /* CSS declarations go here */
-html {
-  height: 100%;
-}
-
-html body {
-  height: 100%;
-}
-
 html body #__blaze-root .wrapper {
-  height: auto;
-  min-height: calc(80vh);
+  min-height: calc(100vh - 180px);
 }
 
 html body input:not([type])[readonly="readonly"] {
@@ -533,6 +524,10 @@ nav {
 
 .side-nav .btn-sign-out #at-nav-button {
   width: 140px;
+}
+
+footer.page-footer {
+  margin-top: 0;
 }
 
 footer .modal {
