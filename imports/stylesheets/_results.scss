@@ -1,11 +1,4 @@
 .results{
-  .export{
-    float: right;
-    margin-right: 10px;
-    @media screen and (max-width: $break-small) {
-      float: left;
-    }
-  }
   .info-icon{
     display: inline;
     float: left;
@@ -21,7 +14,7 @@
     padding: 10px;
     max-width: 405px;
     width: 100%;
-    margin: 35px 0;
+    margin-bottom: 20px;
     .info-text{
       display: inline;
       font-size: 14px;
@@ -43,7 +36,7 @@
     font-size: 18px;
   }
   .symptom-course{
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 40px;
   }
   .food-intolerance, .symptom-course{
@@ -95,7 +88,7 @@
   }
   .legende{
     @media screen and (max-width: $break-small) {
-      width: 320px;
+      width: 310px;
     }
     .ct-series-a {
       background: $light-orange;

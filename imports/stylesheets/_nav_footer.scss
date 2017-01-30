@@ -1,21 +1,9 @@
-nav{
-  height: 65px;
-}
 .nav-wrapper{
   .brand-logo{
-    max-width: 135px;
     @media screen and (min-width: $break-small) {
       left: 0;
       -webkit-transform: none;
       transform: none;
-    }
-    &:hover{
-      opacity: 0.7;
-    }
-    img{
-      width: 100%;
-      margin-top: 5px;
-      border-radius: 10px;
     }
   }
   li a, span{
@@ -87,7 +75,7 @@ nav{
 }
 footer{
   .modal{
-    max-height:80%;
+    max-height: 100%;
   }
   .title{
     font-weight: 600;

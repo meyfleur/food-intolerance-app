@@ -9,7 +9,7 @@ html body {
 
 html body #__blaze-root .wrapper {
   height: auto;
-  min-height: calc(80vh);
+  min-height: calc(100vh - 154px);
 }
 
 html body input:not([type])[readonly="readonly"] {
@@ -106,17 +106,6 @@ html body .toast i {
   margin-right: 10px;
 }
 
-.results .export {
-  float: right;
-  margin-right: 10px;
-}
-
-@media screen and (max-width: 600px) {
-  .results .export {
-    float: left;
-  }
-}
-
 .results .info-icon {
   display: inline;
   float: left;
@@ -136,7 +125,7 @@ html body .toast i {
   padding: 10px;
   max-width: 405px;
   width: 100%;
-  margin: 35px 0;
+  margin-bottom: 20px;
 }
 
 .results .info-box .info-text {
@@ -166,7 +155,7 @@ html body .toast i {
 }
 
 .results .symptom-course {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -224,7 +213,7 @@ html body .toast i {
 
 @media screen and (max-width: 600px) {
   .results .legende {
-    width: 320px;
+    width: 310px;
   }
 }
 
@@ -436,30 +425,12 @@ text {
   margin: 5px;
 }
 
-nav {
-  height: 65px;
-}
-
-.nav-wrapper .brand-logo {
-  max-width: 135px;
-}
-
 @media screen and (min-width: 600px) {
   .nav-wrapper .brand-logo {
     left: 0;
     -webkit-transform: none;
     transform: none;
   }
-}
-
-.nav-wrapper .brand-logo:hover {
-  opacity: 0.7;
-}
-
-.nav-wrapper .brand-logo img {
-  width: 100%;
-  margin-top: 5px;
-  border-radius: 10px;
 }
 
 .nav-wrapper li a, .nav-wrapper span {
@@ -536,7 +507,7 @@ nav {
 }
 
 footer .modal {
-  max-height: 80%;
+  max-height: 100%;
 }
 
 footer .title {
@@ -661,9 +632,4 @@ div.lolliclock-popover {
 .irs .irs-slider:hover {
   background-position: -1px -150px;
   cursor: pointer;
-}
-
-.irs .irs-slider.single {
-  width: 30px;
-  margin-left: 8px;
 }
