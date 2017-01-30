@@ -29,8 +29,7 @@ Template.addSymptoms.events({
      }
      Meteor.call('insertSymptoms', symptomsEntry, (err)=>{
        if (err) {
-         throw err
-         Materialize.toast('<i class="ion-close-round"></i> Validation Error', 2000, 'red')
+         Materialize.toast('<i class="ion-close-round"></i> Error' + 'You must specify at least one value', 2000, 'red')
 
        } else {
          Materialize.toast('<i class="ion-checkmark-round"></i>'+'Entry added',2000,'teal lighten-1')
