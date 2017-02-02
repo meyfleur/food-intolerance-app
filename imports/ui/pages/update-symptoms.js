@@ -105,12 +105,18 @@ function setupJQueryHooks (fields){
 
   $('input[data-role=materialtags]').materialtags({
     typeaheadjs: {
-      hint: false,
-      highlight: true,
-           name: 'symptoms',
-           displayKey: 'name',
-           valueKey: 'name',
-           source: symptoms.ttAdapter()
-       }
+       name: 'symptoms',
+       displayKey: 'name',
+       valueKey: 'name',
+       source: symptoms.ttAdapter()
+     }
+  })
+
+  $('input').focusin(function(event) {
+    $('input.tt-input').val('')
+  })
+
+  $('input').blur(function(event) {
+    $('input.tt-input').val('')
   })
 }

@@ -115,4 +115,12 @@ function setupJQueryHooks( fields ) {
            source: food.ttAdapter()
        }
   })
+
+  $('input').focusin(function(event) {
+    $('input.tt-input').val('')
+  })
+
+  $('input').blur(function(event) {
+    $('input.tt-input').val('')
+  })
 }
